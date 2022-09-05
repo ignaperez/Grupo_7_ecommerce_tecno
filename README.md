@@ -1,6 +1,7 @@
 # Grupo_7_ecommerce_tecno  Nombre: PhericsOne.
 Ecommerce de accesorios Gammers: Teclados, Mouse, Auriculares, Mousepad.
 Apuntamos al público gammer.
+Referencias: www.venex.com.ar, www.fullhard.com.ar, www.mexx.com.ar, www.supermagnete.de/eng/, www.proyectocolor.com.ar
 
 
 
