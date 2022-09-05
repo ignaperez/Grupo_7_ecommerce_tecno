@@ -3,11 +3,14 @@ Ecommerce de accesorios Gammers: Teclados, Mouse, Auriculares, Mousepad.
 Apuntamos al público gammer.
 Referencias: www.venex.com.ar, www.fullhard.com.ar, www.mexx.com.ar, www.supermagnete.de/eng/, www.proyectocolor.com.ar
 
+Wireframe en Miro https://miro.com/app/board/uXjVPcnbF9A=/.
 
-
-
-
-
+Paleta de Colores:
+#051042
+#1D70A2
+#848C8E
+#000000
+#FFFFFF
 
 
 
