@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  },
+  "name": "grupo_7_ecommerce_tecno",
+  "description": "Ecommerce de accesorios Gammers: Teclados, Mouse, Auriculares, Mousepad.\r Apuntamos al público gammer.\r Referencias: www.venex.com.ar, www.fullhard.com.ar, www.mexx.com.ar, www.supermagnete.de/eng/, www.proyectocolor.com.ar",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignaperez/Grupo_7_ecommerce_tecno.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ignaperez/Grupo_7_ecommerce_tecno/issues"
+  },
+  "homepage": "https://github.com/ignaperez/Grupo_7_ecommerce_tecno#readme"
+}
