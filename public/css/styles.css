@@ -1,15 +1,12 @@
 * {
-
-    box-sizing: border-box;
+    margin: 0;
 }
 
-.Banner {
-    
+.Banner {   
     width: 100%;
 }
 
 img {
-
     width: 100%;
 }
 
@@ -20,10 +17,7 @@ img {
 
 
 section article {
-
     width: 25%;
-
-
 }
 
 .pie {
@@ -39,6 +33,26 @@ section article {
     height: 50px;
     align-items: center;
 }
+.cabeza-inferior {
+    display: flex;
+    
+    background-color: #051042;
+}
+.barra-busqueda {
+    width: 600px;
+}
+.barra-navegacion {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.item-nav {
+    width: 15%;
+    font-size: 4vh;
+    text-decoration: none;
+    color: black;
+}
+
 
 .frase-top{
 
