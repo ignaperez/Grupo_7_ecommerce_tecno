@@ -1,0 +1,46 @@
+* {
+
+    box-sizing: border-box;
+}
+
+.Banner {
+    
+    width: 100%;
+}
+
+img {
+
+    width: 100%;
+}
+
+
+.productos {
+    display: flex;
+}
+
+
+section article {
+
+    width: 25%;
+
+
+}
+
+.pie {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* cabeza superior */
+
+.cabeza-superior {
+    display: flex;
+    background-color:#1D70A2;
+    height: 50px;
+    align-items: center;
+}
+
+.frase-top{
+
+    flex: 5;
+}
