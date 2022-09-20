@@ -25,6 +25,11 @@ section article {
     justify-content: space-around;
 }
 
+.cabeza-inferior i {
+
+    text-align: right;
+}
+
 /* cabeza superior */
 
 .cabeza-superior {
