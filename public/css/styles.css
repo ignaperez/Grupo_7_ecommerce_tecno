@@ -103,11 +103,7 @@ section article {
     justify-content: space-between;
     width: 75%;
 }
-.articulo-hijo {
-    display: flex;
-    flex-direction: column;
-    
-}
+
 .nombre-producto {
    text-align: center; 
 }
@@ -119,6 +115,8 @@ section article {
 }
 .producto-imagen {
     text-align: 1;
+    
 }
+
 
 
