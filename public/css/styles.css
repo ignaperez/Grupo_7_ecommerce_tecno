@@ -100,18 +100,23 @@ section article {
     display: flex;
     flex-direction: column;
     border: solid 1vh black;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 75%;
 }
 .articulo-hijo {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    
 }
 .nombre-producto {
-    align-self: flex-start;
+   text-align: center; 
 }
-
+.precio {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 3.5vh;
+}
 .producto-imagen {
     text-align: 1;
 }
