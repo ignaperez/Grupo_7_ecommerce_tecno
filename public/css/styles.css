@@ -31,20 +31,31 @@ section article {
     display: flex;
     background-color:#1D70A2;
     height: 50px;
-    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .cabeza-inferior {
     display: flex;
-    
+    justify-content: space-evenly;
     background-color: #051042;
+    padding: 1vh;
 }
 .barra-busqueda {
-    width: 600px;
+    width: 500px;
+    padding: 0.7vh;
+}
+.form-submit {
+    background-color: white
 }
 .barra-navegacion {
     display: flex;
     justify-content: space-around;
     
+    
+}
+.icono-search {
+    background-color: white ;
+    padding: 0.8vh;
 }
 .item-nav {
     width: 15%;
