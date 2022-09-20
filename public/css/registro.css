@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    
+    padding-bottom: 3vh;
 }
 
 .header {
@@ -19,39 +19,52 @@
     color: white;
     margin-top: 2vh;
 }
-.fondo {
-    width: 100%;
-}
+
+
 .formulario {
     display: flex;
     flex-direction: column ;
     position: absolute;
-    top: 70%;
-    left: 39%;
+    top: 40%;
+    left: 23%;
+    width: 60%;
+    padding-bottom: 2vh;
+    border-radius: 1vh;
+    box-shadow: 1px 1px 4px rgb(218, 217, 217) ;
 }
 .titulo {
     position: absolute;
-    top: 30%;
-    left: 35%;
-    color: white;
+    top: 10%;
+    left: 26%;
     font-size: 20vh;
+    z-index: 1;
 }
+.sombra {
+    position: absolute;
+    top: 9%;
+    left: 25%;
+    font-size: 22vh;
+    color: rgb(152, 151, 151);
+    z-index: 0;
+
+}
+
 .input {
-    width: 125%;
+    width: 80%;
     border-radius: 5px;
     margin: 2vh;
     padding: 3vh;
     border-color: white;
 }
 .boton {
-    width: 60%;
-    padding: 2vh;
+    width: 20%;
+    padding: 1vh;
     background-color: #414BB2;
     color: white;
     border: #414BB2 solid 1vh;
     border-radius: 5px;
     position: relative;
-    left: 50%;
-    margin-top: 4vh;
+    left: 37%;
+    margin-top: 2vh;
 }
 
