@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>PhericsOne</title>
+</head>
+<body>
+    <div class="header">
+        <p class="frase">Equípate para ser el mejor de tu equipo!</p>
+        <p style="margin-top: 1vh;"><a class="ayuda" href="#">Ayuda</a></p>
+    </div>
+
+
+    <h1 class="titulo">PhericsOne</h1>
+    <p class="sombra">PhericsOne</p>
+
+    <form class="formulario" action="/registro" method="post">
+        
+        <input class="input" type="text" name="nombre" placeholder="Nombre" required>
+        <input class="input" type="text" name="apellido" placeholder="Apellido" required>
+        <input class="input" type="email" name="email" placeholder="Email@servidor.com" required>
+        <input class="input" type="text" name="telefono" placeholder="Teléfono" required>
+        <input class="input" type="text" name="nombre" placeholder="Nombre de usuario" required>
+        <input class="input" type="password" name="password" placeholder="Contraseña" required>
+        <input class="input" type="password" name="re-password" placeholder="Reingrese su contraseña" required>
+        <button class="boton" type="submit">Ingresar</button>
+    </form>
+    
+</body>
+</html>

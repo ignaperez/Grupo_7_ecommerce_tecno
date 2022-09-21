@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+}
+img {
+    width: 50%;
+}
+
+
+.productos {
+    display: flex;
+    flex-direction: column ;
+}
+
+
+section article {
+    width: 25%;
+}
+
+.cabeza-superior {
+    display: flex;
+    background-color:#1D70A2;
+    height: 50px;
+    align-items: center;
+}
+.cabeza-inferior {
+    display: flex;
+    
+    background-color: #051042;
+}
+.barra-busqueda {
+    width: 600px;
+}
+.barra-navegacion {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.frase-top{
+
+    flex: 5;
+}
+.pie {
+    display: flex;
+    justify-content: space-around;
+}

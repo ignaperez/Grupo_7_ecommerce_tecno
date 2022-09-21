@@ -1,6 +1,26 @@
 * {
     margin: 0;
 }
+.hipervinculos-header {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    
+}
+a {
+    text-decoration: none;
+}
+header div a {
+    color: white;
+    font-size: 2vh;
+}
+.frase-top{
+    padding-left: 2vh;
+    flex: 5;
+    color: white;
+    font-size: 2vh;
+}
+
 
 .Banner {   
     width: 100%;
@@ -31,20 +51,43 @@ section article {
     display: flex;
     background-color:#1D70A2;
     height: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
 }
 .cabeza-inferior {
     display: flex;
-    
+    justify-content: space-between;
     background-color: #051042;
+    padding: 1vh;
+    align-items: center;
 }
 .barra-busqueda {
-    width: 600px;
+    width: 500px;
+    padding: 0.7vh;
+    border: solid white 1px;
+    
+}
+.form-submit {
+    background-color: white
 }
 .barra-navegacion {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
+    align-items: center;
+    list-style: none;
+}
+.carrito {
     
+    font-size: 2.7vh;
+    padding-right: 5px;
+    padding-top: 5px;
+    color: white;
+    
+}
+.icono-search {
+    background-color: white ;
+    padding: 0.8vh;
 }
 .item-nav {
     width: 15%;
@@ -53,8 +96,26 @@ section article {
     color: black;
 }
 
-
-.frase-top{
-
-    flex: 5;
+.articulo {
+    display: flex;
+    flex-direction: column;
+    border: solid 1vh black;
+    justify-content: space-between;
+    width: 75%;
 }
+
+.nombre-producto {
+   text-align: center; 
+}
+.precio {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 3.5vh;
+}
+.producto-imagen {
+    text-align: 1;
+    
+}
+
+
