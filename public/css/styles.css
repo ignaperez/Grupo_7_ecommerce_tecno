@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    font-family: 'Roboto', sans-serif;;
 }
 .hipervinculos-header {
     display: flex;
@@ -19,6 +20,7 @@ header div a {
     flex: 5;
     color: white;
     font-size: 2vh;
+    font-weight: bold;
 }
 
 
@@ -60,6 +62,11 @@ section article {
     flex-wrap: wrap;
     align-items: center;
 }
+.vinculos {
+    border: solid 0.1vh white;
+    padding: 5px;
+    border-radius: 15px;
+}
 .cabeza-inferior {
     display: flex;
     justify-content: space-between;
@@ -81,6 +88,13 @@ section article {
     justify-content: space-around; 
     align-items: center;
     list-style: none;
+    
+}
+.item-nav {
+    width: 15%;
+    font-size: 4vh;
+    text-decoration: none;
+    color: black;
 }
 .carrito {
     
@@ -108,11 +122,7 @@ section article {
     justify-content: space-between;
     width: 75%;
 }
-.articulo-hijo {
-    display: flex;
-    flex-direction: column;
-    
-}
+
 .nombre-producto {
    text-align: center; 
 }
@@ -124,6 +134,9 @@ section article {
 }
 .producto-imagen {
     text-align: 1;
+}
+.map {
+    padding-right: 0.8vh;
 }
 
 
