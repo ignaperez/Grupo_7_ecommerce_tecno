@@ -49,32 +49,38 @@ section article {
     justify-content: space-around;
 }
 
+.cabeza-inferior i {
+
+    text-align: right;
+    color: #292E1E;
+}
+
 /* cabeza superior */
 
 .cabeza-superior {
     display: flex;
-    background-color:#1D70A2;
+    background-color:#292E1E;
     height: 50px;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
 }
 .vinculos {
-    border: solid 0.1vh white;
+    border: solid 0.1vh #ECEBE4;
     padding: 5px;
     border-radius: 15px;
 }
 .cabeza-inferior {
     display: flex;
     justify-content: space-between;
-    background-color: #051042;
+    background-color: #ECEBE4;
     padding: 1vh;
     align-items: center;
 }
 .barra-busqueda {
     width: 500px;
     padding: 0.7vh;
-    border: solid white 1px;
+    border: solid #ECEBE4 1px;
     
 }
 .form-submit {
@@ -85,14 +91,10 @@ section article {
     justify-content: space-around; 
     align-items: center;
     list-style: none;
+    height: 38px;
     
 }
-.item-nav {
-    width: 15%;
-    font-size: 4vh;
-    text-decoration: none;
-    color: black;
-}
+
 .carrito {
     
     font-size: 2.7vh;
@@ -106,11 +108,11 @@ section article {
     padding: 0.8vh;
 }
 .item-nav {
-    width: 15%;
-    font-size: 4vh;
+    width: 20%;
+    font-size: 15px;
     text-decoration: none;
     color: black;
-    
+    font-weight: bold;
 }
 
 .articulo {

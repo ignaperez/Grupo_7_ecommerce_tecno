@@ -7,7 +7,7 @@ body{
 }
 
 .header {
-    background-color: #1D70A2;
+    background-color: #292E1E;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -51,9 +51,9 @@ body{
 .boton {
     width: 60%;
     padding: 2vh;
-    background-color: #414BB2;
-    color: white;
-    border: #414BB2 solid 1vh;
+    background-color: #ECEBE4;
+    color: black;
+    border: black solid 1vh;
     border-radius: 5px;
     position: relative;
     left: 50%;
