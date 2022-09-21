@@ -35,6 +35,8 @@ img {
 
 .productos {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 
@@ -108,14 +110,16 @@ section article {
     font-size: 4vh;
     text-decoration: none;
     color: black;
+    
 }
 
 .articulo {
     display: flex;
     flex-direction: column;
     border: solid 1vh black;
-    justify-content: space-between;
-    width: 75%;
+    justify-content: space-around;
+    width: 20%;
+    box-sizing: border-box;
 }
 
 .nombre-producto {
@@ -128,7 +132,13 @@ section article {
     font-size: 3.5vh;
 }
 .producto-imagen {
-    text-align: 1;
+    
+    text-align: center;
+    width: 75%;
+}
+.contenedor-img {
+    padding: 2vh;
+    text-align: center;
 }
 .map {
     padding-right: 0.8vh;

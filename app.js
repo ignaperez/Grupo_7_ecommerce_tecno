@@ -19,6 +19,7 @@ app.get('/', (req,res) => {
 app.get("/login", (req,res) => {
     res.sendFile(path.resolve(__dirname, "src/views/login.html"))
 })
+
 app.get("/registro",(req,res)=>{
     res.sendFile(path.resolve(__dirname,'src/views/registro.html'))
 })
