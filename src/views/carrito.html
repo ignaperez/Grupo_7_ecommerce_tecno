@@ -5,40 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/carrito.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>PerichsOne</title>
 </head>
 <body>
 
 
-    <header>
-        <div class="cabeza-superior"> 
-            
-            <p class="frase-top">Equípate para ser el mejor de tu equipo!</p>
-            <a href="#">Seguí tu compra</a>
-            <a href="#">Ayuda</a>
+<!-- En el header van las dos primeras barras : La que dice equipate para ser el mejor y la otra es donde va el nombre y la barra de busqueda! NADA MAS -->
+<header>
+    <div class="cabeza-superior"> 
+        
+        <p class="frase-top">Equípate para ser el mejor de tu equipo!</p>
+    <div class="hipervinculos-header">   
+            <a class="vinculos" href="#"><i class="fa-solid fa-map-location-dot " style="padding-right: 0.8vh;"></i>Seguí tu compra</a>
+            <a class="vinculos" href="#"><i class="fa-solid fa-headset" style="padding-right: 0.8vh;"></i>Ayuda</a>
+            <a class="vinculos" href="/registro">Registrate</a>
+            <a class="vinculos" href="/login"><i class="fa-solid fa-right-to-bracket" style="padding-right: 0.8vh;"></i>Ingresa</a>
+    </div>
+    </div>
 
+    <div class="cabeza-inferior">
+        <h1 style="color:#292E1E">PhericsOne</h1>
+        <div class="form-submit" action="#" method="GET">
+            <input class="input barra-busqueda" type="search" placeholder="Eso que tanto deseas, buscalo acá"></input>
+            <i  class="fa fa-search icono-search"></i>
         </div>
 
-        <div class="cabeza-inferior">
-            <h1 style="color:white">PhericsOne</h1>
-            <div class="form-submit" action="#" method="GET">
-                <input class="input barra-busqueda" placeholder="Buscar productos, marcas y más"></input>
-                <i class="fa fa-search"></i>
-            </div>
-            <a class="carrito" href="#"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        <a class="carrito" href="#"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
 
-        </div>
+    </div>
 
-    </header>
+</header>
+
 
 
 
 <main>
 
-    <section class="productos">
+    <section class="productos-carro">
 
-        <article class="articulo"> 
+        <article class="articulo-carro"> 
             <div>
             <a href="#">
                 <img class="producto-imagen" src="/img/mouse.png" >
@@ -50,10 +57,10 @@
             </div>
             
         </article>
-        <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p class="descripcion-carro">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
             
        
-        <article class="articulo">
+        <article class="articulo-carro">
             
             <a href="#">
                 <img class="producto-imagen" src="/img/auris.png" >
@@ -63,8 +70,8 @@
                 <p class="precio">$14.540</p>
             </div>
         </article>
-        <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        <article class="articulo">
+        <p class="descripcion-carro">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <article class="articulo-carro">
             <a href="#">
                 <img class="producto-imagen" src="/img/teclado.png" >
             </a>
@@ -73,11 +80,11 @@
                 <p class="precio">$21.000</p>
         </div>
         </article>
-        <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p class="descripcion-carro">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 
 
-        <article class="articulo">
-            <a class="articulo-hijo"  href="#">
+        <article class="articulo-carro">
+            <a class="articulo-carro-hijo"  href="#">
                 <img class="producto-imagen" src="/img/mousepad.png"  >
             </a>           
             <div>
@@ -85,7 +92,7 @@
                 <p class="precio">$6.500</p>
             </div>
         </article>
-        <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p class="descripcion-carro">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
     </section>
    
 
