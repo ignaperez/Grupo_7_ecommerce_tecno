@@ -11,6 +11,96 @@ img {
     flex-direction: column ;
 }
 
+.productos p{
+    display: flex;
+    justify-content: space-between;
+}
+
+.descripcion p{
+    display: flex;
+    flex-wrap: wrap;
+   align-items: flex-start;
+    
+   
+}
+.hipervinculos-header {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+
+}
+a {
+    text-decoration: none;
+}
+header div a {
+    color: white;
+    font-size: 2vh;
+}
+.frase-top{
+    padding-left: 2vh;
+    flex: 5;
+    color: white;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.cabeza-inferior i {
+
+    text-align: right;
+    color: #292E1E;
+}
+
+
+.cabeza-superior {
+    display: flex;
+    background-color:#292E1E;
+    height: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.vinculos {
+    border: solid 0.1vh #ECEBE4;
+    padding: 5px;
+    border-radius: 15px;
+}
+.cabeza-inferior {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ECEBE4;
+    padding: 1vh;
+    align-items: center;
+}
+.barra-busqueda {
+    width: 500px;
+    padding: 0.7vh;
+    border: solid #ECEBE4 1px;
+
+}
+.form-submit {
+    background-color: white
+}
+.barra-navegacion {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    list-style: none;
+    height: 38px;
+
+}
+
+.carrito {
+
+    font-size: 2.7vh;
+    padding-right: 5px;
+    padding-top: 5px;
+    color: white;
+
+}
+.icono-search {
+    background-color: white ;
+    padding: 0.8vh;
+}
 
 section article {
     width: 25%;
@@ -42,4 +132,155 @@ section article {
 .pie {
     display: flex;
     justify-content: space-around;
+}
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;;
+}
+.hipervinculos-header {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    
+}
+a {
+    text-decoration: none;
+}
+header div a {
+    color: white;
+    font-size: 2vh;
+}
+.frase-top{
+    padding-left: 2vh;
+    flex: 5;
+    color: white;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+
+.Banner {   
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+
+section article {
+    width: 25%;
+}
+
+.pie {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cabeza-inferior i {
+
+    text-align: right;
+    color: #292E1E;
+}
+
+/* cabeza superior */
+
+.cabeza-superior {
+    display: flex;
+    background-color:#292E1E;
+    height: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.vinculos {
+    border: solid 0.1vh #ECEBE4;
+    padding: 5px;
+    border-radius: 15px;
+}
+.cabeza-inferior {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ECEBE4;
+    padding: 1vh;
+    align-items: center;
+}
+.barra-busqueda {
+    width: 500px;
+    padding: 0.7vh;
+    border: solid #ECEBE4 1px;
+    
+}
+.form-submit {
+    background-color: white
+}
+.barra-navegacion {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    list-style: none;
+    height: 38px;
+    
+}
+
+.carrito {
+    
+    font-size: 2.7vh;
+    padding-right: 5px;
+    padding-top: 5px;
+    color: white;
+    
+}
+.icono-search {
+    background-color: white ;
+    padding: 0.8vh;
+}
+.item-nav {
+    width: 20%;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.articulo {
+    display: flex;
+    flex-direction: column;
+    border: solid 0.2vh black;
+    justify-content: space-between;
+    width: 20%;
+    box-sizing: border-box;
+    border-radius: 3vh;
+
+}
+
+.nombre-producto {
+   text-align: center;
+   background-color: gray;
+   opacity: 0.8;
+   color: black;
+   font-weight: bold;
+}
+.precio {
+    text-align: center;
+    color: white;
+    font-size: 3.5vh;
+    background-color: gray;
+    opacity: 0.7;
+    border-bottom-left-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+}
+.producto-imagen {
+    
+    text-align: center;
+    width: 60%;
 }
