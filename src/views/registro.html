@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/registro.css">
-    
 
 
-   
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>PhericsOne</title>
 </head>
+
 <body>
     <header>
-        <div class="cabeza-superior"> 
-            
+        <div class="cabeza-superior">
+
             <p class="frase-top">Equípate para ser el mejor de tu equipo!</p>
-        <div class="hipervinculos-header">   
-                <a class="vinculos" href="#"><i class="fa-solid fa-map-location-dot " style="padding-right: 0.8vh;"></i>Seguí tu compra</a>
+            <div class="hipervinculos-header">
+                <a class="vinculos" href="#"><i class="fa-solid fa-map-location-dot "
+                        style="padding-right: 0.8vh;"></i>Seguí tu compra</a>
                 <a class="vinculos" href="#"><i class="fa-solid fa-headset" style="padding-right: 0.8vh;"></i>Ayuda</a>
                 <a class="vinculos" href="/registro">Registrate</a>
-                <a class="vinculos" href="/login"><i class="fa-solid fa-right-to-bracket" style="padding-right: 0.8vh;"></i>Ingresa</a>
-        </div>
+                <a class="vinculos" href="/login"><i class="fa-solid fa-right-to-bracket"
+                        style="padding-right: 0.8vh;"></i>Ingresa</a>
+            </div>
         </div>
 
         <div class="cabeza-inferior">
             <h1 style="color:#292E1E">PhericsOne</h1>
             <div class="form-submit" action="#" method="GET">
-                <input class="input barra-busqueda" type="search" placeholder="Eso que tanto deseas, buscalo acá"></input>
-                <i  class="fa fa-search icono-search"></i>
+                <input class="input barra-busqueda" type="search"
+                    placeholder="Eso que tanto deseas, buscalo acá"></input>
+                <i class="fa fa-search icono-search"></i>
             </div>
 
             <a class="carrito" href="#"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
@@ -40,24 +45,26 @@
     </header>
 
 
-<main>
+    <main>
 
 
 
-    <div class="div-formulario">
+        <div class="div-formulario">
 
-    <form  class="formulario" action="/registro" method="post">
-        
-        <input class="input-registro" type="text" name="nombre" placeholder="Nombre" required>
-        <input class="input-registro" type="text" name="apellido" placeholder="Apellido" required>
-        <input class="input-registro" type="email" name="email" placeholder="Email@servidor.com" required>
-        <input class="input-registro" type="text" name="telefono" placeholder="Teléfono" required>
-        <input class="input-registro" type="text" name="nombre" placeholder="Nombre de usuario" required>
-        <input class="input-registro" type="password" name="password" placeholder="Contraseña" required>
-        <input class="input-registro" type="password" name="re-password" placeholder="Reingrese su contraseña" required>
-        <button class="boton" type="submit">Ingresar</button>
-    </form>
-</div>
-</main>
+            <form class="formulario" action="/registro" method="post">
+
+                <input class="input-registro" type="text" name="nombre" placeholder="Nombre" required>
+                <input class="input-registro" type="text" name="apellido" placeholder="Apellido" required>
+                <input class="input-registro" type="email" name="email" placeholder="Email@servidor.com" required>
+                <input class="input-registro" type="text" name="telefono" placeholder="Teléfono" required>
+                <input class="input-registro" type="text" name="nombre" placeholder="Nombre de usuario" required>
+                <input class="input-registro" type="password" name="password" placeholder="Contraseña" required>
+                <input class="input-registro" type="password" name="re-password" placeholder="Reingrese su contraseña"
+                    required>
+                <button class="boton" type="submit">Ingresar</button>
+            </form>
+        </div>
+    </main>
 </body>
+
 </html>
