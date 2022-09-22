@@ -1,60 +1,6 @@
 * {
     margin: 0;
-    font-family: 'Roboto', sans-serif;;
-}
-.hipervinculos-header {
-    display: flex;
-    justify-content: space-around;
-    flex-grow: 1;
-    
-}
-a {
-    text-decoration: none;
-}
-header div a {
-    color: white;
-    font-size: 2vh;
-}
-.frase-top{
-    padding-left: 2vh;
-    flex: 5;
-    color: white;
-    font-size: 2vh;
-    font-weight: bold;
-}
-
-
-.Banner {   
-    width: 100%;
-}
-
-img {
-    width: 100%;
-}
-
-
-.productos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-}
-
-
-section article {
-    width: 25%;
-}
-
-.pie {
-    display: flex;
-    justify-content: space-around;
-}
-
-.cabeza-inferior i {
-
-    text-align: right;
-    color: #292E1E;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* cabeza superior */
@@ -67,10 +13,42 @@ section article {
     flex-wrap: wrap;
     align-items: center;
 }
+.frase-top{
+    padding-left: 2vh;
+    flex: 5;
+    color: white;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.hipervinculos-header {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    
+}
 .vinculos {
     border: solid 0.1vh #ECEBE4;
     padding: 5px;
     border-radius: 15px;
+}
+a {
+    text-decoration: none;
+}
+header div a {
+    color: white;
+    font-size: 2vh;
+}
+
+/* cabeza inferior */
+
+.cabeza-inferior i {
+
+    text-align: right;
+    color: #292E1E;
+}
+.form-submit {
+    background-color: white
 }
 .cabeza-inferior {
     display: flex;
@@ -83,11 +61,40 @@ section article {
     width: 500px;
     padding: 0.7vh;
     border: solid #ECEBE4 1px;
+
+}
+.carrito {
     
+    font-size: 2.7vh;
+    padding-right: 5px;
+    padding-top: 5px;
+    color: white; 
 }
-.form-submit {
-    background-color: white
+.icono-search {
+    background-color: white ;
+    padding: 0.8vh;
 }
+
+/* Banner */
+
+.Banner {   
+    width: 100%;
+}
+img {
+    width: 100%;
+}
+.barra-busqueda {
+    width: 500px;
+    padding: 0.7vh;
+    border: solid white 1px;
+}
+.icono-search {
+    background-color: white ;
+    padding: 0.8vh;
+}
+
+/* Barra de navegación */
+
 .barra-navegacion {
     display: flex;
     justify-content: space-around; 
@@ -96,19 +103,6 @@ section article {
     height: 38px;
     
 }
-
-.carrito {
-    
-    font-size: 2.7vh;
-    padding-right: 5px;
-    padding-top: 5px;
-    color: white;
-    
-}
-.icono-search {
-    background-color: white ;
-    padding: 0.8vh;
-}
 .item-nav {
     width: 20%;
     font-size: 15px;
@@ -116,7 +110,15 @@ section article {
     color: black;
     font-weight: bold;
 }
+/* Seccion Productos */
 
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
 .articulo {
     display: flex;
     flex-direction: column;
@@ -127,32 +129,59 @@ section article {
     border-radius: 3vh;
 
 }
-
-.nombre-producto {
-   text-align: center;
-   background-color: gray;
-   opacity: 0.8;
-   color: black;
-   font-weight: bold;
-}
-.precio {
+.contenedor-img {
+    padding: 2vh;
     text-align: center;
-    color: white;
-    font-size: 3.5vh;
-    background-color: gray;
-    opacity: 0.7;
-    border-bottom-left-radius: 3vh;
-    border-bottom-right-radius: 3vh;
 }
 .producto-imagen {
     
     text-align: center;
     width: 60%;
 }
-.contenedor-img {
-    padding: 2vh;
-    text-align: center;
-}
 .map {
     padding-right: 0.8vh;
+}
+.nombre-producto {
+    text-align: center;
+    background-color: gray;
+    opacity: 0.8;
+    color: black;
+    font-weight: bold;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+ }
+ .precio {
+     text-align: center;
+     color: white;
+     font-size: 3.5vh;
+     background-color: gray;
+     opacity: 0.7;
+     border-bottom-left-radius: 3vh;
+     border-bottom-right-radius: 3vh;
+     padding-top: 1vh;
+    padding-bottom: 1vh;
+ }
+.marcas {
+    background-color: rgb(209, 207, 207);
+}
+
+/* Footer */
+footer {
+    background-color: rgb(209, 207, 207);
+
+}
+.footer-superior {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    border-bottom: 1px black solid;
+    padding-bottom: 2vh;
+}
+.footer-inferior {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    max-width: 50vh;
+}
+.pie {
+    display: flex;
+    justify-content: space-around;
 }
