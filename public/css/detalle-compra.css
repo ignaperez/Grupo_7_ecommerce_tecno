@@ -1,0 +1,83 @@
+
+.img-principal {
+    width: 40%;
+    align-self: center;
+    position:relative;
+    left: 33vh;
+    padding: 7vh;
+}
+.seccion-img {
+    flex-grow: 5;
+    width: 40%;
+}
+.contenedor-img {
+    display: flex;
+    justify-content: flex-start;
+    width: 95%;
+    border-top: 1px solid gray;
+    flex-wrap: wrap;
+}
+
+.img-secundaria {
+    width: 70%;
+    min-width: 247px;
+    border: 1px solid gray;
+    padding: 2vh;
+    border-radius: 15px;
+}
+.img-secundaria:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100); 
+}
+
+.contenedor-hijo-img {
+    width: 25%;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+.contenedor-superior {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.detalles-producto {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px gray solid;
+    border-radius: 10px;
+    margin: 6vh;
+    padding: 3vh;
+}
+.precio-producto {
+    font-size: 10vh;
+    text-align: center;
+    border-bottom: 1px black solid;
+    
+}
+.nombre-producto-img {
+    font-size: 4vh;
+    border-left: 2vh #292E1E solid;
+    background-color: rgb(215, 214, 214);
+    padding-left: 1vh;
+}
+.datos-compra {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.boton-comprar {
+    color: white;
+    background-color: #292E1E ;
+    font-size: 4vh;
+    padding:1.5vh;
+    border-radius: 10px;
+}
+.cantidad {
+    width: 5% ;
+    font-size: 3vh;
+    padding: 2.2vh;
+    border: solid 1px black;
+    margin-right: 1vh;
+    border-radius: 10px;
+}
