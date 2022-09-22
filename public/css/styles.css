@@ -35,8 +35,10 @@ img {
 
 .productos {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 
@@ -118,25 +120,34 @@ section article {
 .articulo {
     display: flex;
     flex-direction: column;
-    border: solid 1vh black;
-    justify-content: space-around;
+    border: solid 0.2vh black;
+    justify-content: space-between;
     width: 20%;
     box-sizing: border-box;
+    border-radius: 3vh;
+
 }
 
 .nombre-producto {
-   text-align: center; 
+   text-align: center;
+   background-color: gray;
+   opacity: 0.8;
+   color: black;
+   font-weight: bold;
 }
 .precio {
     text-align: center;
-    background-color: black;
     color: white;
     font-size: 3.5vh;
+    background-color: gray;
+    opacity: 0.7;
+    border-bottom-left-radius: 3vh;
+    border-bottom-right-radius: 3vh;
 }
 .producto-imagen {
     
     text-align: center;
-    width: 75%;
+    width: 60%;
 }
 .contenedor-img {
     padding: 2vh;
