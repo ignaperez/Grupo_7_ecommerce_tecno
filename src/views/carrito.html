@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,120 +10,181 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>PerichsOne</title>
 </head>
+
 <body>
 
 
-<!-- En el header van las dos primeras barras : La que dice equipate para ser el mejor y la otra es donde va el nombre y la barra de busqueda! NADA MAS -->
-<header>
-    <div class="cabeza-superior"> 
-        
-        <p class="frase-top">Equípate para ser el mejor de tu equipo!</p>
-    <div class="hipervinculos-header">   
-            <a class="vinculos" href="#"><i class="fa-solid fa-map-location-dot " style="padding-right: 0.8vh;"></i>Seguí tu compra</a>
-            <a class="vinculos" href="#"><i class="fa-solid fa-headset" style="padding-right: 0.8vh;"></i>Ayuda</a>
-            <a class="vinculos" href="/registro">Registrate</a>
-            <a class="vinculos" href="/login"><i class="fa-solid fa-right-to-bracket" style="padding-right: 0.8vh;"></i>Ingresa</a>
-    </div>
-    </div>
+    <!-- En el header van las dos primeras barras : La que dice equipate para ser el mejor y la otra es donde va el nombre y la barra de busqueda! NADA MAS -->
+    <header>
+        <div class="cabeza-superior">
 
-    <div class="cabeza-inferior">
-        <h1 style="color:#292E1E">PhericsOne</h1>
-        <div class="form-submit" action="#" method="GET">
-            <input class="input barra-busqueda" type="search" placeholder="Eso que tanto deseas, buscalo acá"></input>
-            <i  class="fa fa-search icono-search"></i>
-        </div>
-
-        <a class="carrito" href="#"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
-
-    </div>
-
-</header>
-
-
-
-
-<main>
-
-    <section class="productos-carro">
-
-        <article class="articulo-carro"> 
-            <div>
-            <a href="#">
-                <img class="producto-imagen" src="/img/mouse.png" >
-            </a> 
-        </div>
-            <div>
-                <p class="nombre-producto">MOUSE GAMING CORSAIR</p> 
-                <p class="precio">$17.999</p> 
+            <p class="frase-top">Equípate para ser el mejor de tu equipo!</p>
+            <div class="hipervinculos-header">
+                <a class="vinculos" href="#"><i class="fa-solid fa-map-location-dot "
+                        style="padding-right: 0.8vh;"></i>Seguí tu compra</a>
+                <a class="vinculos" href="#"><i class="fa-solid fa-headset" style="padding-right: 0.8vh;"></i>Ayuda</a>
+                <a class="vinculos" href="/registro">Registrate</a>
+                <a class="vinculos" href="/login"><i class="fa-solid fa-right-to-bracket"
+                        style="padding-right: 0.8vh;"></i>Ingresa</a>
             </div>
-            
-        </article>
-        <p class="descripcion-carro">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            
-       
-        <article class="articulo-carro">
-            
-            <a href="#">
-                <img class="producto-imagen" src="/img/auris.png" >
-            </a>
-            <div>  
-                <p class="nombre-producto">AURICULARES LOGITECH</p>
-                <p class="precio">$14.540</p>
+        </div>
+
+        <div class="cabeza-inferior">
+            <h1 style="color:#292E1E">PhericsOne</h1>
+            <div class="form-submit" action="#" method="GET">
+                <input class="input barra-busqueda" type="search"
+                    placeholder="Eso que tanto deseas, buscalo acá"></input>
+                <i class="fa fa-search icono-search"></i>
             </div>
-        </article>
-        <p class="descripcion-carro">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        <article class="articulo-carro">
-            <a href="#">
-                <img class="producto-imagen" src="/img/teclado.png" >
-            </a>
-            <div>
-                <p class="nombre-producto">TECLADO MECANICO HYPERX</p>
-                <p class="precio">$21.000</p>
+
+            <a class="carrito" href="#"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+
         </div>
-        </article>
-        <p class="descripcion-carro">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+
+    </header>
 
 
-        <article class="articulo-carro">
-            <a class="articulo-carro-hijo"  href="#">
-                <img class="producto-imagen" src="/img/mousepad.png"  >
-            </a>           
-            <div>
-                <p class="nombre-producto">MOUSEPAD HYPERX L</p>
-                <p class="precio">$6.500</p>
+
+
+    <main>
+
+        <h1 class="titulo-carro">Descripición de tu pedido:</h1>
+
+        <section class="productos-carro">
+
+            <article class="articulo-carro">
+
+                    <h4>Producto</h4>
+                    <h4>Detalle</h4>
+                    <h4 class="precio-tit">Precio</h4>
+                    <h4>Cantidad</h4> 
+
+            </article>
+
+            <article class="articulo-carro">
+                <div class="contenedor-c">
+                    <a href="#" class="img-carro">
+                        <img class="producto-imagen" src="/img/mouse.png">
+                    </a>
+                    <p class="nombre-producto-c">MOUSE GAMING CORSAIR</p>
+                    <p class="precio-c">$17.999</p>
+                    <div>
+                        <select name="Cantidad" id="">
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="articulo-carro">
+                <div class="contenedor-c">
+                    <a href="#" class="img-carro">
+                        <img class="producto-imagen" src="/img/auris.png">
+                    </a>
+
+                    <p class="nombre-producto-c">AURICULARES LOGITECH</p>
+                    <p class="precio-c">$14.540</p>
+                    <div>
+                        <select name="Cantidad" id="">
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5</option>
+                        </select>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="articulo-carro">
+                <div class="contenedor-c">
+                    <a href="#" class="img-carro">
+                        <img class="producto-imagen" src="/img/teclado.png">
+                    </a>
+                    <p class="nombre-producto-c">TECLADO MECANICO HYPERX</p>
+                    <p class="precio-c">$21.000</p>
+                    <div>
+                        <select name="Cantidad" id="">
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5</option>
+                        </select>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="articulo-carro">
+                <div class="contenedor-c">
+                    <a  href="#" class="img-carro">
+                        <img class="producto-imagen" src="/img/mousepad.png">
+                    </a>
+                    <p class="nombre-producto-c">MOUSEPAD HYPERX L</p>
+                    <p class="precio-c">$6.500</p>
+                    <div >
+                        <select name="Cantidad" id="">
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5</option>
+                        </select>
+                    </div>
+                </div>
+
+            </article>
+            <div class="BOTONES">
+                <button type="submit">FINALIZÁ TU COMPRA!</button>
+                <button type="reset">BORRAR CARRITO</button>
             </div>
-        </article>
-        <p class="descripcion-carro">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-    </section>
-   
 
 
-    <section class="marcas">
-        <img src="/img/marcas.png" alt="">
-    </section>
 
 
-</main>
+        </section>
 
-<footer>
 
-    <section class="pie">
-        <div>
-            <p>Sobre Nosotros</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-        </div>
-        <div>
-            <p>Nuestro WhatsApp</p>
-            <p>+54 9 353 417 5992</p>
-        </div>
-        <div>
-            <p>Nuestro Email</p>
-            <p>Contacto@phericsOne.com</p>
-        </div>
-    </section>
 
-</footer>
-    
+        <section class="marcas">
+            <img src="/img/marcas.png" alt="">
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+        <section class="pie">
+            <div>
+                <p>Sobre Nosotros</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+            </div>
+            <div>
+                <p>Nuestro WhatsApp</p>
+                <p>+54 9 353 417 5992</p>
+            </div>
+            <div>
+                <p>Nuestro Email</p>
+                <p>Contacto@phericsOne.com</p>
+            </div>
+        </section>
+
+    </footer>
+
 
 </body>
+
 </html>

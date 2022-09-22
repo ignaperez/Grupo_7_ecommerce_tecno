@@ -10,58 +10,101 @@ img {
     display: flex;
     flex-direction: column ;
     justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    flex-wrap: nowrap;
     align-items: center;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid #292E1E;
+    border-radius: 5%;
+    margin-top: 25px ;
+    margin-bottom: 50px ;
 }
 
-.productos-carro p{
-    display: flex;
-    justify-content: space-between;
-}
 
 .descripcion-carro p{
     display: flex;
     flex-wrap: wrap;
    align-items: flex-start;
-    
-   
 }
 
-section article {
+/* section article {
     width: 25%;
-}
+} */
 
-.articulo {
+.articulo-carro {
     display: flex;
-    flex-direction: column;
-    border: solid 0.2vh black;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 20%;
+    width: 90%;
     box-sizing: border-box;
     border-radius: 3vh;
+    margin-bottom: 4%;
+    margin-top: 4%;
 
 }
 
-.nombre-producto {
-   text-align: center;
-   background-color: gray;
-   opacity: 0.8;
-   color: black;
-   font-weight: bold;
+.articulo-carro div {
+
+    display: flex;
+    font-display: row;
+    justify-content: space-between;
+    align-items: center;
 }
-.precio {
-    text-align: center;
-    color: white;
-    font-size: 3.5vh;
-    background-color: gray;
-    opacity: 0.7;
-    border-bottom-left-radius: 3vh;
-    border-bottom-right-radius: 3vh;
+
+.img-carro{
+    width: 10%;
+    border: 1px rgb(230, 224, 224) solid;
+    padding: 5px;
 }
+
+
+
 .producto-imagen {
     
     text-align: center;
     width: 60%;
+}
+
+.nombre-producto-c{
+    width: 18%;
+    text-align: left;
+}
+
+.contenedor-c{
+
+    width: 100%;
+    border-bottom: 1px rgb(168, 162, 162) solid;
+    padding-bottom: 10px;
+}
+
+.titulo-carro {
+    font-size: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 20px    ;
+    
+}
+
+.BOTONES{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    height: 40px;
+    width: 70%;
+
+}
+
+button{
+    background-color: #292E1E;
+    color: #ECEBE4;
+    border-radius: 10%;
+    font-weight: bold;
+}
+
+.precio-tit{
+    width: 0;
+
 }
