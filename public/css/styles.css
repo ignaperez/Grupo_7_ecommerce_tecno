@@ -14,12 +14,17 @@
     align-items: center;
 }
 .frase-top{
-    padding-left: 2vh;
+    padding-left: 4vh;
     flex: 5;
     color: white;
     font-size: 2vh;
     font-weight: bold;
 }
+
+.frase-top a {
+    font-size: 28px;
+}
+
 
 .hipervinculos-header {
     display: flex;
@@ -48,7 +53,14 @@ header div a {
     color: #292E1E;
 }
 .form-submit {
-    background-color: white
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.carrito{
+    width: 20%;
+    text-align: right;
 }
 .cabeza-inferior {
     display: flex;
@@ -56,7 +68,14 @@ header div a {
     background-color: #ECEBE4;
     padding: 1vh;
     align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
 }
+.cabeza-inferior h1 {
+
+    font-size: 15px;
+}
+
 .barra-busqueda {
     width: 500px;
     padding: 0.7vh;
