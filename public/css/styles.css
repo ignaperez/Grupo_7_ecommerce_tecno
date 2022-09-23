@@ -155,6 +155,16 @@ img {
     padding: 2vh;
     text-align: center;
 }
+.contenedor-img-t {
+
+    text-align: center;
+    height: 100%;
+}
+
+.contenedor-img-t img {
+
+    padding-top: 20%;
+}
 .producto-imagen {
     
     text-align: center;
