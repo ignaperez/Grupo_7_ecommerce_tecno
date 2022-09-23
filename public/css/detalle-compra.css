@@ -29,6 +29,7 @@ main {
     width: 95%;
     border-top: 1px solid gray;
     flex-wrap: wrap;
+    padding-top: 2vh;
 }
 
 .img-secundaria {
@@ -117,4 +118,35 @@ main {
     border: solid 1px black;
     padding: 1vh;
     background-color: rgb(234, 233, 233);
+}
+
+@media (max-width: 426px) {
+    .detalles-producto {
+        height: 200px;
+    }
+    .precio-producto {
+        font-size: 4vh;
+    }
+    .nombre-producto-img p{
+        font-size: 3vh;
+    }
+    .img-principal {
+        width: 60%;
+        left: 10vh;
+    }
+    .img-secundaria {
+        min-width: 80px;
+    }
+    .contenedor-img-1 {
+        justify-content: space-around;
+    }
+    .boton-comprar {
+        font-size: 3vh;
+    }
+    .titulo-descripcion{
+        font-size: 4vh;
+    }
+    .parrafo-descripcion{
+        font-size: 3vh;
+    }
 }

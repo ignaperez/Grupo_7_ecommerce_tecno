@@ -34,3 +34,16 @@ justify-content: center;
     margin-top: 2vh;
 }
 
+@media (max-width: 426px) {
+    .formulario {
+        width: 70%;
+    }
+    .input-registro {
+        margin-left: 4vh;
+        width: 70%;
+        padding: 2vh;
+    }
+    .boton {
+        width: 25%;
+    }
+}

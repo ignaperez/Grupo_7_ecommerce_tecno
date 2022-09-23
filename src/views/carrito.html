@@ -17,11 +17,10 @@
     <!-- En el header van las dos primeras barras : La que dice equipate para ser el mejor y la otra es donde va el nombre y la barra de busqueda! NADA MAS -->
     <header>
         <div class="cabeza-superior">
-
-         <p class="frase-top"> <i class="fa-brands fa-d-and-d"></i>PhericsOne</p>
+                
+            <p class="frase-top"><a href="/"> <i class="fa-brands fa-d-and-d"></i>PhericsOne</a></p>
             <div class="hipervinculos-header">
-                <a class="vinculos" href="#"><i class="fa-solid fa-map-location-dot "
-                        style="padding-right: 0.8vh;"></i>Seguí tu compra</a>
+                
                 <a class="vinculos" href="#"><i class="fa-solid fa-headset" style="padding-right: 0.8vh;"></i>Ayuda</a>
                 <a class="vinculos" href="/registro">Registrate</a>
                 <a class="vinculos" href="/login"><i class="fa-solid fa-right-to-bracket"
@@ -30,14 +29,14 @@
         </div>
 
         <div class="cabeza-inferior">
-            <h1 style="color:#292E1E">Equípate para ser el mejor de tu equipo!</h1>
+            <h1 class="frase-inferior">Equípate para ser el mejor de tu equipo!</h1>
             <div class="form-submit" action="#" method="GET">
                 <input class="input barra-busqueda" type="search"
                     placeholder="Eso que tanto deseas, buscalo acá"></input>
                 <i class="fa fa-search icono-search"></i>
             </div>
 
-            <a class="carrito" href="#"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            <a class="carrito" href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
 
         </div>
 
@@ -146,15 +145,38 @@
 
             </article>
             <div class="BOTONES">
-                <button type="submit">FINALIZÁ TU COMPRA!</button>
+                <button type="submit">COMPRAR!</button>
                 <button type="reset">BORRAR CARRITO</button>
             </div>
 
-
-
-
-        </section>
-
+            </section>
+            
+            <section class="detalle-envio">
+                   <p class="titulo-envio">Elegi cual es el destino</p> 
+                    <form action="/carrito" method="post">
+                   <div class="contenedor-input">
+                        <label class="label" for="provincia">Provincia</label>
+                        <input class="input" type="text" id="provincia" name="provincia" required>
+                    </div>
+                    <div class="contenedor-input">
+                        <label class="label" for="localidad">Localidad</label>
+                        <input class="input" type="text" id="localidad" name="localidad" required>
+                    </div>
+                    <div class="contenedor-input">
+                        <label class="label" for="direccion">Dirección</label>
+                        <input class="input" type="text" id="direccion" name="direccion" required>
+                    </div>
+                    <div class="contenedor-input">
+                        <label class="label" for="codigopostal">Codigo postal</label>
+                        <input class="input" type="text" id="codigopostal" name="codigopostal" required>
+                    </div>
+                    <div class="contenedor-input">
+                        <p class="label">Indicaciones adicionales:</p>
+                        <textarea name="adicional"  cols="30" rows="10" style="width: 578px; height: 127px;"></textarea>
+                    </div>
+                    <button class="boton-envio" type="submit">Aceptar</button>
+                </form>
+            </section>
 
 
         <section class="marcas">
@@ -162,27 +184,28 @@
 
         </section>
 
-
     </main>
 
     <footer>
 
         <section class="pie">
             <div>
-                <p>Sobre Nosotros</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                <p class="footer-superior">Sobre Nosotros</p>
+                <p class="footer-inferior">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor
+                    sit, amet consectetur adipisicing elit. </p>
             </div>
             <div>
-                <p>Nuestro WhatsApp</p>
-                <p>+54 9 353 417 5992</p>
+                <p class="footer-superior">Nuestro WhatsApp</p>
+                <p class="footer-inferior">+54 9 353 417 5992</p>
             </div>
             <div>
-                <p>Nuestro Email</p>
-                <p>Contacto@phericsOne.com</p>
+                <p class="footer-superior">Nuestro Email</p>
+                <p class="footer-inferior">Contacto@phericsOne.com</p>
             </div>
         </section>
 
     </footer>
+
 
 
 </body>
