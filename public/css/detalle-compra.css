@@ -1,4 +1,17 @@
 
+main {
+    box-sizing: border-box;
+    padding-top: 3vh;
+}
+.volver-inicio {
+    font-size: 2vh;
+    margin-left: 4vh;
+    padding: 1.5vh;
+    color: white;
+    border: solid 1px black;
+    border-radius: 15px;
+    background-color: #292E1E;
+}
 .img-principal {
     width: 40%;
     align-self: center;
@@ -10,7 +23,7 @@
     flex-grow: 5;
     width: 40%;
 }
-.contenedor-img {
+.contenedor-img-1 {
     display: flex;
     justify-content: flex-start;
     width: 95%;
@@ -38,6 +51,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    margin-top: 3vh;
 }
 .detalles-producto {
     width: 25%;
@@ -74,10 +88,33 @@
     border-radius: 10px;
 }
 .cantidad {
-    width: 5% ;
+    width: 10% ;
     font-size: 3vh;
     padding: 2.2vh;
     border: solid 1px black;
     margin-right: 1vh;
     border-radius: 10px;
+}
+
+.contenedor-descripcion {
+    margin-top: 3vh;
+    margin-left: 8vh;
+    margin-bottom: 3vh;
+    width: 70%;
+}
+.titulo-descripcion {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-weight: bold;
+}
+.parrafo-descripcion {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+.otro-producto {
+    font-size: 3vh;
+    text-align: center;
+    border: solid 1px black;
+    padding: 1vh;
+    background-color: rgb(234, 233, 233);
 }
