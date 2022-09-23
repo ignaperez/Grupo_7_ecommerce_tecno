@@ -22,7 +22,7 @@ body{
     font-size: 15vh;
     
 }
- .formulario .input {
+.formulario .input {
     width: 100%;
     border-radius: 5px;
     margin: 2vh;
@@ -42,4 +42,31 @@ body{
 }
 body {
     background-color: black;
+}
+
+@media (max-width: 426px) {
+    main {
+        margin-bottom: 10vh;
+    }
+    .titulo {
+        font-size: 8vh;
+        top: 22%;
+        left: 95px;
+    }
+    .fondo {
+        width: 425px;
+    }
+    .formulario .input {
+        padding: 0.5vh;
+    }
+    .formulario {
+        width: 45%;
+        top: 37%;
+        left: 110px;
+    }
+    .boton {
+        left: 33%;
+        border: none;
+    }
+
 }

@@ -52,6 +52,9 @@ header div a {
     text-align: right;
     color: #292E1E;
 }
+.frase-inferior {
+    color:#292E1E
+}
 .form-submit {
     background-color: white;
     display: flex;
@@ -216,4 +219,59 @@ footer {
 .pie {
     display: flex;
     justify-content: space-around;
+}
+
+@media (max-width: 426px) {
+    .frase-top {
+        padding: 0;
+        text-align: center;
+    }
+    .hipervinculos-header {
+        background-color: #292E1E;
+        padding-bottom: 1.5vh;
+    }
+    .cabeza-inferior {
+        display: flex;
+        flex-direction: column;
+    }
+    .carrito {
+        width: 0;
+        font-size: 4vh;
+        margin-top: 1vh;
+    }
+    .frase-inferior{
+        text-align: center;
+        margin-bottom: 1vh;
+    }
+    .form-submit{
+        width: 70%;
+        margin: 0;
+        background-color: none;
+    }
+    .barra-navegacion {
+        padding: 0;
+    }
+    .articulo {
+        width: 35%;
+        margin: 2vh;
+    }
+    
+    .pie {
+        flex-direction: column;
+    }
+    .footer-superior {
+        text-align: center;
+        text-decoration: underline;
+        border: none;
+    }
+    .footer-inferior{
+        text-align: center;
+        margin: 2vh;
+        max-width: 100vh;
+    }
+    .input {
+        
+    }
+
+
 }
