@@ -1,0 +1,39 @@
+.formulario {
+    display: flex;
+    flex-direction: column ;
+    width: 45%;
+    border-radius: 1vh;
+    box-shadow: 1px 1px 4px rgb(218, 217, 217) ;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    justify-content: center;
+    padding-bottom: 3%;
+}
+
+.div-formulario{
+display: flex;
+justify-content: center;
+}
+
+.input-registro {
+    width:60%;
+    border-radius: 5px;
+    margin: 2vh;
+    padding: 3vh;
+    border-color: white;
+    margin-left: 18%;
+}
+.boton {
+    width: 20%;
+    padding: 1vh;
+    color: black;
+    border: black solid 1%;
+    border-radius: 5px;
+    position: relative;
+    left: 37%;
+    margin-top: 2vh;
+}
+body{
+    background: radial-gradient(circle closest-side, rgb(59, 59, 59) 1%, black);
+}
+

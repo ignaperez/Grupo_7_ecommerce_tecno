@@ -29,6 +29,7 @@ app.get("/carrito", (req,res) => {
 })
 
 app.get("/detalle-producto-auriculares", (req,res) => {
+   
         res.sendFile(path.resolve(__dirname, "src/views/detalle-producto-auriculares.html"))
 })
 app.get("/detalle-producto-mouse", (req,res) => {
@@ -39,4 +40,7 @@ app.get("/detalle-producto-teclado", (req,res) => {
 })
 app.get("/detalle-producto-mousepad", (req,res) => {
     res.sendFile(path.resolve(__dirname, "src/views/detalle-producto-mousepad.html"))
+})
+app.get("/ayuda", (req,res) => {
+    res.sendFile(path.resolve(__dirname, "src/views/ayuda.html"))
 })
