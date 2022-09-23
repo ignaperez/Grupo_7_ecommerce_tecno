@@ -5,15 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>PhericsOne</title>
 </head>
 <body>
-    <div class="header">
-        <p class="frase">Equípate para ser el mejor de tu equipo!</p>
-        <p style="margin-top: 1vh;"><a class="ayuda" href="#">Ayuda</a></p>
-    </div>
+    <header>
+        <div class="cabeza-superior">
+            
+            <p class="frase-top"><a href="/"> <i class="fa-brands fa-d-and-d"></i>PhericsOne</a></p>
+            <div class="hipervinculos-header">
+               
+                <a class="vinculos" href="#"><i class="fa-solid fa-headset" style="padding-right: 0.8vh;"></i>Ayuda</a>
+                <a class="vinculos" href="/registro">Registrate</a>
+                <a class="vinculos" href="/login"><i class="fa-solid fa-right-to-bracket"
+                        style="padding-right: 0.8vh;"></i>Ingresa</a>
+            </div>
+        </div>
 
+        <div class="cabeza-inferior">
+            <h1 style="color:#292E1E">Equípate para ser el mejor de tu equipo!</h1>
+            
+
+            <a class="carrito" href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+
+        </div>
+
+    </header>
+<main>
     <img class="fondo" src="/img/fondoLogjn.png" alt="">
 
     <h1 class="titulo">PhericsOne</h1>
@@ -23,7 +42,26 @@
         <input class="input" type="password" name="password" placeholder="Contraseña" required>
         <button class="boton" type="submit">Ingresar</button>
     </form>
-    
+</main>
+<footer>
+
+    <section class="pie">
+        <div>
+            <p class="footer-superior">Sobre Nosotros</p>
+            <p class="footer-inferior">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor
+                sit, amet consectetur adipisicing elit. </p>
+        </div>
+        <div>
+            <p class="footer-superior">Nuestro WhatsApp</p>
+            <p class="footer-inferior">+54 9 353 417 5992</p>
+        </div>
+        <div>
+            <p class="footer-superior">Nuestro Email</p>
+            <p class="footer-inferior">Contacto@phericsOne.com</p>
+        </div>
+    </section>
+
+</footer>
 </body>
 
 </html>

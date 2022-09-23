@@ -1,14 +1,13 @@
 .formulario {
     display: flex;
     flex-direction: column ;
-    top:20%;
-    left: 23%;
     width: 45%;
     border-radius: 1vh;
     box-shadow: 1px 1px 4px rgb(218, 217, 217) ;
     margin-bottom: 10%;
-    margin-top: 10%;
+    margin-top: 5%;
     justify-content: center;
+    padding-bottom: 3%;
 }
 
 .div-formulario{
