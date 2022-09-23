@@ -6,23 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/ayuda.css">
+
+
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&amp;display=swap"
-        rel="stylesheet">
-    <title>PerichsOne</title>
+    <title>PhericsOne</title>
 </head>
 
 <body>
     <header>
         <div class="cabeza-superior">
-                
-            <p class="frase-top"><a href="/"> <i class="fa-brands fa-d-and-d"></i>PhericsOne</a></p>
+
+            <p class="frase-top"> <a href="/"><i class="fa-brands fa-d-and-d"></i>PhericsOne</a></p>
             <div class="hipervinculos-header">
-                
-                <a class="vinculos" href="/ayuda"><i class="fa-solid fa-headset" style="padding-right: 0.8vh;"></i>Ayuda</a>
+                <a class="vinculos" href="/ayuda"><i class="fa-solid fa-headset"
+                        style="padding-right: 0.8vh;"></i>Ayuda</a>
                 <a class="vinculos" href="/registro">Registrate</a>
                 <a class="vinculos" href="/login"><i class="fa-solid fa-right-to-bracket"
                         style="padding-right: 0.8vh;"></i>Ingresa</a>
@@ -31,7 +31,7 @@
 
         <div class="cabeza-inferior">
             <h1 style="color:#292E1E">Equípate para ser el mejor de tu equipo!</h1>
-        
+
 
             <a class="carrito" href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
 
@@ -39,16 +39,21 @@
 
     </header>
 
+
     <main>
-        <img class="fondo" src="/img/fondoLogjn.png" alt="">
 
-        <h1 class="titulo">PhericsOne</h1>
 
-        <form class="formulario" action="/login" method="post">
-            <input class="input" type="text" name="name" placeholder="Usuario" required>
-            <input class="input" type="password" name="password" placeholder="Contraseña" required>
-            <button class="boton" type="submit">Ingresar</button>
-        </form>
+
+        <div class="div-formulario">
+
+            <form class="formulario" action="/registro" method="post">
+
+                <input class="input-registro" type="text" name="nombre" placeholder="Nombre y apellido" required>
+                <input class="input-registro" type="email" name="email" placeholder="Email@servidor.com" required>
+                <textarea class="input-registro" rows="10" cols="45" name="comentarios" placeholder="Ingresa tu consulta" required></textarea>
+               <div> <button class="boton" type="reset">Limpiar</button><button class="boton" type="submit">Enviar</button></div>
+            </form>
+        </div>
     </main>
     <footer>
 
