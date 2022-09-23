@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/detalle-compra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +20,9 @@
     <!-- En el header van las dos primeras barras : La que dice equipate para ser el mejor y la otra es donde va el nombre y la barra de busqueda! NADA MAS -->
     <header>
         <div class="cabeza-superior">
-                
-            <p class="frase-top"><a href="/"> <i class="fa-brands fa-d-and-d"></i>PhericsOne</a></p>
+
+            <p class="frase-top"> <a href="/"><i class="fa-brands fa-d-and-d"></i>PhericsOne</a></p>
             <div class="hipervinculos-header">
-                
                 <a class="vinculos" href="#"><i class="fa-solid fa-headset" style="padding-right: 0.8vh;"></i>Ayuda</a>
                 <a class="vinculos" href="/registro">Registrate</a>
                 <a class="vinculos" href="/login"><i class="fa-solid fa-right-to-bracket"
@@ -44,28 +44,66 @@
 
     </header>
 
-
-
     <main>
+        <a class="volver-inicio" href="/"><i class="fa-solid fa-arrow-left-long"></i> Volver al inicio</a>
+        <section class="contenedor-superior">
+            <section class="seccion-img">
+                <img class="img-principal" src="/img/teclado.png" alt="teclado mecanico">
 
-        <!-- El main arranca con un nav, donde van todos los perifericos . -->
-        <nav>
-            <ul class="barra-navegacion">
-                <li><a class="item-nav" href="#">Mouse</a></li>
-                <li><a class="item-nav" href="#">Teclados</a></li>
-                <li><a class="item-nav" href="#">Mousepads</a></li>
-                <li><a class="item-nav" href="#">Auriculares</a></li>
-                <li><a class="item-nav" href="#">Joystick</a></li>
-            </ul>
-        </nav>
+                <div class="contenedor-img-1">
+                    <div class="contenedor-hijo-img"><img class="img-secundaria" src="/img/teclado.png" alt=""></div>
+                    <div class="contenedor-hijo-img"><img class="img-secundaria" src="/img/teclado.png" alt=""></div>
 
-        <img class="Banner" src="/img/banner.jpg">
+                </div>
+
+            </section>
+
+            <section class="detalles-producto">
+                <div class="precio-producto">
+                    <p>$21.000</p>
+                </div>
+
+                <div class="nombre-producto-img">
+                    <p>TECLADO MECÁNICO</p>
+                </div>
+                <div class="datos-compra">
+                    <input class="cantidad" type="number" value="1" name="cantidad-producto" maxlength="1">
+                    <button class="boton-comprar" type="submit">Comprar</button>
+                </div>
+            </section>
+        </section>
+        <section>
+            <div class="contenedor-descripcion">
+                <p class="titulo-descripcion">Descrición:</p>
+                <p>Teclado Alloy Origins HyperX
+                    El HyperX Alloy Origins™ Core es un teclado ultracompacto y resistente sin zona numérica con
+                    conmutadores mecánicos HyperX personalizados diseñados para proporcionar a los jugadores la mejor
+                    combinación de estilo, rendimiento y fiabilidad. Estos conmutadores de teclas tienen LED expuestos
+                    para una iluminación deslumbrante con una fuerza de actuación y una distancia de recorrido
+                    elegantemente equilibrada para una capacidad de respuesta y precisión. Alloy Origins Core está
+                    fabricado con un cuerpo de aluminio completo para que permanezca rígido y estable cuando se
+                    presionan las teclas, y también cuenta con patas de teclado que le permiten elegir entre tres
+                    niveles de inclinación diferentes. Su diseño TKL elegante y compacto libera espacio para el
+                    movimiento del ratón en escritorios donde el espacio está muy cotizado, y también cuenta con un
+                    cable USB tipo C desmontable para una portabilidad suprema.
+                    </p>
+                    <p>
+                    Personaliza tu iluminación, crea macros y ajusta el modo de juego con el software HyperX NGENUITY.
+                    Este programa potente pero fácil de usar te permite configurar la iluminación por tecla, tener
+                    efectos de iluminación deslumbrantes y agregar decenas de otros toques personalizados a tus
+                    productos compatibles con NGENUITY.</p>
+            </div>
+        </section>
+
+        <div class="otro-producto">
+            Otros productos
+        </div>
 
         <section class="productos">
 
             <article class="articulo">
 
-                <a class="contenedor-img" href="detalle-producto-mouse">
+                <a class="contenedor-img" href="#">
                     <img class="producto-imagen" src="/img/mouse.png">
                 </a>
                 <div>
@@ -77,7 +115,7 @@
 
             <article class="articulo">
 
-                <a class="contenedor-img" href="detalle-producto-auriculares">
+                <a class="contenedor-img" href="#">
                     <img class="producto-imagen" src="/img/auris.png">
                 </a>
                 <div>
@@ -87,7 +125,7 @@
             </article>
 
             <article class="articulo">
-                <a class="contenedor-img" href="detalle-producto-teclado">
+                <a class="contenedor-img" href="#">
                     <img class="producto-imagen" src="/img/teclado.png">
                 </a>
                 <div>
@@ -99,7 +137,7 @@
 
 
             <article class="articulo">
-                <a class="contenedor-img" class="articulo-hijo" href="detalle-producto-mousepad">
+                <a class="contenedor-img" class="articulo-hijo" href="#">
                     <img class="producto-imagen" src="/img/mousepad.png">
                 </a>
                 <div>
@@ -110,13 +148,11 @@
 
         </section>
 
-
-        <section class="marcas">
-            <img src="/img/marcas.png" alt="">
-        </section>
-
-
     </main>
+
+
+
+
 
     <footer>
 

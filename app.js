@@ -28,7 +28,15 @@ app.get("/carrito", (req,res) => {
     res.sendFile(path.resolve(__dirname, "src/views/carrito.html"))
 })
 
-app.get("/detalle-compra", (req,res) => {
-    res.sendFile(path.resolve(__dirname, "src/views/detalle-compra.html"))
+app.get("/detalle-producto-auriculares", (req,res) => {
+        res.sendFile(path.resolve(__dirname, "src/views/detalle-producto-auriculares.html"))
 })
-
+app.get("/detalle-producto-mouse", (req,res) => {
+    res.sendFile(path.resolve(__dirname, "src/views/detalle-producto-mouse.html"))
+})
+app.get("/detalle-producto-teclado", (req,res) => {
+    res.sendFile(path.resolve(__dirname, "src/views/detalle-producto-teclado.html"))
+})
+app.get("/detalle-producto-mousepad", (req,res) => {
+    res.sendFile(path.resolve(__dirname, "src/views/detalle-producto-mousepad.html"))
+})
