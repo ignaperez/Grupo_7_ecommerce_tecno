@@ -29,9 +29,9 @@
         </div>
 
         <div class="cabeza-inferior">
-            <h1 style="color:#292E1E">Equípate para ser el mejor de tu equipo!</h1>
+            <h1 class="frase-inferior">Equípate para ser el mejor de tu equipo!</h1>
             <div class="form-submit" action="#" method="GET">
-                <input class="input barra-busqueda" type="search"
+                <input class="barra-busqueda" type="search"
                     placeholder="Eso que tanto deseas, buscalo acá"></input>
                 <i class="fa fa-search icono-search"></i>
             </div>
@@ -144,22 +144,44 @@
 
             </article>
             <div class="BOTONES">
-                <button type="submit">FINALIZÁ TU COMPRA!</button>
+                <button type="submit">COMPRAR!</button>
                 <button type="reset">BORRAR CARRITO</button>
             </div>
 
-
-
-
-        </section>
-
+            </section>
+            
+            <section class="detalle-envio">
+                   <p class="titulo-envio">Elegi cual es el destino</p> 
+                    <form action="/carrito" method="post">
+                   <div class="contenedor-input">
+                        <label class="label" for="provincia">Provincia</label>
+                        <input class="input" type="text" id="provincia" name="provincia" required>
+                    </div>
+                    <div class="contenedor-input">
+                        <label class="label" for="localidad">Localidad</label>
+                        <input class="input" type="text" id="localidad" name="localidad" required>
+                    </div>
+                    <div class="contenedor-input">
+                        <label class="label" for="direccion">Dirección</label>
+                        <input class="input" type="text" id="direccion" name="direccion" required>
+                    </div>
+                    <div class="contenedor-input">
+                        <label class="label" for="codigopostal">Codigo postal</label>
+                        <input class="input" type="text" id="codigopostal" name="codigopostal" required>
+                    </div>
+                    <div class="contenedor-input">
+                        <p class="label">Indicaciones adicionales:</p>
+                        <textarea name="adicional"  cols="30" rows="10" style="width: 578px; height: 127px;"></textarea>
+                    </div>
+                    <button class="boton-envio" type="submit">Aceptar</button>
+                </form>
+            </section>
 
 
         <section class="marcas">
             <img src="/img/marcas.png" alt="">
 
         </section>
-
 
     </main>
 
@@ -182,6 +204,7 @@
         </section>
 
     </footer>
+
 
 
 </body>

@@ -28,9 +28,7 @@ img {
    align-items: flex-start;
 }
 
-/* section article {
-    width: 25%;
-} */
+
 
 .articulo-carro {
     display: flex;
@@ -106,5 +104,64 @@ button{
 
 .precio-tit{
     width: 0;
+
+}
+
+.detalle-envio {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 4vh;
+    margin: 4vh;
+    width: 30%;
+    border: rgb(103, 103, 103) solid 1px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    left: 30%;
+}
+
+.contenedor-input {
+    padding: 1vh;
+    margin: 1vh;
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+.label {
+    font-size: 2vh;
+}
+.input {
+    align-items: center;
+    position: relative;
+    right: 8vh;
+    border: black 1px solid;
+}
+.titulo-envio {
+    text-align: center;
+    font-size: 2vh;
+    font-weight: bold;
+    padding-bottom: 2vh;
+    border-bottom: solid 1px rgb(103, 103, 103);
+}
+
+@media (max-width: 426px){
+    
+.productos-carro {
+        width: 90%;
+    }
+.precio-tit{
+    margin-right: 6vh;
+}
+.img-carro {
+    width: 18%;
+}
+.nombre-producto-c {
+    font-size: 2.4vh;
+}
+.detalle-envio {
+    width: 75%;
+    left: 2%;
+}
 
 }
