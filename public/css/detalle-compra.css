@@ -33,9 +33,9 @@ main {
 
 .img-secundaria {
     width: 70%;
-    min-width: 247px;
+    min-width: 35vh;
     border: 1px solid gray;
-    padding: 2vh;
+    margin: 2%;
     border-radius: 15px;
 }
 .img-secundaria:hover {
