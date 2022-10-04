@@ -25,7 +25,7 @@ main {
 }
 .contenedor-img-1 {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     width: 95%;
     border-top: 1px solid gray;
     flex-wrap: wrap;

@@ -16,28 +16,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="cabeza-superior">
-                
-            <p class="frase-top"><a href="/"> <i class="fa-brands fa-d-and-d"></i>PhericsOne</a></p>
-            <div class="hipervinculos-header">
-                
-                <a class="vinculos" href="/ayuda"><i class="fa-solid fa-headset" style="padding-right: 0.8vh;"></i>Ayuda</a>
-                <a class="vinculos" href="/registro">Registrate</a>
-                <a class="vinculos" href="/login"><i class="fa-solid fa-right-to-bracket"
-                        style="padding-right: 0.8vh;"></i>Ingresa</a>
-            </div>
-        </div>
-
-        <div class="cabeza-inferior">
-            <h1 style="color:#292E1E">Equípate para ser el mejor de tu equipo!</h1>
-        
-
-            <a class="carrito" href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
-
-        </div>
-
-    </header>
+    <!-- partial del header-->
+    <%- include("./partials/header-superior")  %> 
 
     <main>
         <img class="fondo" src="/img/fondoLogjn.png" alt="">
@@ -50,25 +30,8 @@
             <button class="boton" type="submit">Ingresar</button>
         </form>
     </main>
-    <footer>
-
-        <section class="pie">
-            <div>
-                <p class="footer-superior">Sobre Nosotros</p>
-                <p class="footer-inferior">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor
-                    sit, amet consectetur adipisicing elit. </p>
-            </div>
-            <div>
-                <p class="footer-superior">Nuestro WhatsApp</p>
-                <p class="footer-inferior">+54 9 353 417 5992</p>
-            </div>
-            <div>
-                <p class="footer-superior">Nuestro Email</p>
-                <p class="footer-inferior">Contacto@phericsOne.com</p>
-            </div>
-        </section>
-
-    </footer>
+    <!-- partials del footer-->
+    <%- include("./partials/footer")  %> 
 </body>
 
 </html>

@@ -17,32 +17,8 @@
 <body>
 
     <!-- En el header van las dos primeras barras : La que dice equipate para ser el mejor y la otra es donde va el nombre y la barra de busqueda! NADA MAS -->
-    <header>
-        <div class="cabeza-superior">
-                
-            <p class="frase-top"><a href="/"> <i class="fa-brands fa-d-and-d"></i>PhericsOne</a></p>
-            <div class="hipervinculos-header">
-                
-                <a class="vinculos" href="/ayuda"><i class="fa-solid fa-headset" style="padding-right: 0.8vh;"></i>Ayuda</a>
-                <a class="vinculos" href="/registro">Registrate</a>
-                <a class="vinculos" href="/login"><i class="fa-solid fa-right-to-bracket"
-                        style="padding-right: 0.8vh;"></i>Ingresa</a>
-            </div>
-        </div>
-
-        <div class="cabeza-inferior">
-            <h1 class="frase-inferior">Equípate para ser el mejor de tu equipo!</h1>
-            <div class="form-submit" action="#" method="GET">
-                <input class="input barra-busqueda" type="search"
-                    placeholder="Eso que tanto deseas, buscalo acá"></input>
-                <i class="fa fa-search icono-search"></i>
-            </div>
-
-            <a class="carrito" href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
-
-        </div>
-
-    </header>
+    <!-- partial del header-->
+    <%- include("./partials/header-total")  %> 
 
 
 
@@ -85,25 +61,9 @@
 
     </main>
 
-    <footer>
+    <!-- partials del footer-->
+    <%- include("./partials/footer")  %> 
 
-        <section class="pie">
-            <div>
-                <p class="footer-superior">Sobre Nosotros</p>
-                <p class="footer-inferior">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor
-                    sit, amet consectetur adipisicing elit. </p>
-            </div>
-            <div>
-                <p class="footer-superior">Nuestro WhatsApp</p>
-                <p class="footer-inferior">+54 9 353 417 5992</p>
-            </div>
-            <div>
-                <p class="footer-superior">Nuestro Email</p>
-                <p class="footer-inferior">Contacto@phericsOne.com</p>
-            </div>
-        </section>
-
-    </footer>
 
 
 </body>
