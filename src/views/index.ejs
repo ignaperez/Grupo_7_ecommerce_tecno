@@ -63,7 +63,7 @@
 
         <section class="productos">
 
-            <% productos.forEach(producto => { %>
+            <% productos.slice(-4).forEach(producto => { %>
                 <article class="articulo">
                     <a class="contenedor-img" href="detalle-producto/<%= producto.id %>">
                         <img class="producto-imagen" src="/img/<%= producto.imagen1 %>">

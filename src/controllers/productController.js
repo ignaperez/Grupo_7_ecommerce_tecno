@@ -42,13 +42,14 @@ let productos = [
         titulo: 'MOUSEPAD HYPERX L',
         descripcion1: 'Es tan fácil deslizar el mouse. Con tu HyperX Speed Edition podrás llenar la pantalla de tu'+
         'ordenador de clicks. Su elaborada superficie le dará precisión y comodidad a tus movimientos.'+
-        '<p>Calidad en su confección</p>'+
+        'Calidad en su confección '+
         'Diseñada con materiales de calidad, tu almohadilla de goma, tela te dará una agradable sensación al'+
-        'tacto y evitará un gran desgaste en la base de tu mouse. Este tipo de opción es ideal para gamers ya'+
+        'tacto y evitará un gran desgaste en la base de tu mouse. Este tipo de opción es ideal para gamers ya '+
         'que reparte la presión de manera simétrica, conservando un nivel de precisión adecuado.',
         descripcion2: '',
         descripcion3:'',
         imagen1:'mousepad.png',
+        imagen2:'',
         stock:1,
         precio: '6.500',
         categoria: "mousepad",
@@ -74,6 +75,7 @@ let productos = [
         'productos compatibles con NGENUITY.',
         descripcion3:'',
         imagen1:'teclado.png',
+        imagen2:'',
         stock:1,
         precio: '21000',
         categoria: "teclado",
