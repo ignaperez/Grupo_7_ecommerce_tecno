@@ -63,51 +63,18 @@
 
         <section class="productos">
 
-            <article class="articulo">
-
-                <a class="contenedor-img" href="detalle-producto-mouse">
-                    <img class="producto-imagen" src="/img/mouse.png">
-                </a>
-                <div>
-                    <p class="nombre-producto">MOUSE GAMING CORSAIR</p>
-                    <p class="precio">$17.999</p>
-                </div>
-            </article>
-
-
-            <article class="articulo">
-
-                <a class="contenedor-img" href="detalle-producto-auriculares">
-                    <img class="producto-imagen" src="/img/auris.png">
-                </a>
-                <div>
-                    <p class="nombre-producto">AURICULARES LOGITECH</p>
-                    <p class="precio">$14.540</p>
-                </div>
-            </article>
-
-            <article class="articulo">
-                <a class="contenedor-img-t" href="detalle-producto-teclado">
-                    <img class="producto-imagen" src="/img/teclado.png">
-                </a>
-                <div>
-                    <p class="nombre-producto">TECLADO MECANICO HYPERX</p>
-                    <p class="precio">$21.000</p>
-                </div>
-            </article>
-
-
-
-            <article class="articulo">
-                <a class="contenedor-img-t" class="articulo-hijo" href="detalle-producto-mousepad">
-                    <img class="producto-imagen" src="/img/mousepad.png">
-                </a>
-                <div>
-                    <p class="nombre-producto">MOUSEPAD HYPERX L</p>
-                    <p class="precio">$6.500</p>
-                </div>
-            </article>
-
+            <% productos.forEach(producto => { %>
+                <article class="articulo">
+                    <a class="contenedor-img" href="detalle-producto/<%= producto.id %>">
+                        <img class="producto-imagen" src="/img/<%= producto.imagen1 %>">
+                    </a>
+                    <div>
+                        <p class="nombre-producto"><%= producto.titulo %></p>
+                        <p class="precio">$<%= producto.precio %></p>
+                    </div>
+                </article>
+            <% }) %>
+          
         </section>
 
 

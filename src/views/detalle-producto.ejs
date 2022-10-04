@@ -49,11 +49,11 @@
         <a class="volver-inicio" href="/"><i class="fa-solid fa-arrow-left-long"></i> Volver al inicio</a>
         <section class="contenedor-superior">
             <section class="seccion-img">
-                <img class="img-principal" src="/img/teclado.png" alt="teclado mecanico">
+                <img class="img-principal" src="/img/<%= producto.imagen1 %> " alt="<%= producto.imagen1 %> ">
 
                 <div class="contenedor-img-1">
-                    <div class="contenedor-hijo-img"><img class="img-secundaria" src="/img/teclado.png" alt=""></div>
-                    <div class="contenedor-hijo-img"><img class="img-secundaria" src="/img/teclado.png" alt=""></div>
+                    <div class="contenedor-hijo-img"><img class="img-secundaria" src="/img/<%= producto.imagen1 %> " alt="<%= producto.imagen1 %>"></div>
+                    <div class="contenedor-hijo-img"><img class="img-secundaria" src="/img/<%= producto.imagen2 %>" alt="<%= producto.imagen2 %>"></div>
 
                 </div>
 
@@ -61,11 +61,11 @@
 
             <section class="detalles-producto">
                 <div class="precio-producto">
-                    <p>$21.000</p>
+                    <p>$ precio </p>
                 </div>
 
                 <div class="nombre-producto-img">
-                    <p>TECLADO MECÁNICO</p>
+                    <p> titulo </p>
                 </div>
                 <div class="datos-compra">
                     <input class="cantidad" type="number" value="1" name="cantidad-producto" maxlength="1">
@@ -76,20 +76,14 @@
         <section>
             <div class="contenedor-descripcion">
                 <p class="titulo-descripcion">Descrición:</p>
-                <p>Teclado Alloy Origins HyperX
-                    El HyperX Alloy Origins™ Core es un teclado ultracompacto y resistente sin zona numérica con
-                    conmutadores mecánicos HyperX personalizados diseñados para proporcionar a los jugadores la mejor
-                    combinación de estilo, rendimiento y fiabilidad. Estos conmutadores de teclas tienen LED expuestos
-                    para una iluminación deslumbrante con una fuerza de actuación y una distancia de recorrido
-                    elegantemente equilibrada para una capacidad de respuesta y precisión. Alloy Origins Core está
-                    fabricado con un cuerpo de aluminio completo para que permanezca rígido y estable cuando se
-                    presionan las teclas, y también cuenta con patas de teclado que le permiten elegir entre tres
-                    niveles de inclinación diferentes. Su diseño TKL elegante y compacto libera espacio para el
-                    movimiento del ratón en escritorios donde el espacio está muy cotizado, y también cuenta con un
-                    cable USB tipo C desmontable para una portabilidad suprema.
-                    </p>
-                    <p>
-                    </p>
+                <p> --- Descrición 1 ---
+                   <p>Adaptado a tus movimientos</p>    
+                  
+                   <p> Apto para fácil traslado</p>
+                           ---Descrición 2 ---
+                    
+                </p>
+                
             </div>
         </section>
 
@@ -101,12 +95,12 @@
 
             <article class="articulo">
 
-                <a class="contenedor-img" href="/detalle-producto-mouse">
+                <a class="contenedor-img" href="#">
                     <img class="producto-imagen" src="/img/mouse.png">
                 </a>
                 <div>
-                    <p class="nombre-producto">MOUSE GAMING CORSAIR</p>
-                    <p class="precio">$17.999</p>
+                    <p class="nombre-producto">titulo</p>
+                    <p class="precio">$ precio-producto</p>
                 </div>
             </article>
 
@@ -123,7 +117,7 @@
             </article>
 
             <article class="articulo">
-                <a class="contenedor-img-t" href="#">
+                <a class="contenedor-img-t" href="/detalle-producto-teclado">
                     <img class="producto-imagen" src="/img/teclado.png">
                 </a>
                 <div>
@@ -147,6 +141,10 @@
         </section>
 
     </main>
+
+
+
+
 
     <footer>
 
