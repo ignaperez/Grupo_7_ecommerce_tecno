@@ -1,3 +1,4 @@
+const { render } = require('ejs');
 const productos = require('./productController');
 const mainController =
 {
@@ -31,6 +32,9 @@ const mainController =
         res.render ('registro');
 
     },
+    newProduct: (req,res) => {
+        res.render('newProduct')
+    }
 
     
 }

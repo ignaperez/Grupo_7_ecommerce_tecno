@@ -10,6 +10,8 @@ router.get('/ayuda', mainController.ayuda);
 router.get('/carrito', mainController.carrito);
 router.get('/login', mainController.login);
 router.get('/registro', mainController.registro);
+router.get('/newProduct',mainController.newProduct);
+
 
 
 
