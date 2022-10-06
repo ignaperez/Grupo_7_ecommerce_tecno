@@ -71,20 +71,16 @@ header div a {
     background-color: #ECEBE4;
     padding: 1vh;
     align-items: center;
-    padding-left: 30px;
+   /*  padding-left: 30px; */
     padding-right: 30px;
 }
 .cabeza-inferior h1 {
 
-    font-size: 12px;
+    font-size: 9px;
+    justify-self: flex-start;
+    margin-left: 10px;
 }
 
-.barra-busqueda {
-    width: 500px;
-    padding: 0.7vh;
-    border: solid #ECEBE4 1px;
-
-}
 .carrito {
     
     font-size: 2.7vh;
@@ -97,9 +93,11 @@ header div a {
     padding: 0.8vh;
 }
 .barra-busqueda {
-    width: 500px;
+    width: 400px;
     padding: 0.7vh;
     border: solid white 1px;
+    padding-left: 10px;
+    /* margin-left: 10px; */
 }
 .icono-search {
     background-color: white ;
@@ -219,6 +217,26 @@ footer {
 .pie {
     display: flex;
     justify-content: space-around;
+    font-size: 10px;
+    text-align: center;
+}
+.redes-sociales{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.redes-sociales a {
+
+    margin: auto;
+}
+
+
+
+.redes-sociales a i:hover{
+
+color: white;
 }
 
 @media (max-width: 426px) {
