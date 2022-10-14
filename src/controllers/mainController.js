@@ -1,5 +1,4 @@
-const { render } = require('ejs');
-const productos = require('./productController');
+const productos = require('../data/productData')
 const mainController =
 {
     index: (req,res) =>
@@ -24,16 +23,11 @@ const mainController =
         res.render ('carrito');
 
     },
-    login:(req,res)=> {
-        res.render ('login');
-
-    },
-    registro:(req,res)=>{
-        res.render ('registro');
-
-    },
     newProduct: (req,res) => {
         res.render('newProduct')
+    },
+    editProduct: (req, res) => {
+        res.render("editProduct")
     }
 
     

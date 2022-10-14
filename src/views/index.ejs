@@ -39,22 +39,19 @@
 
             <section class="productos">
 
-                <% productos.slice(-4).forEach(producto=> { %>
-                    <article class="articulo">
-                        <a class="contenedor-img" href="detalle-producto/<%= producto.id %>">
-                            <img class="producto-imagen" src="/img/<%= producto.imagen1 %>">
-                        </a>
-                        <div>
-                            <p class="nombre-producto">
-                                <%= producto.titulo %>
-                            </p>
-                            <p class="precio">$<%= producto.precio %>
-                            </p>
-                        </div>
-                    </article>
-                    <% }) %>
-
-            </section>
+            <% productos.slice(-4).forEach(producto => { %>
+                <article class="articulo">
+                    <a class="contenedor-img" href="/product/detalle-producto/<%= producto.id %>">
+                        <img class="producto-imagen" src="/img/<%= producto.imagen1 %>">
+                    </a>
+                    <div>
+                        <p class="nombre-producto"><%= producto.titulo %></p>
+                        <p class="precio">$<%= producto.precio %></p>
+                    </div>
+                </article>
+            <% }) %>
+          
+        </section>
 
 
             <section class="marcas">
