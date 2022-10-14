@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "method-override": "^3.0.0"
   },
   "name": "grupo_7_ecommerce_tecno",
   "description": "Ecommerce de accesorios Gammers: Teclados, Mouse, Auriculares, Mousepad.\r Apuntamos al público gammer.\r Referencias: www.venex.com.ar, www.fullhard.com.ar, www.mexx.com.ar, www.supermagnete.de/eng/, www.proyectocolor.com.ar",

@@ -1,4 +1,7 @@
-const productos = require('../data/productData')
+const fs = require('fs');
+const path = require('path');
+const productsFilePath = path.join(__dirname, '../data/productData.json');
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const mainController =
 {
     index: (req,res) =>

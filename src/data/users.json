@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "firstname": "Juan",
+        "lastname": "Rusconi",
+        "email": "juan@perichsone.com",
+        "password":"auris.png",
+        "categoria":"admin",
+        "username":1,
+        "image": "foto.png"  
+    },
+
+    {
+        "id": 2,
+        "firstname": "Diego",
+        "lastname": "Palomino",
+        "email": "diegho@perichsone.com",
+        "password":"auris.png",
+        "categoria":"admin",
+        "username":1,
+        "image": "foto.png"  
+    },
+    {
+        "id": 3,
+        "firstname": "Jeremias",
+        "lastname": "Cuenca",
+        "email": "jeremias@perichsone.com",
+        "password":"auris.png",
+        "categoria":"admin",
+        "username":1,
+        "image": "foto.png"  
+    },
+    {
+        "id": 2,
+        "firstname": "Ignacio",
+        "lastname": "Perez",
+        "email": "ignacio@perichsone.com",
+        "password":"auris.png",
+        "categoria":"admin",
+        "username":1,
+        "image": "foto.png"  
+    }
+    
+
+]
