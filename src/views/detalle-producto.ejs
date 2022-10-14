@@ -19,87 +19,97 @@
 
     <!-- En el header van las dos primeras barras : La que dice equipate para ser el mejor y la otra es donde va el nombre y la barra de busqueda! NADA MAS -->
     <!-- partial del header-->
-    <%- include("./partials/header-total")  %> 
+    <%- include("./partials/header-total") %>
 
-    <main>
-        <a class="volver-inicio" href="/"><i class="fa-solid fa-arrow-left-long"></i> Volver al inicio</a>
-        <section class="contenedor-superior">
-            <section class="seccion-img">
-                <img class="img-principal" src="/img/<%= producto.imagen1 %> " alt="<%= producto.imagen1 %> ">
+        <main>
+            <a class="volver-inicio" href="/"><i class="fa-solid fa-arrow-left-long"></i> Volver al inicio</a>
+            <section class="contenedor-superior">
+                <section class="seccion-img">
+                    <img class="img-principal" src="/img/<%= producto.imagen1 %> " alt="<%= producto.imagen1 %> ">
 
-                <div class="contenedor-img-1">
-                    <div class="contenedor-hijo-img"><img class="img-secundaria" src="/img/<%= producto.imagen1 %> " alt="<%= producto.imagen1 %>"></div>
-                    <div class="contenedor-hijo-img"><img class="img-secundaria" src="/img/<%= producto.imagen2 %>" alt="<%= producto.imagen2 %>"></div>
+                    <div class="contenedor-img-1">
+                        <div class="contenedor-hijo-img"><img class="img-secundaria" src="/img/<%= producto.imagen1 %> "
+                                alt="<%= producto.imagen1 %>"></div>
+                        <div class="contenedor-hijo-img"><img class="img-secundaria" src="/img/<%= producto.imagen2 %>"
+                                alt="<%= producto.imagen2 %>"></div>
+
+                    </div>
+
+                </section>
+
+                <section class="detalles-producto">
+                    <div class="precio-producto">
+                        <p>$ <%= producto.precio %>
+                        </p>
+                    </div>
+
+                    <div class="nombre-producto-img">
+                        <p>
+                            <%= producto.titulo %>
+                        </p>
+                    </div>
+                    <div class="datos-compra">
+                        <input class="cantidad" type="number" value="1" name="cantidad-producto" maxlength="1">
+                        <button class="boton-comprar" type="submit">Comprar</button>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <div class="contenedor-descripcion">
+                    <p class="titulo-descripcion">Descrición:</p>
+                    <p>
+                        <%= producto.descripcion1 %>
+                    </p>
+
+
+                    <p>
+                        <%= producto.descripcion2 %>
+                    </p>
+
 
                 </div>
-
             </section>
 
-            <section class="detalles-producto">
-                <div class="precio-producto">
-                    <p>$ <%= producto.precio %>  </p>
-                </div>
-
-                <div class="nombre-producto-img">
-                    <p><%= producto.titulo %> </p>
-                </div>
-                <div class="datos-compra">
-                    <input class="cantidad" type="number" value="1" name="cantidad-producto" maxlength="1">
-                    <button class="boton-comprar" type="submit">Comprar</button>
-                </div>
-            </section>
-        </section>
-        <section>
-            <div class="contenedor-descripcion">
-                <p class="titulo-descripcion">Descrición:</p>
-                <p><%= producto.descripcion1 %> </p>
-                   
-                  
-                <p><%= producto.descripcion2 %> </p>
-                      
-                    
-                
-                
+            <div class="otro-producto">
+                Otros productos
             </div>
-        </section>
 
-        <div class="otro-producto">
-            Otros productos
-        </div>
-
-        <section class="productos">
-            <% productos.slice(-4).forEach(masProductos => { %>
-             
-            
-            <article class="articulo">
-
-                <a class="contenedor-img" href="../detalle-producto/<%= masProductos.id %> ">
-                    <img class="producto-imagen" src="/img/<%= masProductos.imagen1 %> ">
-                </a>
-                <div>
-                    <p class="nombre-producto"><%= masProductos.titulo %> </p>
-                    <p class="precio">$ <%= masProductos.precio %> </p>
-                </div>
-            </article>
-            <% }) %>
-
-            
-            
+            <section class="productos">
+                <% productos.slice(-4).forEach(masProductos=> { %>
 
 
+                    <article class="articulo">
 
-            
-
-        </section>
-
-    </main>
+                        <a class="contenedor-img" href="../detalle-producto/<%= masProductos.id %> ">
+                            <img class="producto-imagen" src="/img/<%= masProductos.imagen1 %> ">
+                        </a>
+                        <div>
+                            <p class="nombre-producto">
+                                <%= masProductos.titulo %>
+                            </p>
+                            <p class="precio">$ <%= masProductos.precio %>
+                            </p>
+                        </div>
+                    </article>
+                    <% }) %>
 
 
 
 
 
-    <!-- partials del footer-->
-    <%- include("./partials/footer")  %> 
+
+
+
+            </section>
+
+        </main>
+
+
+
+
+
+        <!-- partials del footer-->
+        <%- include("./partials/footer") %>
 
 
 </body>

@@ -18,51 +18,54 @@
 
     <!-- En el header van las dos primeras barras : La que dice equipate para ser el mejor y la otra es donde va el nombre y la barra de busqueda! NADA MAS -->
     <!-- partial del header-->
-    <%- include("./partials/header-total")  %> 
+    <%- include("./partials/header-total") %>
 
 
 
-    <main>
+        <main>
 
-        <!-- El main arranca con un nav, donde van todos los perifericos . -->
-        <nav>
-            <ul class="barra-navegacion">
-                <li><a class="item-nav" href="#">Mouse</a></li>
-                <li><a class="item-nav" href="#">Teclados</a></li>
-                <li><a class="item-nav" href="#">Mousepads</a></li>
-                <li><a class="item-nav" href="#">Auriculares</a></li>
-                <li><a class="item-nav" href="#">Joystick</a></li>
-            </ul>
-        </nav>
+            <!-- El main arranca con un nav, donde van todos los perifericos . -->
+            <nav>
+                <ul class="barra-navegacion">
+                    <li><a class="item-nav" href="#">Mouse</a></li>
+                    <li><a class="item-nav" href="#">Teclados</a></li>
+                    <li><a class="item-nav" href="#">Mousepads</a></li>
+                    <li><a class="item-nav" href="#">Auriculares</a></li>
+                    <li><a class="item-nav" href="#">Joystick</a></li>
+                </ul>
+            </nav>
 
-        <img class="Banner" src="/img/banner.jpg">
+            <img class="Banner" src="/img/banner.jpg">
 
-        <section class="productos">
+            <section class="productos">
 
-            <% productos.slice(-4).forEach(producto => { %>
-                <article class="articulo">
-                    <a class="contenedor-img" href="detalle-producto/<%= producto.id %>">
-                        <img class="producto-imagen" src="/img/<%= producto.imagen1 %>">
-                    </a>
-                    <div>
-                        <p class="nombre-producto"><%= producto.titulo %></p>
-                        <p class="precio">$<%= producto.precio %></p>
-                    </div>
-                </article>
-            <% }) %>
-          
-        </section>
+                <% productos.slice(-4).forEach(producto=> { %>
+                    <article class="articulo">
+                        <a class="contenedor-img" href="detalle-producto/<%= producto.id %>">
+                            <img class="producto-imagen" src="/img/<%= producto.imagen1 %>">
+                        </a>
+                        <div>
+                            <p class="nombre-producto">
+                                <%= producto.titulo %>
+                            </p>
+                            <p class="precio">$<%= producto.precio %>
+                            </p>
+                        </div>
+                    </article>
+                    <% }) %>
 
-
-        <section class="marcas">
-            <img src="/img/marcas.png" alt="">
-        </section>
+            </section>
 
 
-    </main>
+            <section class="marcas">
+                <img src="/img/marcas.png" alt="">
+            </section>
 
-    <!-- partials del footer-->
-    <%- include("./partials/footer")  %> 
+
+        </main>
+
+        <!-- partials del footer-->
+        <%- include("./partials/footer") %>
 
 
 

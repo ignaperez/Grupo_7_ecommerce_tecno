@@ -17,21 +17,21 @@
 
 <body>
     <!-- partial del header-->
-    <%- include("./partials/header-superior")  %> 
+    <%- include("./partials/header-superior") %>
 
-    <main>
-        <img class="fondo" src="/img/fondoLogjn.png" alt="">
+        <main>
+            <img class="fondo" src="/img/fondoLogjn.png" alt="">
 
-        <h1 class="titulo">PhericsOne</h1>
+            <h1 class="titulo">PhericsOne</h1>
 
-        <form class="formulario" action="/login" method="post">
-            <input class="input" type="text" name="name" placeholder="Usuario" required>
-            <input class="input" type="password" name="password" placeholder="Contraseña" required>
-            <button class="boton" type="submit">Ingresar</button>
-        </form>
-    </main>
-    <!-- partials del footer-->
-    <%- include("./partials/footer")  %> 
+            <form class="formulario" action="/login" method="post">
+                <input class="input" type="text" name="name" placeholder="Usuario" required>
+                <input class="input" type="password" name="password" placeholder="Contraseña" required>
+                <button class="boton" type="submit">Ingresar</button>
+            </form>
+        </main>
+        <!-- partials del footer-->
+        <%- include("./partials/footer") %>
 </body>
 
 </html>
