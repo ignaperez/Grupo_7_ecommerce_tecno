@@ -20,7 +20,7 @@
     <body>
         <h1 class="titulo-np">Agreguemos nuevos productos!</h1>
         <div class="contenedor-formulario">
-            <form action="/product/newProduct" method="POST" class="formulario-np">
+            <form action="/product/newProduct" method="POST" class="formulario-np" enctype="multipart/form-data">
                 <div><label for="">Ingrese el nombre del nuevo producto: </label>
                     <input type="text" name="titulo" placeholder="Por ejemplo, auriculares Logitech" ></div>
                 <div><label for="categoria">Ingrese la categoría del nuevo producto: </label>
@@ -32,11 +32,11 @@
                         <option value="mousepads">Mousepads</option>
                     </select>
                 </div>
-                <div><label for="">Ingrese imágenes del nuevo producto: </label>
-                    <input type="file" name="imagen1">
-                    <input type="file" name="imagen2">
-                    
-                    <input type="file" name="imagen3">
+                <div>
+                    <label for="">Ingrese imágenes del nuevo producto: </label>
+                        <input type="file" name="imagen1">
+                        <input type="file" name="imagen2">
+                        <input type="file" name="imagen3">
                 </div>
         <div><label for="precio">Ingrese el precio del nuevo producto: </label>
             <input type="text" id="precio"name="precio"></div>
