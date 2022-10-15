@@ -1,6 +1,21 @@
 const fs = require("fs");
-const path = require("path")
-const productos = require('../data/productData')
+const path = require("path");
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "public/img/productos");
+    },
+    
+    filename: (req, file, cb) => {
+        cb = (null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
+    }
+})
+
+var upload = multer({storage});
+
+const productsFilePath = path.join(__dirname, '../data/productData.json');
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productController = {
     carrito:(req,res)=>
     {
@@ -21,6 +36,23 @@ const productController = {
     },
     editProduct: (req, res) => {
         res.render("editProduct")
+    },
+    create:(req,res)=>{
+        let image
+        (req.files[0] != undefined) 
+            ? image = req.files[0].filename 
+            : image = "logo-img.png"
+        let newProduct = {
+			id: productos[productos.length - 1].id + 1,
+			...req.body,
+            image: image
+		};
+		productos.push(newProduct)
+		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
+		res.redirect('/');
+       
+        
+        res.redirect('/product/newProduct');
     }
 }
 module.exports = productController;

@@ -1,9 +1,7 @@
 .contenedor-formulario {
     background: radial-gradient(circle closest-side, rgb(59, 59, 59) 1%, #292E1E);
-
     border: 1px solid black;
     width: 50%;
-    /* height: 500px; */
     text-align: center;
     margin: auto;
     margin-top: 4%;

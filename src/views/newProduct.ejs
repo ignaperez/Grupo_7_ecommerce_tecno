@@ -20,37 +20,43 @@
     <body>
         <h1 class="titulo-np">Agreguemos nuevos productos!</h1>
         <div class="contenedor-formulario">
-            <form action="/newProduct" method="post" class="formulario-np">
-                <div><label for="">Ingrese el nombre del nuevo producto: </label><input type="text" name="nombre"
-                        placeholder="Por ejemplo, auriculares Logitech" required></div>
-                <div><label for="">Ingrese la categoría del nuevo producto: </label>
-                    <select name="categoria" id="" required>Auriculares
-                        <option value="Auriculares">Auriculares</option>
-                        <option value="Auriculares">Mouse</option>
-                        <option value="Auriculares">Teclados</option>
-                        <option value="Auriculares">Joysticks</option>
-                        <option value="Auriculares">Mousepads</option>
+            <form action="/product/newProduct" method="POST" class="formulario-np" enctype="multipart/form-data">
+                <div><label for="">Ingrese el nombre del nuevo producto: </label>
+                    <input type="text" name="titulo" placeholder="Por ejemplo, auriculares Logitech" ></div>
+                <div><label for="categoria">Ingrese la categoría del nuevo producto: </label>
+                    <select name="categoria" id="categoria" >Auriculares
+                        <option value="auriculares">Auriculares</option>
+                        <option value="mouse">Mouse</option>
+                        <option value="teclados">Teclados</option>
+                        <option value="joysticks">Joysticks</option>
+                        <option value="mousepads">Mousepads</option>
                     </select>
                 </div>
-                <div><label for="">Ingrese imágenes del nuevo producto: </label><input type="file" name="imagen"></div>
-                <div><label for="">Ingrese el precio del nuevo producto: </label><input type="text" name="precio"></div>
-                <div><label for="">Garantía: </label>
-                    <select name="garantia" id="" required>Auriculares
-                        <option value="6">6 meses</option>
-                        <option value="12">12 meses</option>
-                        <option value="24">24 meses</option>
-                    </select>
+                <div>
+                    <label for="">Ingrese imágenes del nuevo producto: </label>
+                        <input type="file" name="imagen1">
+                        <input type="file" name="imagen2">
+                        <input type="file" name="imagen3">
                 </div>
-
-                    <div><label for="">Descripción 1: </label><textarea name="" id="" cols="30" rows="5"></textarea></div>
-                    <div><label for="">Descripción 2: </label><textarea name="" id="" cols="30" rows="5"></textarea></div>
-                    <div><label for="">Descripción 3: </label><textarea name="" id="" cols="30" rows="5"></textarea></div>
-
-                <div class="botones">
-                    <button type="submit">Crear</button>
-                    <button type="reset">Borrar</button>
-                </div>
-            </form>
+        <div><label for="precio">Ingrese el precio del nuevo producto: </label>
+            <input type="text" id="precio"name="precio"></div>
+        <div><label for="garantia">Garantía: </label>
+            <select name="garantia" id="garantia">
+                <option value="6">6 meses</option>
+                <option value="12">12 meses</option>
+                <option value="24">24 meses</option>
+            </select>
+        </div>
+        <div>
+            <div><label for="">Descripción 1: </label><textarea name="descripcion1" cols="30" rows="5"></textarea></div>
+            <div><label for="">Descripción 2: </label><textarea name="descripcion2" cols="30" rows="5"></textarea></div>
+            <div><label for="">Descripción 3: </label><textarea name="descripcion3" cols="30" rows="5"></textarea></div>
+        </div>
+        <div class="botones">
+            <button type="submit">Crear</button>
+            <button type="reset">Borrar</button>
+        </div>
+        </form>
         </div>
 
     </body>
