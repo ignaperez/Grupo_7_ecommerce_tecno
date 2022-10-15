@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path")
 const productos = require('../data/productData')
 const productController = {
     carrito:(req,res)=>
