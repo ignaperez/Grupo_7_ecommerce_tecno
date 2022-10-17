@@ -35,6 +35,7 @@ const productController = {
         res.render('newProduct')
     },
     editProduct: (req, res) => {
+        
         res.render("editProduct")
     },
     create:(req,res)=>{
@@ -53,6 +54,9 @@ const productController = {
        
         
         res.redirect('/product/newProduct');
+    },
+    dashboard: (req, res) => {
+        res.render("admin-producto", {productos})
     }
 }
 module.exports = productController;

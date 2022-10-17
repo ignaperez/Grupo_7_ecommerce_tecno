@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/dashboard.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&amp;display=swap" rel="stylesheet">
+        <title>PerichsOne - Dashboard</title>
+    </head>
+<body>
+
+    <!-- En el header van las dos primeras barras : La que dice equipate para ser el mejor y la otra es donde va el nombre y la barra de busqueda! NADA MAS -->
+    <!-- partial del header-->
+    <%- include("./partials/header-total") %>
+        <main>
+            <section>
+                <div class="contenedor-agregar-search">
+                    <a href="/product/newProduct" class="agregar-producto">Agregar un producto</a>
+                    <form class="barra-search-caja" action="/product/dashboard" method="get">
+                        <input type="text" name="keywords" class="barra-search-dashboard" placeholder="Cual es el producto?">
+                        <button type="submit" class="boton-busqueda-caja"><i class="boton-busqueda fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <div>
+                    <section class="seccion-productos">
+                        <% productos.forEach(producto => { %>
+                            <article class="tablero-de-productos">
+                                <div class="caja-imagen">
+                                    <img class="imagen-dashboard" src="/img/productos/<%= producto.imagen1 %> " alt="">
+                                </div>
+                                <div class="caja-titulo">
+                                    <p class="titulo-producto"><%= producto.titulo %> </p>
+                                </div>
+                                <div class="caja-botones">
+                                    <a href="/product/editProduct/<%= producto.id %> " class="boton-editar">EDITAR</a>
+                                    <form action="/product/dashboard/<%= producto.id %>" method="post">
+                                    <button type="submit" class="boton-eliminar">ELIMINAR</button>
+                                    </form>
+                                </div>
+                            </article>
+                        <% }) %>
+                    </section>
+                </div>
+            </section>
+        
+            
+        </main>
+        <!-- partials del footer-->
+        <%- include("./partials/footer") %>
+
+
+
+</body>
+
+</html>
