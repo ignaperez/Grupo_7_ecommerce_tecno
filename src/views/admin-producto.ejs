@@ -23,7 +23,7 @@
                 <div class="contenedor-agregar-search">
                     <a href="/product/newProduct" class="agregar-producto">Agregar un producto</a>
                     <form class="barra-search-caja" action="/product/dashboard" method="get">
-                        <input type="text" name="keywords" class="barra-search-dashboard" placeholder="Cual es el producto?">
+                        <input type="text" name="keywords" class="barra-search-dashboard" placeholder="Cual es el producto que busc?">
                         <button type="submit" class="boton-busqueda-caja"><i class="boton-busqueda fa-sharp fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>
@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="caja-botones">
                                     <a href="/product/editProduct/<%= producto.id %> " class="boton-editar">EDITAR</a>
-                                    <form action="/product/dashboard/<%= producto.id %>" method="post">
+                                    <form action="/product/dashboard/<%= producto.id %>?_method=DELETE" method="POST">
                                     <button type="submit" class="boton-eliminar">ELIMINAR</button>
                                     </form>
                                 </div>

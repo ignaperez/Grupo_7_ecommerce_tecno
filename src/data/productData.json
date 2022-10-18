@@ -48,13 +48,24 @@
  },
  {
   "id": 5,
-  "titulo": "Auiriculares Gammer Corsair H50",
-  "categoria": "auriculares",
+  "titulo": "Auriculares Gamer Corsair H50",
+  "categoria": "Auriculares",
   "precio": "25000",
-  "garantia": "6",
-  "descripcion1": "Auricular stereo gaming headset HS50 PRO STEREO Corsair.",
-  "descripcion2": "",
+  "garantia": "12",
+  "descripcion1": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Corsair HS50 no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.",
+  "descripcion2": "El formato perfecto para vos\r\nEl diseño over-ear brinda una comodidad insuperable gracias a sus suaves almohadillas. Al mismo tiempo, su sonido envolvente del más alto nivel se convierte en el protagonista de la escena.",
   "descripcion3": "",
-  "imagen1": "imagen1-1665796021931.png"
+  "imagen1": "imagen1-1666101508810.jfif"
+ },
+ {
+  "id": 6,
+  "titulo": "Joystick  Xbox Serie X",
+  "categoria": "joysticks",
+  "precio": "36000",
+  "garantia": "12",
+  "descripcion1": "Control preciso\r\nEste mando combina funciones revolucionarias mientras conserva precisión, comodidad y exactitud en cada movimiento. Gracias a su ergonomía especialmente pensada para la posición de tu mano, podés pasar horas jugando con total confort.",
+  "descripcion2": "Mayor comodidad y realismo\r\nTe permite jugar sin necesidad de que haya cables de por medio. Está pensado no solamente para controlar mejor tus videojuegos, sino también para aumentar su realismo y experiencia.",
+  "descripcion3": "Activá el Bluetooth\r\nCuenta con conexión Bluetooth de alta tecnología para usarlo en cualquier ordenador o dispositivo; ya no necesitarás de aplicaciones de terceros ni cable USB. Además, posee gran capacidad antiinterferente, fácil manejo y señal de conexión estable.",
+  "imagen1": "imagen1-1666016035583.jfif"
  }
 ]

@@ -35,8 +35,30 @@ const productController = {
         res.render('newProduct')
     },
     editProduct: (req, res) => {
-        
-        res.render("editProduct")
+        let id = req.params.id;
+        let productoAEditar = productos.find(producto => producto.id == id);
+        res.render("editProduct",{producto: productoAEditar});
+    },
+    editar: (req, res) => {
+        let id = req.params.id;
+        let productoAEditar = productos.find(producto => producto.id == id)
+        let imagen 
+        (req.files[0] != undefined)
+            ? imagen = req.files[0].filename
+            : imagen = productoAEditar.imagen1
+        productoAEditar = {
+            id: productoAEditar.id,
+            ...req.body,
+            imagen1: imagen,
+        } 
+        let nuevoProducto = productos.map(producto => {
+            if(producto.id == productoAEditar.id) {
+                return producto = {...productoAEditar};
+            }
+            return producto
+        })
+        fs.writeFileSync(productsFilePath, JSON.stringify(nuevoProducto, null, " "));
+        res.redirect("/product/dashboard")
     },
     create:(req,res)=>{
         let image
@@ -46,17 +68,27 @@ const productController = {
         let newProduct = {
 			id: productos[productos.length - 1].id + 1,
 			...req.body,
-            image: image
+            imagen1: image
 		};
 		productos.push(newProduct)
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
 		res.redirect('/');
-       
-        
         res.redirect('/product/newProduct');
     },
     dashboard: (req, res) => {
         res.render("admin-producto", {productos})
-    }
+    },
+    borrar: (req, res) => {
+        let id = req.params.id;
+        let nuevosProductos = productos.filter(producto => producto.id != id);
+        let productosFinales = nuevosProductos.map(producto => {
+            if(producto.id > id){
+                producto.id = producto.id - 1;
+            }
+            return producto
+        })
+        fs.writeFileSync(productsFilePath, JSON.stringify(productosFinales, null, " "))
+        res.redirect("/product/dashboard")
+    } 
 }
 module.exports = productController;
