@@ -77,5 +77,17 @@
         "password": "2222",
         "categoria": "user",
         "image": "imagenPerfil-1666647015390.jpg"
+    },
+    {
+        "id": 8,
+        "re-password": "adsdasads",
+        "firstname": "Burrito",
+        "lastname": "Ortega",
+        "email": "burro@ortega.com.ar",
+        "telefono": "223213",
+        "username": "asddasdas",
+        "password": "dasdasdsa",
+        "categoria": "user",
+        "image": "imagenPerfil-1666650244842.jpg"
     }
 ]
