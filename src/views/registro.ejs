@@ -26,16 +26,16 @@
 
         <div class="div-formulario">
 
-            <form class="formulario" action="/registro" method="post">
+            <form class="formulario" action="/users/registro" method="POST" enctype="multipart/form-data">
 
-                <input class="input-registro" type="text" name="nombre" placeholder="Nombre" required>
-                <input class="input-registro" type="text" name="apellido" placeholder="Apellido" required>
+                <input class="input-registro" type="text" name="firstname" placeholder="Nombre" required>
+                <input class="input-registro" type="text" name="lastname" placeholder="Apellido" required>
                 <input class="input-registro" type="email" name="email" placeholder="Email@servidor.com" required>
                 <input class="input-registro" type="text" name="telefono" placeholder="Teléfono" required>
-                <input class="input-registro" type="text" name="nombre" placeholder="Nombre de usuario" required>
+                <input class="input-registro" type="text" name="username" placeholder="Nombre de usuario" required>
                 <input class="input-registro" type="password" name="password" placeholder="Contraseña" required>
-                <input class="input-registro" type="password" name="re-password" placeholder="Reingrese su contraseña"
-                    required>
+                <input class="input-registro" type="password" name="re-password" placeholder="Reingrese su contraseña" required>
+                <div class="foto-perfil"><label for="imagenPerfil">Seleccione su foto de perfil: </label><input type="file" name = "imagenPerfil"> </div>
                 <button class="boton" type="submit">Registrar</button>
             </form>
         </div>

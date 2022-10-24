@@ -4,42 +4,90 @@
         "firstname": "Juan",
         "lastname": "Rusconi",
         "email": "juan@perichsone.com",
-        "password":"auris.png",
-        "categoria":"admin",
-        "username":1,
-        "image": "foto.png"  
+        "telefono": "111111111",
+        "username": 1,
+        "password": "auris.png",
+        "categoria": "admin",
+        "image": "foto.png"
     },
-
     {
         "id": 2,
         "firstname": "Diego",
         "lastname": "Palomino",
         "email": "diegho@perichsone.com",
-        "password":"auris.png",
-        "categoria":"admin",
-        "username":1,
-        "image": "foto.png"  
+        "telefono": "111111111",
+        "username": 1,
+        "password": "auris.png",
+        "categoria": "admin",
+        "image": "foto.png"
     },
     {
         "id": 3,
         "firstname": "Jeremias",
         "lastname": "Cuenca",
         "email": "jeremias@perichsone.com",
-        "password":"auris.png",
-        "categoria":"admin",
-        "username":1,
-        "image": "foto.png"  
+        "telefono": "111111111",
+        "username": 1,
+        "password": "auris.png",
+        "categoria": "admin",
+        "image": "foto.png"
     },
     {
-        "id": 2,
+        "id": 4,
         "firstname": "Ignacio",
         "lastname": "Perez",
         "email": "ignacio@perichsone.com",
-        "password":"auris.png",
-        "categoria":"admin",
-        "username":1,
-        "image": "foto.png"  
+        "telefono": "111111111",
+        "username": 1,
+        "password": "auris.png",
+        "categoria": "admin",
+        "image": "foto.png"
+    },
+    {
+        "id": 5,
+        "re-password": "fortito21",
+        "firstname": "Ricardo",
+        "lastname": "Ford",
+        "email": "Ricado@fort.com.ar",
+        "telefono": "1164748284",
+        "username": "Forti2",
+        "password": "fortito21",
+        "categoria": "user"
+    },
+    {
+        "id": 6,
+        "re-password": "22",
+        "firstname": "Ricardo",
+        "lastname": "Fort",
+        "email": "Richard@fort.com.ar",
+        "telefono": "22222",
+        "username": "ri",
+        "password": "22",
+        "categoria": "user",
+        "image": "imagenPerfil-1666646728922.jpg"
+    },
+    {
+        "id": 7,
+        "re-password": "2222",
+        "firstname": "Lionel",
+        "lastname": "Messi",
+        "email": "leo@messi.com.ar",
+        "telefono": "11562321",
+        "username": "Leito",
+        "password": "2222",
+        "categoria": "user",
+        "image": "imagenPerfil-1666647015390.jpg"
+    },
+    {
+        "id": 8,
+        "re-password": "adsdasads",
+        "firstname": "Burrito",
+        "lastname": "Ortega",
+        "email": "burro@ortega.com.ar",
+        "telefono": "223213",
+        "username": "asddasdas",
+        "password": "dasdasdsa",
+        "categoria": "user",
+        "image": "imagenPerfil-1666650244842.jpg"
     }
-    
-
 ]
