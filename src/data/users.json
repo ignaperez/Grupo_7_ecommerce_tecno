@@ -4,42 +4,76 @@
         "firstname": "Juan",
         "lastname": "Rusconi",
         "email": "juan@perichsone.com",
-        "password":"auris.png",
-        "categoria":"admin",
-        "username":1,
-        "image": "foto.png"  
+        "telefono": "111111111",
+        "username": 1,
+        "password": "auris.png",
+        "categoria": "admin",
+        "image": "foto.png"
     },
-
     {
         "id": 2,
         "firstname": "Diego",
         "lastname": "Palomino",
         "email": "diegho@perichsone.com",
-        "password":"auris.png",
-        "categoria":"admin",
-        "username":1,
-        "image": "foto.png"  
+        "telefono": "111111111",
+        "username": 1,
+        "password": "auris.png",
+        "categoria": "admin",
+        "image": "foto.png"
     },
     {
         "id": 3,
         "firstname": "Jeremias",
         "lastname": "Cuenca",
         "email": "jeremias@perichsone.com",
-        "password":"auris.png",
-        "categoria":"admin",
-        "username":1,
-        "image": "foto.png"  
+        "telefono": "111111111",
+        "username": 1,
+        "password": "auris.png",
+        "categoria": "admin",
+        "image": "foto.png"
     },
     {
-        "id": 2,
+        "id": 4,
         "firstname": "Ignacio",
         "lastname": "Perez",
         "email": "ignacio@perichsone.com",
-        "password":"auris.png",
-        "categoria":"admin",
-        "username":1,
-        "image": "foto.png"  
+        "telefono": "111111111",
+        "username": 1,
+        "password": "auris.png",
+        "categoria": "admin",
+        "image": "foto.png"
+    },
+    {
+        "id": 5,
+        "re-password": "2222",
+        "firstname": "sdsd",
+        "lastname": "sdds",
+        "email": "sdds@sdsd",
+        "telefono": "2222",
+        "username": "sdds",
+        "password": "222",
+        "categoria": "admin"
+    },
+    {
+        "id": 6,
+        "re-password": "sdaasd",
+        "firstname": "asdasddas",
+        "lastname": "dasasdasd",
+        "email": "adssda@asdasd",
+        "telefono": "2222",
+        "username": "sadads",
+        "password": "adsasd",
+        "categoria": "user"
+    },
+    {
+        "id": 7,
+        "re-password": "2",
+        "firstname": "asdasdasd",
+        "lastname": "asddas",
+        "email": "dasasd@ss",
+        "telefono": "2",
+        "username": "2",
+        "password": "2",
+        "categoria": "user"
     }
-    
-
 ]
