@@ -23,4 +23,8 @@ app.get('/', (req, res) => {
 });
 
 //SERVIDOR
-app.listen(2000, () => {console.log('Servidor corriendo en el puerto 2000');})
+//app.listen(2000, () => {console.log('Servidor corriendo en el puerto 2000');})
+app.listen(process.env.PORT || 2000
+    , ()=>{
+    console.log('Servidor funcionando en puerto 2000');
+});
