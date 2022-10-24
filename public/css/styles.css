@@ -53,7 +53,8 @@ header div a {
     color: #292E1E;
 }
 .frase-inferior {
-    color:#292E1E
+    color:#292E1E;
+    
 }
 .form-submit {
     background-color: white;
@@ -73,12 +74,13 @@ header div a {
     align-items: center;
    /*  padding-left: 30px; */
     padding-right: 30px;
+    
 }
 .cabeza-inferior h1 {
 
-    font-size: 9px;
-    justify-self: flex-start;
-    margin-left: 10px;
+    font-size: 17px;
+    margin-left: 15px;
+    margin-left: 25px;
 }
 
 .carrito {

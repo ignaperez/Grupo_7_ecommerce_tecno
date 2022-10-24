@@ -45,35 +45,37 @@
     },
     {
         "id": 5,
-        "re-password": "2222",
-        "firstname": "sdsd",
-        "lastname": "sdds",
-        "email": "sdds@sdsd",
-        "telefono": "2222",
-        "username": "sdds",
-        "password": "222",
-        "categoria": "admin"
+        "re-password": "fortito21",
+        "firstname": "Ricardo",
+        "lastname": "Ford",
+        "email": "Ricado@fort.com.ar",
+        "telefono": "1164748284",
+        "username": "Forti2",
+        "password": "fortito21",
+        "categoria": "user"
     },
     {
         "id": 6,
-        "re-password": "sdaasd",
-        "firstname": "asdasddas",
-        "lastname": "dasasdasd",
-        "email": "adssda@asdasd",
-        "telefono": "2222",
-        "username": "sadads",
-        "password": "adsasd",
-        "categoria": "user"
+        "re-password": "22",
+        "firstname": "Ricardo",
+        "lastname": "Fort",
+        "email": "Richard@fort.com.ar",
+        "telefono": "22222",
+        "username": "ri",
+        "password": "22",
+        "categoria": "user",
+        "image": "imagenPerfil-1666646728922.jpg"
     },
     {
         "id": 7,
-        "re-password": "2",
-        "firstname": "asdasdasd",
-        "lastname": "asddas",
-        "email": "dasasd@ss",
-        "telefono": "2",
-        "username": "2",
-        "password": "2",
-        "categoria": "user"
+        "re-password": "2222",
+        "firstname": "Lionel",
+        "lastname": "Messi",
+        "email": "leo@messi.com.ar",
+        "telefono": "11562321",
+        "username": "Leito",
+        "password": "2222",
+        "categoria": "user",
+        "image": "imagenPerfil-1666647015390.jpg"
     }
 ]
