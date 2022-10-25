@@ -17,7 +17,7 @@
   "descripcion2": "El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla. La funcionalidad al alcance de tu mano. El sistema de detección de movimiento óptico te permitirá mover el cursor de una manera más precisa  y sensible que en los sistemas tradicionales. Rapidez y confiabilidad de los botones. Con sus 6 botones podrás tener mayor control e independencia para ejecutar.",
   "descripcion3": "Navegá rápidamente por documentos y páginas web gracias su diseño ultra delgado, ergonómico, liviano y conveniente para llevar a donde quieras o viajar.",
   "imagen1": "mouse.png",
-  "imagen2": "",
+  "imagen2": "mouse.png",
   "stock": 1,
   "precio": 17999,
   "categoria": "mouse"
@@ -29,7 +29,7 @@
   "descripcion2": "",
   "descripcion3": "",
   "imagen1": "mousepad.png",
-  "imagen2": "",
+  "imagen2": "mousepad.png",
   "stock": 1,
   "precio": 6500,
   "categoria": "mousepad"
@@ -41,7 +41,7 @@
   "descripcion2": "Personaliza tu iluminación, crea macros y ajusta el modo de juego con el software HyperX NGENUITY. Este programa potente pero facil de usar te permite configurar la iluminación por tecla, tener efectos de iluminacion deslumbrantes y agregar decenas de otros toques personalizados a tus productos compatibles con NGENUITY.",
   "descripcion3": "",
   "imagen1": "teclado.png",
-  "imagen2": "",
+  "imagen2": "teclado.png",
   "stock": 1,
   "precio": 21000,
   "categoria": "teclado"
@@ -55,7 +55,7 @@
   "descripcion1": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Corsair HS50 no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.",
   "descripcion2": "El formato perfecto para vos\r\nEl diseño over-ear brinda una comodidad insuperable gracias a sus suaves almohadillas. Al mismo tiempo, su sonido envolvente del más alto nivel se convierte en el protagonista de la escena.",
   "descripcion3": "",
-  "imagen1": "imagen1-1666101508810.jfif"
+  "imagen1": "auris.png"
  },
  {
   "id": 5,
@@ -66,17 +66,28 @@
   "descripcion1": "Control preciso\r\nEste mando combina funciones revolucionarias mientras conserva precisión, comodidad y exactitud en cada movimiento. Gracias a su ergonomía especialmente pensada para la posición de tu mano, podés pasar horas jugando con total confort.",
   "descripcion2": "Mayor comodidad y realismo\r\nTe permite jugar sin necesidad de que haya cables de por medio. Está pensado no solamente para controlar mejor tus videojuegos, sino también para aumentar su realismo y experiencia.",
   "descripcion3": "Activá el Bluetooth\r\nCuenta con conexión Bluetooth de alta tecnología para usarlo en cualquier ordenador o dispositivo; ya no necesitarás de aplicaciones de terceros ni cable USB. Además, posee gran capacidad antiinterferente, fácil manejo y señal de conexión estable.",
-  "imagen1": "imagen1-1666016035583.jfif"
+  "imagen1": "auris-1.png"
  },
  {
   "id": 6,
-  "titulo": "",
-  "categoria": "auriculares",
-  "precio": "",
+  "titulo": "Monitor gamer curvo Samsung F390 Series C24F390FH",
+  "categoria": "otros",
+  "precio": "58299",
+  "garantia": "12",
+  "descripcion1": "Samsung está fielmente comprometida en brindar productos de calidad y que contribuyan a crear un mejor futuro para las personas. Como empresa líder en la industria tecnológica uno de sus objetivos principales es desarrollar avanzadas e innovadoras soluciones. Es por ello que con este monitor tendrás y disfrutarás de una gran experiencia visual en todo momento.",
+  "descripcion2": "Un monitor a tu medida\r\nCon tu pantalla LED no solo ahorrás energía, ya que su consumo es bajo, sino que vas a ver colores nítidos y definidos en tus películas o series favoritas.",
+  "descripcion3": "Una experiencia visual de calidad\r\nEste monitor de 24\" te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad. Su tiempo de respuesta de 4 ms lo hace ideal para gamers y cinéfilos porque es capaz de mostrar imágenes en movimiento sin halos o bordes borrosos.",
+  "imagen1": "imagen1-1666739568791.png"
+ },
+ {
+  "id": 7,
+  "titulo": "Joystick Razer Wolverine Tournament Edition negro",
+  "categoria": "joysticks",
+  "precio": "234000",
   "garantia": "6",
-  "descripcion1": "",
+  "descripcion1": "Joystick Razer Wolverine Tournament Edition negro\r\n",
   "descripcion2": "",
   "descripcion3": "",
-  "imagen1": "logo-img.png"
+  "imagen1": "imagen1-1666740836669.png"
  }
 ]

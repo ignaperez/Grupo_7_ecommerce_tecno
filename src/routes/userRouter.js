@@ -16,6 +16,7 @@ var upload = multer({storage: storage})
 
 
 router.get("/login", userController.login);
+router.post("/login", userController.loginPost);
 
 router.get("/registro", userController.registro)
 router.post("/registro", upload.any(), userController.logicRegister)

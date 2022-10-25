@@ -72,8 +72,8 @@ const productController = {
 		};
 		productos.push(newProduct)
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
-		res.redirect('/');
-        res.redirect('/product/newProduct');
+		//res.redirect('/');
+        res.redirect('/product/dashboard');
     },
     dashboard: (req, res) => {
         res.render("admin-producto", {productos})
@@ -87,8 +87,9 @@ const productController = {
             }
             return producto
         })
+       
         fs.writeFileSync(productsFilePath, JSON.stringify(productosFinales, null, " "))
-        res.redirect("/product/dashboard")
+        res.redirect("/product/dashboard");
     } 
 }
 module.exports = productController;
