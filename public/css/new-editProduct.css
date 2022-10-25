@@ -66,8 +66,6 @@ form .botones {
     flex-direction: row;
 }
 
-
-
 form .botones :hover {
 
     background-color: black;
@@ -85,11 +83,39 @@ form .botones :hover {
     margin: auto;
     margin-top: 2%;
 }
-
-
 .descripciones{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 border-bottom: 0px;
+}
+
+@media (max-width: 426px) {
+.cabeza-inferior{
+    display: none;
+}
+.titulo-np {
+    width: 78%;
+    font-size: 16px;
+    margin-top: 6%;
+}
+.contenedor-formulario {
+    width: 95%;
+    border-radius: 2%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+input {
+    width: 100%;
+}
+select {
+    width: 130px
+}
+form .botones {
+    width: 100%;
+}
+button {
+    width: 40%;
+    padding: 3%;
+}
 }

@@ -23,7 +23,7 @@
   "categoria": "mouse"
  },
  {
-  "id": 3,
+  "id": 2,
   "titulo": "MOUSEPAD HYPERX L",
   "descripcion1": "Es tan fácil deslizar el mouse. Con tu HyperX Speed Edition podrás llenar la pantalla de tuordenador de clicks. Su elaborada superficie le dará precisión y comodidad a tus movimientos.Calidad en su confección Diseñada con materiales de calidad, tu almohadilla de goma, tela te dará una agradable sensación altacto y evitará un gran desgaste en la base de tu mouse. Este tipo de opción es ideal para gamers ya que reparte la presión de manera simétrica, conservando un nivel de precisión adecuado.",
   "descripcion2": "",
@@ -35,7 +35,7 @@
   "categoria": "mousepad"
  },
  {
-  "id": 4,
+  "id": 3,
   "titulo": "TECLADO MECÁNICO",
   "descripcion1": "Teclado Alloy Origins HyperX.El HyperX Alloy Origins™ Core es un teclado ultracompacto y resistente sin zona numérica conconmutadores mecánicos HyperX personalizados diseñados para proporcionar a los jugadores la mejor combinación de estilo, rendimiento y fiabilidad. Estos conmutadores de teclas tienen LED expuestospara una iluminación deslumbrante con una fuerza de actuación y una distancia de recorridoelegantemente equilibrada para una capacidad de respuesta y precisión. Alloy Origins Core está fabricado con un cuerpo de aluminio completo para que permanezca rígido y estable cuando se presionan las teclas, y también cuenta con patas de teclado que le permiten elegir entre tres niveles de inclinación diferentes. Su diseño TKL elegante y compacto libera espacio para el movimiento del ratón en escritorios donde el espacio está muy cotizado, y también cuenta con un cable USB tipo C desmontable para una portabilidad suprema.",
   "descripcion2": "Personaliza tu iluminación, crea macros y ajusta el modo de juego con el software HyperX NGENUITY. Este programa potente pero facil de usar te permite configurar la iluminación por tecla, tener efectos de iluminacion deslumbrantes y agregar decenas de otros toques personalizados a tus productos compatibles con NGENUITY.",
@@ -47,7 +47,7 @@
   "categoria": "teclado"
  },
  {
-  "id": 5,
+  "id": 4,
   "titulo": "Auriculares Gamer Corsair H50",
   "categoria": "Auriculares",
   "precio": "25000",
@@ -58,7 +58,7 @@
   "imagen1": "imagen1-1666101508810.jfif"
  },
  {
-  "id": 6,
+  "id": 5,
   "titulo": "Joystick  Xbox Serie X",
   "categoria": "joysticks",
   "precio": "36000",
@@ -69,14 +69,14 @@
   "imagen1": "imagen1-1666016035583.jfif"
  },
  {
-  "id": 7,
-  "titulo": "sdasd",
-  "categoria": "teclados",
-  "precio": "2222",
+  "id": 6,
+  "titulo": "",
+  "categoria": "auriculares",
+  "precio": "",
   "garantia": "6",
-  "descripcion1": "sdsd",
+  "descripcion1": "",
   "descripcion2": "",
   "descripcion3": "",
-  "imagen1": "imagen1-1666642459747.jpg"
+  "imagen1": "logo-img.png"
  }
 ]

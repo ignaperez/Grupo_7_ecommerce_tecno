@@ -100,4 +100,52 @@
     margin-top: 15px;
 }
     
-
+@media (max-width: 426px) {
+.cabeza-inferior {
+    display: none;
+}
+.contenedor-agregar-search {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.agregar-producto {
+    text-align: center;
+    width: 60%;
+    margin-top: 5%;
+}
+.barra-search-caja{
+    width: 88%;
+}
+.tablero-de-productos {
+    width: 90%;
+    margin: 2%;
+    height: 120px;
+    justify-content: flex-start;
+}
+.caja-imagen{
+    width: 30%;
+    margin: 2%;
+}
+.titulo-producto {
+    width: max-content;
+    
+}
+.caja-botones {
+    display: inline;
+}
+.boton-editar {
+    border: black solid 1px;
+    padding: 12%;
+    align-items: center;
+    position: relative;
+    left: 25px;
+}
+.boton-eliminar {
+    border: black solid 1px;
+    padding: 9%;
+    position: relative;
+    left: 24px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+}

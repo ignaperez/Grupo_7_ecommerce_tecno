@@ -59,6 +59,29 @@ body{
     color: #ECEBE4 ;
 }
 
+@media (max-width: 426px) {
+    .cabeza-inferior {
+        padding-right: 20px;
+    }
+    .carrito{
+        margin-left: 3%;
+    }
+    main h1 {
+        width: 80%;
+    }
+    .formulario {
+        width: initial;
+        align-items: center;  
+    }
+    .input-registro {
+        margin-left: 0 ;
+        width: 80%;
+        margin: 2vh
+    }
+    .botones {
+        width: 70%;
+    }
+}
 
 
 

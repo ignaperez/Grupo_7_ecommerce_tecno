@@ -45,27 +45,29 @@ body {
 }
 
 @media (max-width: 426px) {
+    .cabeza-inferior{
+        display: none;
+    }
     main {
         margin-bottom: 10vh;
     }
     .titulo {
         font-size: 8vh;
-        top: 22%;
-        left: 95px;
+        top: 15%;
+        left: 26%;
+        font-size: 30px; 
     }
-    .fondo {
-        width: 425px;
-    }
+    
     .formulario .input {
         padding: 0.5vh;
     }
     .formulario {
-        width: 45%;
-        top: 37%;
-        left: 110px;
+        width: 60%;
+        top: 19%;
+        left: 17%;
     }
     .boton {
-        left: 33%;
+        left: 30%;
         border: none;
     }
 

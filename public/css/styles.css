@@ -1,6 +1,7 @@
 * {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+  
 }
 
 /* cabeza superior */
@@ -159,19 +160,19 @@ img {
     text-align: center;
 }
 .contenedor-img-t {
-
+    justify-content: center;
     text-align: center;
     height: 100%;
 }
 
 .contenedor-img-t img {
-
-    padding-top: 20%;
+   
+    padding-top: 30%;
 }
 .producto-imagen {
-    
+    align-items: center;
     text-align: center;
-    width: 60%;
+    width: 80%;
 }
 .map {
     padding-right: 0.8vh;
@@ -242,26 +243,35 @@ color: white;
 }
 
 @media (max-width: 426px) {
+    .cabeza-superior {
+        height: auto;
+        flex-direction: column;
+    }
     .frase-top {
-        padding: 0;
+        margin-top: 2%;
         text-align: center;
+        padding-left: 0;
+        margin-bottom: 10px;
+        
     }
     .hipervinculos-header {
         background-color: #292E1E;
-        padding-bottom: 1.5vh;
+        margin-bottom: 5%;
+        display: inline;
     }
     .cabeza-inferior {
         display: flex;
-        flex-direction: column;
+    }
+    .form-submit {
+        text-align: center;
     }
     .carrito {
-        width: 0;
+        padding: 0;
         font-size: 4vh;
-        margin-top: 1vh;
+        
     }
     .frase-inferior{
-        text-align: center;
-        margin-bottom: 1vh;
+       display: none;
     }
     .form-submit{
         width: 70%;
@@ -275,7 +285,28 @@ color: white;
         width: 35%;
         margin: 2vh;
     }
-    
+    .item-nav {
+        font-size: 12px;
+    }
+    .articulo {
+        width: 40%;
+        
+    }
+    .contenedor-img {
+        height: 50px;
+        align-self: center;
+    }
+    .producto-imagen {
+        padding-top: 8%;
+    }
+    .nombre-producto {
+        font-size: 70%;
+        background-color: rgb(196, 193, 193);
+    }
+    .precio {
+        background-color: #c6c5bd;
+        font-size: 120%;
+    }
     .pie {
         flex-direction: column;
     }
@@ -288,6 +319,12 @@ color: white;
         text-align: center;
         margin: 2vh;
         max-width: 100vh;
+    }
+    .redes-sociales {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 15px;
     }
 
 

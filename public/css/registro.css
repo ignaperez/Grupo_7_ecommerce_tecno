@@ -63,15 +63,37 @@ justify-content: center;
 
 
 @media (max-width: 426px) {
+    .cabeza-inferior{
+        display: none;
+    }
     .formulario {
-        width: 70%;
+        width: 85%;
+
     }
     .input-registro {
         margin-left: 4vh;
-        width: 70%;
+        width: 82%;
         padding: 2vh;
+        margin-left: 3%;
     }
     .boton {
         width: 25%;
     }
+    .foto-perfil {
+        align-items: center;
+        text-align: center;
+        margin-left: 6%;
+        width: 73%;
+        flex-direction: column;
+        
+    }
+    .foto-perfil input{
+        margin: 0;
+        width: 65%;
+    }
+    .boton-imagen{
+        width: 40%;
+       
+    }
+
 }

@@ -3,6 +3,7 @@ const path = require("path");
 const userFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 /* const productos = JSON.parse(fs.readFileSync(userFilePath, 'utf-8')); */
+
 const multer = require('multer');
 var storage = multer.diskStorage({
     destination:function(req,file,cb){
@@ -13,6 +14,8 @@ var storage = multer.diskStorage({
     }
 })
 var upload = multer({storage: storage})
+
+
 
 
 const userController = {

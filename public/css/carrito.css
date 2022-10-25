@@ -146,22 +146,45 @@ button{
 }
 
 @media (max-width: 426px){
-    
+.cabeza-inferior{
+    display: none;
+}  
 .productos-carro {
-        width: 90%;
+        width: 95%;
     }
-.precio-tit{
-    margin-right: 6vh;
+.precio-c {
+    display: none;
 }
+.precio-tit{
+    display: none;
+}
+
 .img-carro {
-    width: 18%;
+    width: 20%;
+}
+.titulo-carro {
+    width: initial;
+    text-align: center;
 }
 .nombre-producto-c {
-    font-size: 2.4vh;
+    font-size: 13px;
+    width: 40%;
 }
 .detalle-envio {
-    width: 75%;
+    margin: 0;
+    width: 79%;
     left: 2%;
+    margin-bottom: 10px;
+    
+}
+.input{
+    position: initial;
+    width: 95%;
+}
+.BOTONES {
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 20px;
 }
 
 }
