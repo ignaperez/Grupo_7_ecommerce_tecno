@@ -16,7 +16,7 @@ var upload = multer({storage});
 
 const productsFilePath = path.join(__dirname, '../data/productData.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const productController = {
+const giproductController = {
     carrito:(req,res)=>
     {
         res.render ('carrito');
