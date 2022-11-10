@@ -16,7 +16,7 @@ var upload = multer({storage});
 
 const productsFilePath = path.join(__dirname, '../data/productData.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const giproductController = {
+const productController = {
     carrito:(req,res)=>
     {
         res.render ('carrito');
@@ -90,6 +90,14 @@ const giproductController = {
        
         fs.writeFileSync(productsFilePath, JSON.stringify(productosFinales, null, " "))
         res.redirect("/product/dashboard");
-    } 
+    },
+    searchAdmin: (req, res) => {
+        let search = req.query.keywords;
+        let productoABuscar = productos.filter(producto => producto.titulo.toLowerCase().includes(search));
+        res.render("admin-producto", {
+            productos : productoABuscar
+        })
+
+    }
 }
 module.exports = productController;
