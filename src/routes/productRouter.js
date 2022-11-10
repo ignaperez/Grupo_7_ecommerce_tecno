@@ -24,5 +24,5 @@ router.put("/editProduct/:id", upload.any(), productController.editar)
 router.get("/dashboard", productController.dashboard);
 
 router.delete("/dashboard/:id", productController.borrar)
-
+router.get("/dashboard/search", productController.searchAdmin)
 module.exports = router

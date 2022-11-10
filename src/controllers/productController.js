@@ -90,6 +90,14 @@ const productController = {
        
         fs.writeFileSync(productsFilePath, JSON.stringify(productosFinales, null, " "))
         res.redirect("/product/dashboard");
-    } 
+    },
+    searchAdmin: (req, res) => {
+        let search = req.query.keywords;
+        let productoABuscar = productos.filter(producto => producto.titulo.toLowerCase().includes(search));
+        res.render("admin-producto", {
+            productos : productoABuscar
+        })
+
+    }
 }
 module.exports = productController;
