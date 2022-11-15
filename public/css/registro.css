@@ -11,7 +11,10 @@ body{
     margin-top: 5%;
     justify-content: center;
     padding-bottom: 3%;
+    align-items: center;
 }
+
+
 
 .div-formulario{
 display: flex;
@@ -24,7 +27,6 @@ justify-content: center;
     margin: 2vh;
     padding: 3vh;
     border-color: white;
-    margin-left: 18%;
 }
 .boton {
     width: 20%;
@@ -33,10 +35,10 @@ justify-content: center;
     border: black solid 1%;
     border-radius: 5px;
     margin: auto;
+    margin-top: 2%;
 }
 
 .foto-perfil{
-    margin-left: 18%;
     padding:3vh;
     display: flex;
     width: 60%;
@@ -44,7 +46,7 @@ justify-content: center;
     flex-wrap: nowrap;
     border: 1px white solid ;
     border-radius: 5px;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
 }
 
 .foto-perfil input {
@@ -59,6 +61,14 @@ justify-content: center;
 
     color: antiquewhite;
     width: 70%;
+}
+.error-text{
+    color: red;
+    text-align: center;
+    margin: 1%;
+}
+.is-invalid{
+    border:2px solid red;
 }
 
 

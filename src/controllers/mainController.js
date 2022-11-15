@@ -21,17 +21,8 @@ const mainController =
     {
         res.render ('ayuda');
     },
-    carrito:(req,res)=>
-    {
-        res.render ('carrito');
-
-    },
-    newProduct: (req,res) => {
-        res.render('newProduct')
-    },
-    editProduct: (req, res) => {
-        res.render("editProduct")
-    }
+    
+    
 
     
 }

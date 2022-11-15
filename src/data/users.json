@@ -1,134 +1,145 @@
 [
-    {
-        "id": 1,
-        "firstname": "Juan",
-        "lastname": "Rusconi",
-        "email": "juan@perichsone.com",
-        "telefono": "111111111",
-        "username": "juan",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "admin",
-        "image": "foto.png"
-    },
-    {
-        "id": 2,
-        "firstname": "Diego",
-        "lastname": "Palomino",
-        "email": "diegho@perichsone.com",
-        "telefono": "111111111",
-        "username": "diego",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "admin",
-        "image": "foto.png"
-    },
-    {
-        "id": 3,
-        "firstname": "Jeremias",
-        "lastname": "Cuenca",
-        "email": "jeremias@perichsone.com",
-        "telefono": "111111111",
-        "username": "jere",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "admin",
-        "image": "foto.png"
-    },
-    {
-        "id": 4,
-        "firstname": "Ignacio",
-        "lastname": "Perez",
-        "email": "ignacio@perichsone.com",
-        "telefono": "111111111",
-        "username": "ignacio",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "admin",
-        "image": "foto.png"
-    },
-    {
-        "id": 5,
-        "firstname": "Ricardo",
-        "lastname": "Ford",
-        "email": "Ricado@fort.com.ar",
-        "telefono": "1164748284",
-        "username": "Forti2",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "user",
-        "image": "imagenPerfil-1666646728922.jpg"
-    },
-    {
-        "id": 6,
-        "firstname": "Ricardo",
-        "lastname": "Fort",
-        "email": "Richard@fort.com.ar",
-        "telefono": "22222",
-        "username": "ri",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "user",
-        "image": "imagenPerfil-1666646728922.jpg"
-    },
-    {
-        "id": 7,
-        "firstname": "Lionel",
-        "lastname": "Messi",
-        "email": "leo@messi.com.ar",
-        "telefono": "11562321",
-        "username": "Leito",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "user",
-        "image": "imagenPerfil-1666647015390.jpg"
-    },
-    {
-        "id": 8,
-        "firstname": "Burrito",
-        "lastname": "Ortega",
-        "email": "burro@ortega.com.ar",
-        "telefono": "223213",
-        "username": "asddasdas",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "user",
-        "image": "imagenPerfil-1666650244842.jpg"
-    },
-    {
-        "id": 9,
-        "firstname": "IGNACIO ",
-        "lastname": "perez123",
-        "email": "ignaperez76@gmail.com",
-        "telefono": "+541132325991",
-        "username": "nach",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "user",
-        "image": "generic.jpg"
-    },
-    {
-        "id": 10,
-        "firstname": "nuevo",
-        "lastname": "nuevito",
-        "email": "nuevo@ne.com.ar",
-        "telefono": "11-2121-2121",
-        "username": "new",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "user",
-        "image": "imagenPerfil-1666659173870.png"
-    },
-    {
-        "id": 11,
-        "firstname": "13213",
-        "lastname": "123223",
-        "email": "ignaperez76@gmail.com",
-        "telefono": "+541132325991",
-        "username": "2321231",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "user",
-        "image": "generic.jpg"
-    },
-    {
-        "id": 12,
-        "firstname": "nacho",
-        "lastname": "p",
-        "email": "ignaperez76@gmail.com",
-        "telefono": "+541132325991",
-        "username": "nacho1",
-        "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
-        "categoria": "user",
-        "image": "generic.jpg"
-    }
+ {
+  "id": 1,
+  "firstname": "Juan",
+  "lastname": "Rusconi",
+  "email": "juan@perichsone.com",
+  "telefono": "111111111",
+  "username": "juan",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "admin",
+  "image": "foto.png"
+ },
+ {
+  "id": 2,
+  "firstname": "Diego",
+  "lastname": "Palomino",
+  "email": "diegho@perichsone.com",
+  "telefono": "111111111",
+  "username": "diego",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "admin",
+  "image": "foto.png"
+ },
+ {
+  "id": 3,
+  "firstname": "Jeremias",
+  "lastname": "Cuenca",
+  "email": "jeremias@perichsone.com",
+  "telefono": "111111111",
+  "username": "jere",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "admin",
+  "image": "foto.png"
+ },
+ {
+  "id": 4,
+  "firstname": "Ignacio",
+  "lastname": "Perez",
+  "email": "ignacio@perichsone.com",
+  "telefono": "111111111",
+  "username": "ignacio",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "admin",
+  "image": "foto.png"
+ },
+ {
+  "id": 5,
+  "firstname": "Ricardo",
+  "lastname": "Ford",
+  "email": "Ricado@fort.com.ar",
+  "telefono": "1164748284",
+  "username": "Forti2",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "user",
+  "image": "imagenPerfil-1666646728922.jpg"
+ },
+ {
+  "id": 6,
+  "firstname": "Ricardo",
+  "lastname": "Fort",
+  "email": "Richard@fort.com.ar",
+  "telefono": "22222",
+  "username": "ri",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "user",
+  "image": "imagenPerfil-1666646728922.jpg"
+ },
+ {
+  "id": 7,
+  "firstname": "Lionel",
+  "lastname": "Messi",
+  "email": "leo@messi.com.ar",
+  "telefono": "11562321",
+  "username": "Leito",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "user",
+  "image": "imagenPerfil-1666647015390.jpg"
+ },
+ {
+  "id": 8,
+  "firstname": "Burrito",
+  "lastname": "Ortega",
+  "email": "burro@ortega.com.ar",
+  "telefono": "223213",
+  "username": "asddasdas",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "user",
+  "image": "imagenPerfil-1666650244842.jpg"
+ },
+ {
+  "id": 9,
+  "firstname": "IGNACIO ",
+  "lastname": "perez123",
+  "email": "ignaperez76@gmail.com",
+  "telefono": "+541132325991",
+  "username": "nach",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "user",
+  "image": "generic.jpg"
+ },
+ {
+  "id": 10,
+  "firstname": "nuevo",
+  "lastname": "nuevito",
+  "email": "nuevo@ne.com.ar",
+  "telefono": "11-2121-2121",
+  "username": "new",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "user",
+  "image": "imagenPerfil-1666659173870.png"
+ },
+ {
+  "id": 11,
+  "firstname": "13213",
+  "lastname": "123223",
+  "email": "ignaperez76@gmail.com",
+  "telefono": "+541132325991",
+  "username": "2321231",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "user",
+  "image": "generic.jpg"
+ },
+ {
+  "id": 12,
+  "firstname": "nacho",
+  "lastname": "p",
+  "email": "ignaperez76@gmail.com",
+  "telefono": "+541132325991",
+  "username": "nacho1",
+  "password": "$2a$10$QKC7HHcyZgCmhBq8E3MQlu2SJYLC1ZL1isUo2h.X.apfFbldEixUa",
+  "categoria": "user",
+  "image": "generic.jpg"
+ },
+ {
+  "id": 13,
+  "firstname": "Carlos",
+  "lastname": "Menem",
+  "email": "carlitos1930@hotmail.com",
+  "telefono": "3534044222",
+  "username": "Menem",
+  "password": "$2a$10$gnauDPyaAnn6pfJ/oDJ4iuIS85xRwEPWQQW2wgVbgi3vupTXRKRW2",
+  "categoria": "user",
+  "image": "imagenPerfil-1668292907266.png"
+ }
 ]

@@ -22,22 +22,22 @@
         <div class="contenedor-formulario">
             <form action="/product/editProduct/<%= producto.id %>?_method=PUT " method="post" class="formulario-np" enctype="multipart/form-data">
                 <div><label for="">Nombre del Producto: </label>
-                    <input type="text" name="titulo" placeholder="Por ejemplo, auriculares Logitech" required></div>
+                    <input type="text" name="titulo" placeholder="Por ejemplo, auriculares Logitech" value="<%= producto.titulo %> " required></div>
                 <div><label for="">Que categoria le quieres asignar al producto: </label>
                     <select name="categoria" id="" required>Auriculares
                         <option value="Auriculares">Auriculares</option>
-                        <option value="Auriculares">Mouse</option>
-                        <option value="Auriculares">Teclados</option>
-                        <option value="Auriculares">Joysticks</option>
-                        <option value="Auriculares">Mousepads</option>
+                        <option value="Mouse">Mouse</option>
+                        <option value="Teclados">Teclados</option>
+                        <option value="Joysticks">Joysticks</option>
+                        <option value="Mousepads">Mousepads</option>
                     </select>
                 </div>
                 <div><label for="">imagen del producto: </label>
                     <input type="file" name="imagen1"></div>
                 <div><label for="">precio del producto: </label>
-                    <input type="text" name="precio"></div>
+                    <input type="text" name="precio" value="<%= producto.precio %> "></div>
                 <div><label for="">Garantía: </label>
-                    <select name="garantia" id="" required>Auriculares
+                    <select name="garantia" id="" required >Auriculares
                         <option value="6">6 meses</option>
                         <option value="12">12 meses</option>
                         <option value="24">24 meses</option>

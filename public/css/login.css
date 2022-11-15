@@ -43,6 +43,11 @@ body{
 body {
     background-color: black;
 }
+.error-text{
+    color: red;
+    text-align: center;
+    margin: 1%;
+}
 
 @media (max-width: 426px) {
     .cabeza-inferior{

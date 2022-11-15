@@ -28,15 +28,65 @@
 
             <form class="formulario" action="/users/registro" method="POST" enctype="multipart/form-data">
 
-                <input class="input-registro" type="text" name="firstname" placeholder="Nombre" required>
-                <input class="input-registro" type="text" name="lastname" placeholder="Apellido" required>
-                <input class="input-registro" type="email" name="email" placeholder="Email@servidor.com" required>
-                <input class="input-registro" type="text" name="telefono" placeholder="Teléfono" required>
-                <input class="input-registro" type="text" name="username" placeholder="Nombre de usuario" required>
-                <input class="input-registro" type="password" name="password" placeholder="Contraseña" required>
-                <input class="input-registro" type="password" name="re-password" placeholder="Reingrese su contraseña" required>
-                <div class="foto-perfil"><label for="imagenPerfil">Seleccione su foto de perfil: </label><input class="boton-imagen" type="file" name = "imagenPerfil"> </div>
+                <input class="input-registro <%= locals.errors && errors.firstname ? 'is-invalid' : null %>" 
+                type="text" name="firstname" placeholder="Nombre"
+                value="<%= locals.oldData ? oldData.firstname : null %>">
+                <% if (locals.errors && errors.firstname) { %>
+                    <div class="error-text">
+                        <%= errors.firstname.msg %> 
+                    </div>
+                <% } %>
+                <input class="input-registro <%= locals.errors && errors.lastname ? 'is-invalid' : null %>" 
+                type="text" name="lastname" placeholder="Apellido"
+                value="<%= locals.oldData ? oldData.lastname : null %>">
+                <% if (locals.errors && errors.lastname) { %>
+                    <div class="error-text">
+                        <%= errors.lastname.msg %> 
+                    </div>
+                <% } %>
+                <input class="input-registro <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+                type="text" name="email" placeholder="Email@servidor.com"
+                value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="error-text">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
+                <input class="input-registro <%= locals.errors && errors.telefono ? 'is-invalid' : null %>" 
+                type="text" name="telefono" placeholder="Teléfono"
+                value="<%= locals.oldData ? oldData.telefono : null %>">
+                <% if (locals.errors && errors.telefono) { %>
+                    <div class="error-text">
+                        <%= errors.telefono.msg %> 
+                    </div>
+                <% } %>
+                <input class="input-registro <%= locals.errors && errors.username ? 'is-invalid' : null %>" 
+                type="text" name="username" placeholder="Nombre de usuario"
+                value="<%= locals.oldData ? oldData.username : null %>">
+                <% if (locals.errors && errors.username) { %>
+                    <div class="error-text">
+                        <%= errors.username.msg %> 
+                    </div>
+                <% } %>
+                <input class="input-registro <%= locals.errors && errors.password ? 'is-invalid' : null %>" 
+                type="password" name="password" placeholder="Contraseña">
+                <% if (locals.errors && errors.password) { %>
+                    <div class="error-text">
+                        <%= errors.password.msg %> 
+                    </div>
+                <% } %>
+
+                <div class="foto-perfil"><label for="imagenPerfil">Seleccione su foto de perfil: </label>
+                    <input class="boton-imagen <%= locals.errors && errors.imagenPerfil ? 'is-invalid' : null %>" 
+                    type="file" name = "imagenPerfil"> </div>
+                <% if (locals.errors && errors.imagenPerfil) { %>
+                    <div class="error-text">
+                        <%= errors.imagenPerfil.msg %> 
+                    </div>
+                <% } %>
+                
                 <button class="boton" type="submit">Registrar</button>
+
             </form>
         </div>
     </main>

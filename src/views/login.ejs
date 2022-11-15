@@ -23,9 +23,13 @@
             <img class="fondo" src="/img/fondoLogjn.png" alt="">
 
             <h1 class="titulo">PhericsOne</h1>
-
+                <% if (locals.error) { %>
+                    <div class="error-text">
+                        <%= error %> 
+                    </div>
+                <% } %>
             <form class="formulario" action="/users/login" method="post">
-                <input class="input" type="text" name="name" placeholder="Usuario" required>
+                <input class="input" type="text" name="email" placeholder="Email" required>
                 <input class="input" type="password" name="password" placeholder="Contraseña" required>
                 <button class="boton" type="submit">Ingresar</button>
             </form>

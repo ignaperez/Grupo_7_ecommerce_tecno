@@ -1,8 +1,10 @@
+//Requires
 const fs = require("fs");
 const path = require("path");
 const userFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
+const {validationResult} = require("express-validator")
 /* const productos = JSON.parse(fs.readFileSync(userFilePath, 'utf-8')); */
 
 const multer = require('multer');
@@ -32,56 +34,70 @@ const userController = {
     },
 
     logicRegister: (req, res) => {
-        let image
-
-        if (req.files[0] != undefined) {
-
-            image = req.files[0].filename
-        } else {
-            image = 'generic.jpg'
-        }
-
-        let newUser = {
-
-            id: users[users.length - 1].id + 1,
-            ...req.body,
-            're-password': null,
-            //Encripto password 
-            password: bcryptjs.hashSync(req.body.password, 10),
-            categoria: "user",
-            image: image
-        }
-
-        users.push(newUser);
-        fs.writeFileSync(userFilePath, JSON.stringify(users, null, ''));
-        res.redirect('/');
-    },
-    loginPost: (req, res) => {
-        let nombreUsuario = req.body.name;
-        let user = users.find(usuario => usuario.username == nombreUsuario);
-        //Login compara pass encriptado
-        if (user && bcryptjs.compare(req.body.password, user.password)) {
-            //console.log(user.categoria);
-            if (user.categoria == "admin") {
-                req.session.nombre = user.firstname;
-                console.log(req.session.nombre);
-                res.redirect('/product/dashboard');
+        const resultValidation = validationResult(req);
+        const userInDB = users.find(usuario => usuario.email == req.body.email)
+            
+            console.log(userInDB);
+            if(resultValidation.errors.length > 0){
+                return res.render("registro", {
+                    errors: resultValidation.mapped(), 
+                    oldData: req.body
+                }); 
+            } else {
                 
+                let image
+                
+                if (req.file != undefined) {
+                    
+                    image = req.file.filename
+                } else {
+                    image = 'generic.jpg'
+                }
+                
+                let newUser = {
+                    
+                    id: users[users.length - 1].id + 1,
+                    ...req.body,
+                    //Encripto password 
+                    password: bcryptjs.hashSync(req.body.password, 10),
+                    categoria: "user",
+                    image: image
+                }
+                
+                users.push(newUser);
+                fs.writeFileSync(userFilePath, JSON.stringify(users, null, ' '));
+                res.redirect('/');
             }
-            else 
-            {
-                res.redirect('/product/carrito');
+
+    },
+            
+    loginPost: (req, res) => {
+        let emailUsuario = req.body.email;
+        let user = users.find(usuario => usuario.email == emailUsuario);
+        
+        //Login compara password encriptada
+        if (user && bcryptjs.compare(req.body.password, user.password)) {
+            delete user.password
+            req.session.user = user;
+            console.log(req.session)
+            if (user.categoria == "admin") {
+                res.redirect('/product/dashboard');
+            } else {
+               res.redirect('/');
             }
+        } else {
+            let errors = "Las credenciales son invalidas, prueba nuevamente"
+            res.render("login", {
+                error:  errors
+            })
         }
-        else
-
-
-            console.log("no existe");
-
-    
-
-
-}
+    },
+    vistaPerfil: (req, res) => {
+        res.render("perfilUsuario", {
+            user: req.session.user
+        })
+        
+    }
 
 }
 
