@@ -2,14 +2,13 @@
  {
   "id": 1,
   "titulo": "TECLADO MECÁNICO",
-  "descripcion1": "Teclado Alloy Origins HyperX.El HyperX Alloy Origins™ Core es un teclado ultracompacto y resistente sin zona numérica conconmutadores mecánicos HyperX personalizados diseñados para proporcionar a los jugadores la mejor combinación de estilo, rendimiento y fiabilidad. Estos conmutadores de teclas tienen LED expuestospara una iluminación deslumbrante con una fuerza de actuación y una distancia de recorridoelegantemente equilibrada para una capacidad de respuesta y precisión. Alloy Origins Core está fabricado con un cuerpo de aluminio completo para que permanezca rígido y estable cuando se presionan las teclas, y también cuenta con patas de teclado que le permiten elegir entre tres niveles de inclinación diferentes. Su diseño TKL elegante y compacto libera espacio para el movimiento del ratón en escritorios donde el espacio está muy cotizado, y también cuenta con un cable USB tipo C desmontable para una portabilidad suprema.",
+  "categoria": "Auriculares",
+  "precio": "21001",
+  "garantia": "6",
+  "descripcion1": "Teclado Alloy Origins HyperX.El HyperX Alloy Origins™ Core es un teclado ultracompacto y resistente sin zona numérica conconmutadores mecánicos HyperX personalizados diseñados para proporcionar a los jugadores la mejor combinación de estilo, rendimiento y fiabilidad. Estos conmutadores de teclas tienen LED expuestospara una iluminación deslumbrante con una fuerza de actuación y una distancia de recorridoelegantemente equilibrada para una capacidad de respuesta y precisión. Alloy Origins Core está fabricado con un cuerpo de aluminio completo para que permanezca rígido y estable cuando se presionan las teclas, y también cuenta con patas de teclado que le permiten elegir entre tres niveles de inclinación diferentes. Su diseño TKL elegante y compacto libera espacio para el movimiento del ratón en escritorios donde el espacio está muy cotizado, y también cuenta con un cable USB tipo C desmontable para una portabilidad suprema.  ",
   "descripcion2": "Personaliza tu iluminación, crea macros y ajusta el modo de juego con el software HyperX NGENUITY. Este programa potente pero facil de usar te permite configurar la iluminación por tecla, tener efectos de iluminacion deslumbrantes y agregar decenas de otros toques personalizados a tus productos compatibles con NGENUITY.",
   "descripcion3": "",
-  "imagen1": "teclado.png",
-  "imagen2": "teclado.png",
-  "stock": 1,
-  "precio": 21000,
-  "categoria": "teclado"
+  "imagen1": "teclado.png"
  },
  {
   "id": 2,
