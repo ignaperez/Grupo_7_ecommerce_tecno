@@ -9,6 +9,7 @@ const {body} = require("express-validator");
 //Middlewares de ruta
 const userLoggedMiddleware = require("../middlewares/userLoggedMiddleware")
 const userNotLoggedMiddleware = require("../middlewares/userNotLoggedMiddleware");
+const adminAccsessMiddelware = require("../middlewares/adminAccessMiddleware")
 
 
 const fs = require("fs");
@@ -40,7 +41,8 @@ router.post("/registro", upload.single("imagenPerfil"), userValidations, userCon
 router.get("/profile",userNotLoggedMiddleware, userController.vistaPerfil)
 
 router.get("/listar-usuarios",userNotLoggedMiddleware, userController.listarUsuarios);
-router.get('/detalle-usuario/:id',userController.detalleUsuario);
+router.get('/detalle-usuario/:id',adminAccsessMiddelware,userController.detalleUsuario);
+router.get('/editar-usuario/:id',userController.editarUsuario);
 
 module.exports = router;
 

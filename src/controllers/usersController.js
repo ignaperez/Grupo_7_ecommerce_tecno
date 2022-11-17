@@ -115,6 +115,14 @@ const userController = {
         
         res.render('detalleUsuario',{verUsuario});
     },
+    editarUsuario: (req,res)=>
+    {
+        let idUser= req.params.id;
+        let verUsuario = users.find(usuario => usuario.id == idUser);
+        //console.log(verUsuario);
+        
+        res.render('editarUsuario',{verUsuario});
+    },
 
 }
 
