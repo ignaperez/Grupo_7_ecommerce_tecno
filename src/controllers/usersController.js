@@ -74,14 +74,15 @@ const userController = {
     loginPost: (req, res) => {
         let emailUsuario = req.body.email;
         let user = users.find(usuario => usuario.email == emailUsuario);
+        if(req.body.recordar_usuario) {
+           res.cookie("cookieEmail", user.email, {maxAge: 60000 * 5 });
+           console.log(req.cookies.cookieEmail);
+        }
         
         //Login compara password encriptada
         if (user && bcryptjs.compare(req.body.password, user.password)) {
             delete user.password
             req.session.user = user;
-            if(req.body.recordame) {
-                res.cookie("userEmail", req.body.email, {maxAge: 60000});
-            }
             
             if (user.categoria == "admin") {
                 res.redirect('/product/dashboard');

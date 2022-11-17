@@ -22,8 +22,8 @@ const mainController =
         res.render ('ayuda');
     },
     logout:(req,res)=>{
+        res.clearCookie("cookieEmail")
         req.session.destroy();
-        //req.cookies.destroy();
         res.redirect('/');
     }
     

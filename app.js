@@ -20,8 +20,10 @@ app.use(session ( {
     secret: "secret",
     resave: false,
     saveUninitialized: true}));
-app.use(loggedMiddleware)
 app.use(cookies())
+
+
+app.use(loggedMiddleware)
 
 //RUTAS
 app.use('/',mainRouter);
