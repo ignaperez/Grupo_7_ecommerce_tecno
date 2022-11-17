@@ -1,7 +1,6 @@
 * {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-  
 }
 
 /* cabeza superior */
@@ -10,7 +9,8 @@
     display: flex;
     background-color:#292E1E;
     height: 75px;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     flex-wrap:wrap;
     align-items: center;
     
@@ -19,7 +19,7 @@
     padding-left: 4vh;
     flex: 5;
     color: white;
-    font-size: 2vh;
+    font-size: 3vh;
     font-weight: bold;
 }
 
@@ -30,6 +30,7 @@
 
 .hipervinculos-header {
     display: flex;
+    flex: 5;
     justify-content: space-around;
     flex-grow: 1;
     
@@ -55,7 +56,7 @@ header div a {
     margin-top: 10px;
 }
 .imagen-perfil-nav {
-    width: 30%;
+    width: 40%;
     border-radius: 25%;
     margin: 2px;
     margin-right: 15px;
@@ -64,6 +65,11 @@ header div a {
     color: white;
     font-size: 3vh;
     font-weight: bold;
+}
+.contenedor-nav-superior {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* cabeza inferior */
@@ -240,8 +246,10 @@ img {
 
 /* Footer */
 footer {
+    width: 100%;
     background-color: rgb(209, 207, 207);
-
+    align-items: flex-end;
+   
 }
 .footer-superior {
     margin-top: 3vh;
