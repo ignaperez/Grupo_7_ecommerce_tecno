@@ -43,6 +43,6 @@ router.get("/profile",userNotLoggedMiddleware, userController.vistaPerfil)
 router.get("/listar-usuarios",userNotLoggedMiddleware, userController.listarUsuarios);
 router.get('/detalle-usuario/:id',adminAccsessMiddelware,userController.detalleUsuario);
 router.get('/editar-usuario/:id',userController.editarUsuario);
-
+router.put('/editar-usuario/:id',userController.editarUsuario);
 module.exports = router;
 

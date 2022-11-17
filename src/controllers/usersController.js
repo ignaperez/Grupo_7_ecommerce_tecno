@@ -85,7 +85,7 @@ const userController = {
             req.session.user = user;
             
             if (user.categoria == "admin") {
-                res.redirect('/product/dashboard');
+                res.redirect('/users/listar-usuarios');
             } else {
                 res.redirect('/');
             }
@@ -123,6 +123,28 @@ const userController = {
         
         res.render('editarUsuario',{verUsuario});
     },
+    actualizarUsuario: (req, res) => {
+        let id = req.params.id;
+        let usuarioActualizado = users.find(usuario => usuario.id == id)
+        let imagen 
+        (req.files[0] != undefined)
+            ? imagen = req.files[0].filename
+            : imagen = usuarioActualizado.image
+        usuarioActualizado = {
+            id: usuarioActualizado.id,
+            ...req.body,
+            image: imagen,
+        } 
+        let nuevoUsuario= users.map(usuario => {
+            if(usuario.id == usuarioActualizado.id) {
+                return usuario = {...usuarioActualizado};
+            }
+            return usuario
+        })
+        fs.writeFileSync(productsFilePath, JSON.stringify(usuarioActualizado, null, " "));
+        res.redirect("/users/listar-usuarios")
+    }
+    
 
 }
 
