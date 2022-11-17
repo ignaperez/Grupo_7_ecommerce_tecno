@@ -28,21 +28,26 @@
                 <div class="caja-izquierda">
     
                     <article class="perfil-usuario">
-
-                        <div class="titulo-perfil"> <div><p>PERFIL DEL USUARIO: <%= verUsuario.username %> </p> <p class="editar"><a href="***">Editar</a></p></div></div>
-
+                        <form action="">
+                        <div class="titulo-perfil"> <div><p>PERFIL DEL USUARIO: <%= verUsuario.username %> </p></div></div>
+                       
                         <p class="rotulo">Nombres</p> 
-                        <p class="dato"><%= verUsuario.firstname %> </p>
+                        <p class="dato"><input type="text" name="firstname" value="<%= verUsuario.firstname %>">
+                             </p>
                         <p class="rotulo">Apellido</p> 
-                        <p class="dato"><%= verUsuario.lastname %></p>
+                        <p class="dato"><input type="text" name="lasttname" value="<%= verUsuario.lastname %>"></p>
                         <p class="rotulo">Email</p> 
-                        <p class="dato"><%= verUsuario.email %></p>
+                        <p class="dato"><input type="text" name="email" value="<%= verUsuario.email %>"></p>
                         <p class="rotulo">Teléfono</p> 
-                        <p class="dato"><%= verUsuario.telefono %></p>
+                        <p class="dato"><input type="text" name="telefono" value="<%= verUsuario.telefono %>"></p>
                         <p class="rotulo">Categoría</p>  
-                        <p class="dato"><%= verUsuario.categoria %></p>
+                        <p class="dato"><select name="categoria" id="">
+                            <option selected="selected" value="User">User</option>
+                            <option value="Administrador">Administrador</option>
+                        </select></p>
+                            <p><button type="submit">Guardar</button></p>
                     </article>
-        
+                </form>
                     <article class="perfil-usuario">
                         <div class="titulo-perfil"> <div><p>CONTRASEÑA</p> <p class="editar"><a href="***">Editar</a></p></div></div>
                         <p class="rotulo">Contraseña</p> 
