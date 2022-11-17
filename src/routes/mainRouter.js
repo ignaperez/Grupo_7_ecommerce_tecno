@@ -2,6 +2,7 @@ const fs = require("fs")
 const path =require('path');
 const express = require('express');
 const mainController = require('../controllers/mainController');
+const userNotLoggedMiddleware = require("../middlewares/userNotLoggedMiddleware");
 const router =express.Router();
 
 //RUTAS

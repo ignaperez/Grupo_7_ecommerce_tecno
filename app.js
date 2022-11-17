@@ -7,6 +7,7 @@ const mainRouter = require('./src/routes/mainRouter');
 const productRouter = require('./src/routes/productRouter');
 const usersRouter = require('./src/routes/userRouter');
 const session = require('express-session')
+const loggedMiddleware = require("./src/middlewares/loggedMiddleware")
 
 //Configuración
 app.use(express.static(path.resolve(__dirname,'public')));
@@ -18,7 +19,7 @@ app.use(session ( {
     secret: "secret",
     resave: false,
     saveUninitialized: true}));
-
+app.use(loggedMiddleware)
 //RUTAS
 app.use('/',mainRouter);
 app.use("/users", usersRouter)

@@ -40,7 +40,7 @@
   "garantia": "12",
   "descripcion1": "Samsung está fielmente comprometida en brindar productos de calidad y que contribuyan a crear un mejor futuro para las personas. Como empresa líder en la industria tecnológica uno de sus objetivos principales es desarrollar avanzadas e innovadoras soluciones. Es por ello que con este monitor tendrás y disfrutarás de una gran experiencia visual en todo momento.",
   "descripcion2": "Un monitor a tu medida\r\nCon tu pantalla LED no solo ahorrás energía, ya que su consumo es bajo, sino que vas a ver colores nítidos y definidos en tus películas o series favoritas.",
-  "descripcion3": "Una experiencia visual de calidad\r\nEste monitor de 24\" te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad. Su tiempo de respuesta de 4 ms lo hace ideal para gamers y cinéfilos porque es capaz de mostrar imágenes en movimiento sin halos o bordes borrosos.",
+  "descripcion3": "Una experiencia visual de calidad\r\nEste monitor de 24 pulgadas te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad. Su tiempo de respuesta de 4 ms lo hace ideal para gamers y cinéfilos porque es capaz de mostrar imágenes en movimiento sin halos o bordes borrosos.",
   "imagen1": "imagen1-1666739568791.png"
  },
  {
@@ -64,5 +64,17 @@
   "descripcion2": "",
   "descripcion3": "",
   "imagen1": "imagen1-1666745828723.png"
+ },
+ {
+  "id": 7,
+  "titulo": "auris",
+  "categoria": "Auriculares",
+  "precio": "13000",
+  "garantia": "6",
+  "descripcion1": "hola",
+  "descripcion2": "",
+  "descripcion3": "",
+  "imagen1": "imagen3-1668630452550.jfif",
+  "imagen2": "imagen2-1668630452546.png"
  }
 ]

@@ -2,13 +2,22 @@
     <div class="cabeza-superior">
             
         <p class="frase-top"><a href="/"> <i class="fa-brands fa-d-and-d"></i>PhericsOne</a></p>
-        <p></p>
         <div class="hipervinculos-header">
             
             <a class="vinculos" href="/ayuda"><i class="fa-solid fa-headset" style="padding-right: 0.8vh;"></i>Ayuda</a>
-            <a class="vinculos" href="/users/registro">Registrate</a>
-            <a class="vinculos" href="/users/login"><i class="fa-solid fa-right-to-bracket"
+            
+             <% if (locals.isLogged) { %>
+              
+                <div class="contenedor-perfil-nav">
+                    <img class="imagen-perfil-nav" src="/img/users/<%= locals.user.image %> " alt="">
+                    <p class="nombre-usuario-nav"><%= locals.user.username %> </p>
+                </div>
+
+             <% } else { %>
+                <a class="vinculos" href="/users/registro">Registrate</a>
+                <a class="vinculos" href="/users/login"><i class="fa-solid fa-right-to-bracket"
                     style="padding-right: 0.8vh;"></i>Ingresa</a>
+                    <% } %>
         </div>
     </div>
 
