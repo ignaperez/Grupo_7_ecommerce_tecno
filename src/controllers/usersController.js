@@ -102,7 +102,19 @@ const userController = {
             
         })
         
-    }
+    },
+    listarUsuarios:(req,res)=>{
+        res.render("listadoU",{users})
+    
+    },
+    detalleUsuario: (req,res)=>
+    {
+        let idUser= req.params.id;
+        let verUsuario = users.find(usuario => usuario.id == idUser);
+        //console.log(verUsuario);
+        
+        res.render('detalleUsuario',{verUsuario});
+    },
 
 }
 

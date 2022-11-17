@@ -32,21 +32,21 @@
                         <div class="titulo-perfil"> <div><p>PERFIL</p> <p class="editar"><a href="***">Editar</a></p></div></div>
 
                         <p class="rotulo">Nombres</p> 
-                        <p class="dato"><%= user.firstname %></p>
+                        <p class="dato"><%= verUsuario.firstname %> </p>
                         <p class="rotulo">Apellido</p> 
-                        <p class="dato"><%= user.lastname %></p>
+                        <p class="dato"><%= verUsuario.lastname %></p>
                         <p class="rotulo">Email</p> 
-                        <p class="dato"><%= user.email %></p>
+                        <p class="dato"><%= verUsuario.email %></p>
                         <p class="rotulo">Teléfono</p> 
-                        <p class="dato"><%= user.telefono %></p>
+                        <p class="dato"><%= verUsuario.telefono %></p>
                         <p class="rotulo">Categoría</p>  
-                        <p class="dato"><%= user.categoria %></p>
+                        <p class="dato"><%= verUsuario.categoria %></p>
                     </article>
         
                     <article class="perfil-usuario">
                         <div class="titulo-perfil"> <div><p>CONTRASEÑA</p> <p class="editar"><a href="***">Editar</a></p></div></div>
                         <p class="rotulo">Contraseña</p> 
-                        <p class="dato"><!-- <%= user.password %> -->***********</p>
+                        <p class="dato"> -->***********</p>
         
                     </article>
                 </div>
@@ -61,7 +61,7 @@
 
                     <article class="perfil-usuario-2">
                         <div class="titulo-perfil"> <div><p>FOTO DE PERFIL</p> <p class="editar"><a href="***">Editar</a></p></div></div>
-                        <div class="IMAGEN"><img class="img" src="/img/users/<%= user.image %> " alt=""> </div> 
+                        <div class="IMAGEN"><img class="img" src="/public/img/users/<%= verUsuario.image %>"  alt=""> </div> 
                                 
                     </article>
 

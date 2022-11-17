@@ -64,9 +64,7 @@
     padding-top: 0;
 }
 
-.editar {
-    display: none;
-}
+
 
 .titulo-perfil div {
     display: flex;
@@ -112,19 +110,24 @@
     width: 100%;
     height: 40px;
     text-align: left;
-    display:inline;
     background-color: #ECEBE4;
     border-bottom:0.5px solid rgb(187, 178, 178) ;
+}
+
+
+.editar {
+    display: none;
 }
 
 
 
 
 
-
-
-
 @media (min-width: 768px) {
+
+    .editar {
+        display: block;
+    }
 
 .cajas {
     margin: auto;
