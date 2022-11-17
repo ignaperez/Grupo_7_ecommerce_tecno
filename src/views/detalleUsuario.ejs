@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/perfilUsuario.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&amp;display=swap"
+        rel="stylesheet">
+    <title>PerichsOne - Mi Perfil</title>
+</head>
+
+<body>
+
+    <!-- En el header van las dos primeras barras : La que dice equipate para ser el mejor y la otra es donde va el nombre y la barra de busqueda! NADA MAS -->
+    <!-- partial del header-->
+    <%- include("./partials/header-total") %>
+        <main>
+            <div class="cajas">
+
+
+                <div class="caja-izquierda">
+    
+                    <article class="perfil-usuario">
+
+                        <div class="titulo-perfil"> <div><p>PERFIL</p> <p class="editar"><a href="***">Editar</a></p></div></div>
+
+                        <p class="rotulo">Nombres</p> 
+                        <p class="dato"><%= verUsuario.firstname %> </p>
+                        <p class="rotulo">Apellido</p> 
+                        <p class="dato"><%= verUsuario.lastname %></p>
+                        <p class="rotulo">Email</p> 
+                        <p class="dato"><%= verUsuario.email %></p>
+                        <p class="rotulo">Teléfono</p> 
+                        <p class="dato"><%= verUsuario.telefono %></p>
+                        <p class="rotulo">Categoría</p>  
+                        <p class="dato"><%= verUsuario.categoria %></p>
+                    </article>
+        
+                    <article class="perfil-usuario">
+                        <div class="titulo-perfil"> <div><p>CONTRASEÑA</p> <p class="editar"><a href="***">Editar</a></p></div></div>
+                        <p class="rotulo">Contraseña</p> 
+                        <p class="dato"> -->***********</p>
+        
+                    </article>
+                </div>
+    
+                <div class="caja-derecha">
+                    
+                    <article class="perfil-usuario">
+                        <div class="titulo-perfil"> <div><p>METODOS DE PAGO</p> <p class="editar"><a href="***">Editar</a></p></div></div>
+                        <p class="rotuloCC"> <a href="">+ AÑADIR NUEVA TARJETA</a></p> 
+                                
+                    </article>
+
+                    <article class="perfil-usuario-2">
+                        <div class="titulo-perfil"> <div><p>FOTO DE PERFIL</p> <p class="editar"><a href="***">Editar</a></p></div></div>
+                        <div class="IMAGEN"><img class="img" src="/public/img/users/<%= verUsuario.image %>"  alt=""> </div> 
+                                
+                    </article>
+
+    
+
+
+                </div>
+            </div>
+
+
+
+
+        </main>
+
+
+
+
+
+
+
+        <!-- partials del footer-->
+        <%- include("./partials/footer") %>
+
+
+
+</body>
+
+</html>

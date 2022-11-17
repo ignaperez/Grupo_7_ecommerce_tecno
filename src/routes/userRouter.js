@@ -39,5 +39,8 @@ router.post("/registro", upload.single("imagenPerfil"), userValidations, userCon
 
 router.get("/profile",userNotLoggedMiddleware, userController.vistaPerfil)
 
+router.get("/listar-usuarios",userNotLoggedMiddleware, userController.listarUsuarios);
+router.get('/detalle-usuario/:id',userController.detalleUsuario);
+
 module.exports = router;
 
