@@ -1,0 +1,125 @@
+* {
+
+    box-sizing: border-box;
+}
+
+.cajas {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
+
+.caja-izquierda{
+    margin: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 600px;
+
+}
+
+.caja-derecha{
+
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 600px;
+    align-items: center;
+    justify-content: start;
+    margin: 0;
+
+}
+
+
+
+
+.perfil-usuario {
+    margin:auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border:0.5px solid rgb(187, 178, 178);
+    width: 30vw;
+    /* margin-top: 50px; */
+}
+
+.perfil-usuario .rotulo {
+
+    padding: 10px;
+    color:rgb(177, 170, 170);
+    font-size: 14px;
+    
+}
+
+.perfil-usuario .rotuloCC {
+
+    padding: 10px;
+    color:rgb(177, 170, 170);
+    font-size: 14px;
+    margin: auto;
+    
+}
+
+.perfil-usuario .dato {
+
+    padding: 10px;
+    padding-top: 0;
+}
+
+.titulo-perfil{
+
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    display:inline;
+    background-color: #ECEBE4;
+    border-bottom:0.5px solid rgb(187, 178, 178) ;
+}
+
+.editar{
+    color: grey;
+    font-size: 10px;
+    text-decoration: underline;
+    
+}
+.titulo-perfil div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-perfil p {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.IMAGEN {
+    width:100%;
+    text-align: center;
+    /* height: 200PX; */
+    
+}
+
+.img {
+    width:30%;
+    border-radius: 10px;
+    border: BLACK SOLID 3PX;
+    margin: 20px;
+    text-align: center;
+    
+}
+
+
+.perfil-usuario-2 {
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:0.5px solid rgb(187, 178, 178);
+    width: 30vw;
+    /* margin-top: 50px; */
+}
+
