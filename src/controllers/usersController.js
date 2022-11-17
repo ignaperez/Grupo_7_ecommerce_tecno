@@ -79,10 +79,14 @@ const userController = {
         if (user && bcryptjs.compare(req.body.password, user.password)) {
             delete user.password
             req.session.user = user;
+            if(req.body.recordame) {
+                res.cookie("userEmail", req.body.email, {maxAge: 60000});
+            }
+            
             if (user.categoria == "admin") {
                 res.redirect('/product/dashboard');
             } else {
-               res.redirect('/');
+                res.redirect('/');
             }
         } else {
             let errors = "Las credenciales son invalidas, prueba nuevamente"
@@ -94,6 +98,7 @@ const userController = {
     vistaPerfil: (req, res) => {
         res.render("perfilUsuario", {
             user: req.session.user
+            
         })
         
     }

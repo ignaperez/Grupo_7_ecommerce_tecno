@@ -6,8 +6,9 @@ const methodOverride =  require('method-override');
 const mainRouter = require('./src/routes/mainRouter');
 const productRouter = require('./src/routes/productRouter');
 const usersRouter = require('./src/routes/userRouter');
-const session = require('express-session')
-const loggedMiddleware = require("./src/middlewares/loggedMiddleware")
+const session = require('express-session');
+const loggedMiddleware = require("./src/middlewares/loggedMiddleware");
+const cookies = require("cookie-parser");
 
 //Configuración
 app.use(express.static(path.resolve(__dirname,'public')));
@@ -20,6 +21,8 @@ app.use(session ( {
     resave: false,
     saveUninitialized: true}));
 app.use(loggedMiddleware)
+app.use(cookies())
+
 //RUTAS
 app.use('/',mainRouter);
 app.use("/users", usersRouter)
