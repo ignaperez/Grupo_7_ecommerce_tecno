@@ -28,7 +28,6 @@ const productController = {
         let producto = productos.find(producto => producto.id == idProducto);
         if (producto.imagen2 == '')
         producto.imagen2=producto.imagen1;
-        let miniListado = productos;
         res.render('detalle-producto',{productos, producto});
     },
     newProduct: (req,res) => {
@@ -61,14 +60,26 @@ const productController = {
         res.redirect("/product/dashboard")
     },
     create:(req,res)=>{
+        console.log(req.files);
         let image
         (req.files[0] != undefined) 
             ? image = req.files[0].filename 
             : image = "logo-img.png"
+        let image2 
+        (req.files[1] != undefined) 
+            ? image2 = req.files[1].filename 
+            : image2 = "logo-img.png"
+        let image3
+        (req.files[2] != undefined) 
+            ? image3 = req.files[2].filename 
+            : image3 = "logo-img.png" 
+        
         let newProduct = {
 			id: productos[productos.length - 1].id + 1,
 			...req.body,
-            imagen1: image
+            imagen1: image,
+            imagen2: image2,
+            imagen3: image3
 		};
 		productos.push(newProduct)
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
@@ -76,7 +87,8 @@ const productController = {
         res.redirect('/product/dashboard');
     },
     dashboard: (req, res) => {
-        res.render("admin-producto", {productos})
+        let productos1 = productos
+        res.render("admin-producto", {productos: productos1})
     },
     borrar: (req, res) => {
         let id = req.params.id;
@@ -89,7 +101,7 @@ const productController = {
         })
        
         fs.writeFileSync(productsFilePath, JSON.stringify(productosFinales, null, " "))
-        res.redirect("/product/dashboard");
+        res.render("/product/dashboard");
     },
     searchAdmin: (req, res) => {
         let search = req.query.keywords;

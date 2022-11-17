@@ -22,11 +22,7 @@
         <div class="contenedor-formulario">
             <form action="/product/editProduct/<%= producto.id %>?_method=PUT " method="post" class="formulario-np" enctype="multipart/form-data">
                 <div><label for="">Nombre del Producto: </label>
-<<<<<<< HEAD
-                    <input type="text" name="titulo" placeholder="Por ejemplo, auriculares Logitech" value="<%= producto.titulo %> " required></div>
-=======
                     <input type="text" name="titulo"  required value="<%= producto.titulo %>"></div>
->>>>>>> a750e5a68b3dcdea530c6eacee82d5ac8fb61b86
                 <div><label for="">Que categoria le quieres asignar al producto: </label>
                     <select name="categoria" id="" required>Auriculares
                         <option value="Auriculares">Auriculares</option>
@@ -56,7 +52,7 @@
                             <label for="">Descripción 2: </label><textarea name="descripcion2" cols="30" rows="5"><%= producto.descripcion2 %></textarea>
                         </div>
                         <div>
-                            <label for="">Descripción 3: </label><textarea name="descripcion3" cols="30" rows="5"><%= producto.descripcion3 %></textarea>
+                            <label for="">Descripción 3: </label><textarea name="descripcion3" cols="30" rows="5" ><%= producto.descripcion3 %></textarea>
                         </div>
                 </div>
                 <div class="botones">

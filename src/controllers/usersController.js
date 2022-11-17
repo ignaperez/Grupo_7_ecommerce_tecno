@@ -37,7 +37,7 @@ const userController = {
         const resultValidation = validationResult(req);
         const userInDB = users.find(usuario => usuario.email == req.body.email)
             
-            console.log(userInDB);
+            
             if(resultValidation.errors.length > 0){
                 return res.render("registro", {
                     errors: resultValidation.mapped(), 
@@ -79,7 +79,6 @@ const userController = {
         if (user && bcryptjs.compare(req.body.password, user.password)) {
             delete user.password
             req.session.user = user;
-            console.log(req.session)
             if (user.categoria == "admin") {
                 res.redirect('/product/dashboard');
             } else {

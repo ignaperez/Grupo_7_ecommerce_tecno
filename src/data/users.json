@@ -141,5 +141,17 @@
   "password": "$2a$10$gnauDPyaAnn6pfJ/oDJ4iuIS85xRwEPWQQW2wgVbgi3vupTXRKRW2",
   "categoria": "user",
   "image": "imagenPerfil-1668292907266.png"
+ },
+ {
+  "id": 14,
+  "firstname": "Carlos",
+  "lastname": "Garga",
+  "email": "carlos28@gmail.com",
+  "telefono": "1123456213",
+  "username": "calos23",
+  "password": "$2a$10$qAmrmkNQAG6Cys/6/ePLbeUlXxNAX3xvFi38cfQVhJx5BZT9cC3vO",
+  "categoria": "user",
+  "image": "imagenPerfil-1668477410549.png"
  }
+ 
 ]
