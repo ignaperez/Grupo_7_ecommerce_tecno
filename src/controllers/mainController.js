@@ -21,6 +21,11 @@ const mainController =
     {
         res.render ('ayuda');
     },
+    logout:(req,res)=>{
+        req.session.destroy();
+        //req.cookies.destroy();
+        res.redirect('/');
+    }
     
     
 
