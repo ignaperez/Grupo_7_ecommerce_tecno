@@ -1,9 +1,9 @@
 //Requires
 const fs = require("fs");
 const path = require("path");
+const bcryptjs = require('bcryptjs');
 const userFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-const bcryptjs = require('bcryptjs');
 const {validationResult} = require("express-validator")
 /* const productos = JSON.parse(fs.readFileSync(userFilePath, 'utf-8')); */
 
@@ -74,26 +74,30 @@ const userController = {
     loginPost: (req, res) => {
         let emailUsuario = req.body.email;
         let user = users.find(usuario => usuario.email == emailUsuario);
-        if(req.body.recordar_usuario) {
-           res.cookie("cookieEmail", user.email, {maxAge: 60000 * 5 });
-           console.log(req.cookies.cookieEmail);
-        }
         
         //Login compara password encriptada
-        if (user && bcryptjs.compare(req.body.password, user.password)) {
-            delete user.password
-            req.session.user = user;
+        if (user) {
             
-            if (user.categoria == "admin") {
-                res.redirect('/users/listar-usuarios');
-            } else {
-                res.redirect('/');
-            }
-        } else {
+            if (bcryptjs.compare(req.body.password, user.password)) {
+                
+                delete user.password
+                req.session.user = user;
+            
+                if(req.body.recordar_usuario) {
+               res.cookie("cookieEmail", user.email, {maxAge: 60000 * 5 });
+
+                }
+                
+                if (user.categoria == "admin") {
+                    res.redirect('/users/listar-usuarios');
+                } else {
+                    res.redirect('/');
+                }
+        }} else {
             let errors = "Las credenciales son invalidas, prueba nuevamente"
             res.render("login", {
                 error:  errors
-            })
+            }) 
         }
     },
     vistaPerfil: (req, res) => {
@@ -111,7 +115,6 @@ const userController = {
     {
         let idUser= req.params.id;
         let verUsuario = users.find(usuario => usuario.id == idUser);
-        //console.log(verUsuario);
         
         res.render('detalleUsuario',{verUsuario});
     },
@@ -119,7 +122,6 @@ const userController = {
     {
         let idUser= req.params.id;
         let verUsuario = users.find(usuario => usuario.id == idUser);
-        //console.log(verUsuario);
         
         res.render('editarUsuario',{verUsuario});
     },

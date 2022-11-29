@@ -42,8 +42,15 @@
                         <p class="dato"><input type="text" name="telefono" value="<%= verUsuario.telefono %>"></p>
                         <p class="rotulo">Categoría</p>  
                         <p class="dato"><select name="categoria" id="">
-                            <option selected="selected" value="User">User</option>
-                            <option value="Administrador">Administrador</option>
+                            <% 
+                           let categorias = ["user","admin"]
+                             %>  
+                            <% categorias.forEach(categoria => {%>
+                                <option 
+                                    value="<%= categoria %> "
+                                    <%= verUsuario.categoria == categoria ? "selected" : null %> 
+                                    ><%= categoria %> </option>
+                            <% }) %>
                         </select></p>
                             <p><button type="submit">Guardar</button></p>
                     </article>

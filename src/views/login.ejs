@@ -20,22 +20,26 @@
     <%- include("./partials/header-superior") %>
 
         <main>
-            <img class="fondo" src="/img/fondoLogjn.png" alt="">
+            
 
-            <h1 class="titulo">PhericsOne</h1>
+            <div class="div-titulo"><h1 class="titulo">PhericsOne</h1></div>
+        <div class="contenedor-formulario">
+            <form class="formulario" action="/users/login" method="post">
                 <% if (locals.error) { %>
                     <div class="error-text">
                         <%= error %> 
                     </div>
                 <% } %>
-            <form class="formulario" action="/users/login" method="post">
-                <input class="input" type="text" name="email" placeholder="Email" required>
-                <input class="input" type="password" name="password" placeholder="Contraseña" required>
-             <label>
-                    <input type="checkbox" name="recordar_usuario">Recordar este usuario
-                </label>
-                    <button class="boton" type="submit">Ingresar</button>
+                <div class="contenedor-input"><input class="input" type="text" name="email" placeholder="Email" required></div>
+                <div class="contenedor-input"><input class="input" type="password" name="password" placeholder="Contraseña" required></div>
+                 <div class="contenedor-recordar">  
+                        <label>
+                            <input class="checkbox" type="checkbox" name="recordar_usuario">Recordar este usuario
+                        </label>
+                    </div class="contenedor-boton"> 
+                        <button class="boton" type="submit">Ingresar</button>
             </form>
+        </div>
         </main>
         <!-- partials del footer-->
         <%- include("./partials/footer") %>

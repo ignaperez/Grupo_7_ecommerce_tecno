@@ -16,11 +16,11 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'./src/views'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
+app.use(cookies())
 app.use(session ( {
     secret: "secret",
     resave: false,
     saveUninitialized: true}));
-app.use(cookies())
 
 
 app.use(loggedMiddleware)

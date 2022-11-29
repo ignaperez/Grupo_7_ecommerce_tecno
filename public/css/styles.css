@@ -246,9 +246,9 @@ img {
 
 /* Footer */
 footer {
+    
     width: 100%;
     background-color: rgb(209, 207, 207);
-    align-items: flex-end;
    
 }
 .footer-superior {

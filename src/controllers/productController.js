@@ -45,10 +45,20 @@ const productController = {
         (req.files[0] != undefined)
             ? imagen = req.files[0].filename
             : imagen = productoAEditar.imagen1
+            let image2
+        (req.files[1] != undefined)
+            ? image2 = req.files[1].filename
+            : image2 = productoAEditar.imagen2
+            let image3 
+            (req.files[2] != undefined)
+                ? image3 = req.files[2].filename
+                : image3 = productoAEditar.imagen3
         productoAEditar = {
             id: productoAEditar.id,
             ...req.body,
             imagen1: imagen,
+            imagen2: image2,
+            imagen3: image3
         } 
         let nuevoProducto = productos.map(producto => {
             if(producto.id == productoAEditar.id) {

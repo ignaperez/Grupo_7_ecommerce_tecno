@@ -24,7 +24,7 @@
  {
   "id": 3,
   "titulo": "Joystick  Xbox Serie X",
-  "categoria": "joysticks",
+  "categoria": "Joysticks",
   "precio": "36000",
   "garantia": "12",
   "descripcion1": "Control preciso\r\nEste mando combina funciones revolucionarias mientras conserva precisión, comodidad y exactitud en cada movimiento. Gracias a su ergonomía especialmente pensada para la posición de tu mano, podés pasar horas jugando con total confort.",
@@ -46,18 +46,20 @@
  {
   "id": 5,
   "titulo": "Joystick Razer Wolverine ",
-  "categoria": "Auriculares",
+  "categoria": "Joysticks",
+  "garantia": "24",
   "precio": "123",
-  "garantia": "6",
-  "descripcion1": "Joystick Razer Wolverine Tournament Edition negro",
+  "descripcion1": "Joystick Razer Wolverine Tournament Edition negro    ",
   "descripcion2": "",
   "descripcion3": "",
-  "imagen1": "imagen1-1666745282359.png"
+  "imagen1": "imagen1-1669506717414.png",
+  "imagen2": "imagen2-1669506717416.jfif",
+  "imagen3": "imagen3-1669506717416.jfif"
  },
  {
   "id": 6,
   "titulo": "Joystick Razer Wolverine Tournament Edition negro",
-  "categoria": "mouse",
+  "categoria": "Mouse",
   "precio": "123",
   "garantia": "6",
   "descripcion1": "aaa",
