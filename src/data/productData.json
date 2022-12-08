@@ -1,17 +1,6 @@
 [
  {
   "id": 1,
-  "titulo": "TECLADO MECÁNICO",
-  "categoria": "Auriculares",
-  "precio": "21001",
-  "garantia": "6",
-  "descripcion1": "Teclado Alloy Origins HyperX.El HyperX Alloy Origins™ Core es un teclado ultracompacto y resistente sin zona numérica conconmutadores mecánicos HyperX personalizados diseñados para proporcionar a los jugadores la mejor combinación de estilo, rendimiento y fiabilidad. Estos conmutadores de teclas tienen LED expuestospara una iluminación deslumbrante con una fuerza de actuación y una distancia de recorridoelegantemente equilibrada para una capacidad de respuesta y precisión. Alloy Origins Core está fabricado con un cuerpo de aluminio completo para que permanezca rígido y estable cuando se presionan las teclas, y también cuenta con patas de teclado que le permiten elegir entre tres niveles de inclinación diferentes. Su diseño TKL elegante y compacto libera espacio para el movimiento del ratón en escritorios donde el espacio está muy cotizado, y también cuenta con un cable USB tipo C desmontable para una portabilidad suprema.  ",
-  "descripcion2": "Personaliza tu iluminación, crea macros y ajusta el modo de juego con el software HyperX NGENUITY. Este programa potente pero facil de usar te permite configurar la iluminación por tecla, tener efectos de iluminacion deslumbrantes y agregar decenas de otros toques personalizados a tus productos compatibles con NGENUITY.",
-  "descripcion3": "",
-  "imagen1": "teclado.png"
- },
- {
-  "id": 2,
   "titulo": "Auriculares Gamer Corsair H50",
   "categoria": "Auriculares",
   "precio": "25000",
@@ -22,7 +11,7 @@
   "imagen1": "auris.png"
  },
  {
-  "id": 3,
+  "id": 2,
   "titulo": "Joystick  Xbox Serie X",
   "categoria": "Joysticks",
   "precio": "36000",
@@ -33,18 +22,7 @@
   "imagen1": "joyxbox.png"
  },
  {
-  "id": 4,
-  "titulo": "Monitor gamer curvo Samsung F390 Series C24F390FH",
-  "categoria": "otros",
-  "precio": "58299",
-  "garantia": "12",
-  "descripcion1": "Samsung está fielmente comprometida en brindar productos de calidad y que contribuyan a crear un mejor futuro para las personas. Como empresa líder en la industria tecnológica uno de sus objetivos principales es desarrollar avanzadas e innovadoras soluciones. Es por ello que con este monitor tendrás y disfrutarás de una gran experiencia visual en todo momento.",
-  "descripcion2": "Un monitor a tu medida\r\nCon tu pantalla LED no solo ahorrás energía, ya que su consumo es bajo, sino que vas a ver colores nítidos y definidos en tus películas o series favoritas.",
-  "descripcion3": "Una experiencia visual de calidad\r\nEste monitor de 24 pulgadas te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad. Su tiempo de respuesta de 4 ms lo hace ideal para gamers y cinéfilos porque es capaz de mostrar imágenes en movimiento sin halos o bordes borrosos.",
-  "imagen1": "imagen1-1666739568791.png"
- },
- {
-  "id": 5,
+  "id": 3,
   "titulo": "Joystick Razer Wolverine ",
   "categoria": "Joysticks",
   "garantia": "24",
@@ -57,7 +35,7 @@
   "imagen3": "imagen3-1669506717416.jfif"
  },
  {
-  "id": 6,
+  "id": 4,
   "titulo": "Joystick Razer Wolverine Tournament Edition negro",
   "categoria": "Mouse",
   "precio": "123",
@@ -68,7 +46,7 @@
   "imagen1": "imagen1-1666745828723.png"
  },
  {
-  "id": 7,
+  "id": 5,
   "titulo": "auris",
   "categoria": "Auriculares",
   "precio": "13000",

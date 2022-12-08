@@ -36,68 +36,187 @@
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
+.menu-izquierda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:  200px;
+    height: 200px;
+    
+    text-align: center;
+    margin: 0 25px 0 25px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow:  5px 5px 6px #c4c4c4,
+             -5px -5px 6px #ffffff; 
+}
+.tituloMenu {
+    font-size: 25px;
+    width: 60%;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+    bottom: 25px;
+    border: gainsboro solid 0.1px;
+    background: #ffffff;
+    box-shadow:  5px 5px 6px #c4c4c4,
+             -5px -5px 6px #ffffff;
+}
+.vinculosMenu {
+    color: black;
+    font-weight: bolder;
+    width: 75%;
+    padding: 2px;
+    margin: 0 auto 12px auto;
+    border: gainsboro solid 0.3px;
+    border-radius: 19px;
+    background: #ffffff;
+    box-shadow:  5px 5px 6px #c4c4c4,
+             -5px -5px 6px #ffffff; 
+    transition:all 500ms; 
+           
+}
+.vinculosMenu:hover {
+    transform: scale(1.1);
+}
+.vinculosMenu p{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    position: relative;
+}
+.vinculosMenu p:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background:black;  
+    /*Animacion subrayado */
+    transform-origin: right;
+    transform:scaleX(0);
+    transition: transform 0.4s ease-in-out;
+}
+.vinculosMenu p:hover:after{
+    /*Animacion subrayado */
+    transform-origin: left;
+    transform:scaleX(1);
+
+}
+.contenedorPrincipal{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px auto 30px 0;
+    width: 90%;
+}
 .seccion-productos {
     display: flex;
-    flex-flow: column ;
-    justify-content: center;
     align-items: center;
+    flex-flow: wrap row;
+    width: 75%;
 }
 .tablero-de-productos {
     align-items: center;
     box-sizing: content-box ;
     display: flex;
-    justify-content: space-around;
-    width: 60%;
-    border: 1px solid black;
-    height: 130px;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 22%;
+    height: 240px;
     border-radius: 10px;
     margin: 10px;
-    
+    background: #ffffff;
+    box-shadow:  7px 7px 34px #e6e6e6,
+             -7px -7px 34px #ffffff;
 }
 .caja-imagen {
-    width: 12%;
-    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px 5px 15px 5px; 
+    padding: 5px;
+    min-width: 110px;
+    min-height: 110px;
+    text-align: center;
 }
 .imagen-dashboard {
-    max-width: 100px;
-    border-radius: 5px;
+    text-align: center;
+    margin: 0;
+    min-width: 50px;  
+    min-height: 50px; 
+    max-width: 120px;
+    max-height: 120px;
 }
 .caja-titulo {
+    color: gray;
     display: flex;
     justify-content: left;
-    width: 30%;
+    width: 100%;
+    position: relative;
+
 }
 .titulo-producto {  
-    font-size: 2vh;
-    font-weight: bolder;
+    width: 100%;
+    font-size: 1.5vh;
+    font-weight: 500;
+    text-align: center;
+    margin: 10px auto 10px auto;
 }
 .caja-botones {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 15%;
+    width: 100%;
+    margin: auto auto 0px auto;
+    text-align: center;
 }
-.boton-editar {
-    background-color: #55603d;
+.boton-editar { 
+    text-decoration: none;
+    width: 60px;
+    margin: auto auto 20px 15px;
+    padding: 5px;
+    color: black;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: white;
+    background: #ffffff;
+    box-shadow:  7px 7px 14px #ededed,
+             -7px -7px 14px #ffffff;
+}
+.boton-editar:hover {
+    background-color: #5de99c;
+    transition: all .5s;
+    text-decoration: underline 2px;
     color: white;
-    padding-left: 2.5vh;
-    padding-right: 2.5vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    border-radius: 6px;
-    margin-bottom: 10px;
-   
+    font-weight: bold;
 }
+
+
 .boton-eliminar {
-    background-color: #d40e2f;
+    border: none;
+    display: inline-block;
+    margin: auto 15px 20px auto ;
+    padding: 5px;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+    background: #ffffff;
+    box-shadow:  7px 7px 14px #ededed,
+             -7px -7px 14px #ffffff;
+}
+.boton-eliminar:hover {
+    background-color: #5de99c;
+    transition: all .5s;
+    text-decoration: underline 2px;
     color: white;
-    border: #d40e2f solid 1px;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    padding-top: 0.8vh;
-    padding-bottom: 0.8vh;
-    border-radius: 5px;
-    margin-top: 15px;
+    font-weight: bold;
+}
+
+.boton-eliminar:hover {
+        background-color: tomato;
+        transition: all .5s;
+        color: white;
+        font-weight: bold;
 }
     
 @media (max-width: 426px) {

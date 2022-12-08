@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/dashboardUsuario.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,92 +34,31 @@
                 <div class="contenedor">
                     
                         <div class="menu-izquierda">
-                            Usuarios<br> 
-                           <a href="/product/dashboard">Listado de productos</a><br>
-                           <a href="/logout">Salir</a>
+                            <div class="tituloMenu">Menu</div>
+                            <a class="vinculosMenu" href="/users/listar-usuarios"><p>Usuarios</p></a>
+                            <a class="vinculosMenu" href="/product/dashboard"><p>Productos</p></a>
+                            <a class="vinculosMenu" href="/"><p>Inicio</p></a>
+                            <a class="vinculosMenu" href="/logout"><p>Salir</p></a>
                         </div>
-                    
-                    <div>
-                        <table class="tabla">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Apellido</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Telefono</th>
-                                    <th scope="col">Username</th>
-                                    <th scope="col">Categoria</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                <% let i =0; users.forEach(user=> { %>
-                                    <!-- color de fondo -->
-                                    <%  if (i%2==1) { %>
-                                     
-                                    
-                                    <tr class="fondo-gris">
-                                        <th scope="row">
-                                            <%= user.id %>
-                                        </th>
-                                        <td>
-                                            <%= user.firstname %>
-                                        </td>
-                                        <td>
-                                            <%= user.lastname %>
-                                        </td>
-                                        <td>
-                                            <%= user.email %>
-                                        </td>
-                                        <td>
-                                            <%= user.telefono %>
-                                        </td>
-                                        <td>
-                                            <%= user.username %>
-                                        </td>
-                                        <td>
-                                            <%= user.categoria %>
-                                        </td>
-                                        <td>
-                                          <a href="detalle-usuario/<%= user.id %> "><button class="boton-ver-listados">ver</button></a><a href="/user/edit/<%= user.id %> "><button class="boton-editar-listados">editar</button></a><a href="/user/del/<%= user.id %> "><button  class="boton-eliminar-listados">eliminar</button></a>
-                                        </td>
-                                    </tr>
-                                  
-                                     <!-- aca el otro color -->
-                                     <% } else { %>
-                                        <tr class="fondo-blanco">
-                                            <th scope="row">
-                                                <%= user.id %>
-                                            </th>
-                                            <td>
-                                                <%= user.firstname %>
-                                            </td>
-                                            <td>
-                                                <%= user.lastname %>
-                                            </td>
-                                            <td>
-                                                <%= user.email %>
-                                            </td>
-                                            <td>
-                                                <%= user.telefono %>
-                                            </td>
-                                            <td>
-                                                <%= user.username %>
-                                            </td>
-                                            <td>
-                                                <%= user.categoria %>
-                                            </td>
-                                            <td>
-                                              <a href="detalle-usuario/<%= user.id %> "><button class="boton-ver-listados">ver</button></a><a href="editar-usuario/<%= user.id %> "><button class="boton-editar-listados">editar</button></a><a href="/user/del/<%= user.id %> "><button  class="boton-eliminar-listados">eliminar</button></a>
-                                            </td>
-                                        </tr>
-                                        <% } %>
-                                      
-                                    <% i++; }) %>
-                            </tbody>
-                        </table>
+                    <div class="contenedorPrincipal">
+                        <% users.forEach(user => { %>
+                      <div class="contenedorUsuario">
+                            <figure class="contenedorIMG">
+                                <img class="userImage" src="/img/users/<%= user.image %> " >
+                            </figure>
+                            <div class="divDatos">
+                                <p class="parrafoInfo"><%= user.firstname %></p>
+                                <p class="parrafoInfo"><%= user.lastname %></p>
+                                <p class="parrafoInfo"><%= user.email %> </p>
+                                <p class="parrafoInfo"><%= user.categoria %> </p>
+                            </div>
+                            <div class="divBotones">
+                                <a class="botonCRUD first" href="/users/detalle-usuario/<%= user.id %> ">Perfil</a>
+                                <a class="botonCRUD second" href="/users/editar-usuario/<%= user.id %>">Editar</a>
+                                <a class="botonCRUD third" href="">Borrar</a>
+                            </div>
+                        </div>
+                        <% }) %>
                     </div>
                 </div>
             </section>
