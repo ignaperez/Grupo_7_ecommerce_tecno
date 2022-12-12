@@ -28,14 +28,14 @@
                 <div class="caja-izquierda">
     
                     <article class="perfil-usuario">
-                        <form action="/users/editar-usuario/?_method=PUT " method="post" class="formulario-np" enctype="multipart/form-data">
+                        <form action="/users/editar-usuario/<%= verUsuario.id %>?_method=PUT " method="post" class="formulario-np" enctype="multipart/form-data">
                         <div class="titulo-perfil"> <div><p>PERFIL DEL USUARIO: <%= verUsuario.username %> </p></div></div>
                        
                         <p class="rotulo">Nombres</p> 
-                        <p class="dato"><input type="text" name="firstname" value="<%= verUsuario.firstname %>">
+                        <p class="dato"><input type="text" name="firstname" value="<%= verUsuario.nombre %>">
                              </p>
                         <p class="rotulo">Apellido</p> 
-                        <p class="dato"><input type="text" name="lasttname" value="<%= verUsuario.lastname %>"></p>
+                        <p class="dato"><input type="text" name="lastname" value="<%= verUsuario.apellido %>"></p>
                         <p class="rotulo">Email</p> 
                         <p class="dato"><input type="text" name="email" value="<%= verUsuario.email %>"></p>
                         <p class="rotulo">Teléfono</p> 

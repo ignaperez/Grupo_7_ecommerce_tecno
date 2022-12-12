@@ -33,16 +33,18 @@ var upload = multer({storage: storage})
 
 //RUTAS
 router.get("/login", userLoggedMiddleware, userController.login);
-router.post("/login", userController.loginPost);
+//router.post("/login", userController.loginPost);
+router.post("/login", userController.loginPostMysql);
 
 router.get("/registro", userLoggedMiddleware, userController.registro)
 router.post("/registro", upload.single("imagenPerfil"), userValidations, userController.logicRegister)
 
 router.get("/profile",userNotLoggedMiddleware, userController.vistaPerfil)
 
-router.get("/listar-usuarios",userNotLoggedMiddleware, userController.listarUsuarios);
+router.get("/listar-usuarios",userNotLoggedMiddleware,adminAccsessMiddelware, userController.listarUsuarios);
 router.get('/detalle-usuario/:id',adminAccsessMiddelware,userController.detalleUsuario);
 router.get('/editar-usuario/:id',userController.editarUsuario);
-router.put('/editar-usuario/:id',userController.editarUsuario);
+router.put('/editar-usuario/:id',upload.any() , userController.actualizarUsuario);
+router.get('/listar', userController.listar)
 module.exports = router;
 

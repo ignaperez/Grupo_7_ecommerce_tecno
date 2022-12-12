@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const multer = require("multer");
+const db = require('../database/models')
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -14,21 +15,30 @@ const storage = multer.diskStorage({
 
 var upload = multer({storage});
 
-const productsFilePath = path.join(__dirname, '../data/productData.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const productsFilePath = path.join(__dirname, '../data/productData.json');
+//const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productController = {
     carrito:(req,res)=>
     {
         res.render ('carrito');
 
     },
-    detalleProducto: (req,res)=>
+    detalleProducto: async (req,res)=>
     {
-        let idProducto= req.params.id;
-        let producto = productos.find(producto => producto.id == idProducto);
+        try {
+            let idProducto= req.params.id;
+        const producto = await db.Producto.findByPk(idProducto);
+        const productos = await db.Producto.findAll();
+        //let producto = productos.find(producto => producto.id == idProducto);
         if (producto.imagen2 == '')
         producto.imagen2=producto.imagen1;
         res.render('detalle-producto',{productos, producto});
+            
+        } catch (error) {
+            
+        }
+
+        
     },
     newProduct: (req,res) => {
         res.render('newProduct')
@@ -86,9 +96,15 @@ const productController = {
 		//res.redirect('/');
         res.redirect('/product/dashboard');
     },
-    dashboard: (req, res) => {
-        let productos1 = productos
+    dashboard: async  (req, res) => {
+        try {
+            let productos1 = await db.Producto.findAll();
         res.render("admin-producto", {productos: productos1})
+            
+        } catch (error) {
+            
+        }
+        
     },
     borrar: (req, res) => {
         let id = req.params.id;
