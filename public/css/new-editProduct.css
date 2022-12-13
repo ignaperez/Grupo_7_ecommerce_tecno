@@ -1,121 +1,122 @@
+* {
+    box-sizing: content-box;
+}
 .contenedor-formulario {
-    background: radial-gradient(circle closest-side, rgb(59, 59, 59) 1%, #292E1E);
-    border: 1px solid black;
-    width: 50%;
-    text-align: center;
-    margin: auto;
-    margin-top: 4%;
-    border-radius: 4%;
-    margin-bottom: 2%;
     display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.formulario-np{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
-}
-
-
-.formulario-np div{
-    
-    font-size: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 1px black solid;
-}
-
-
-div label{
+    flex-flow: wrap row;
     justify-content: center;
-    color: #ECEBE4;
-    width: 100%;
-    font-weight: bold;
-    margin-bottom: 5%;
-    
+    margin-left: 17%;
+    margin-right: 17%;
+    height: 70vh;
+    margin-bottom: 80px;
 }
-
-input{
-    width: 20vw;
-    text-align: center;
-}
-
-select{
-    width: 20vw;
-    text-align: center;
-    
-}
-select option, ::placeholder,button,input, div label,select{
-    font-size: 12px;
-}
-
-
-form .botones {
-
+.contenedor-datos {
+    background-color: #55603d;
     display: flex;
-    width: 70%;
-    flex-direction: row;
+    flex-flow: wrap column;
+    width: 50%;
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    align-items: flex-start;
+    padding-left: 30px;
 }
-
-form .botones :hover {
-
-    background-color: black;
-    color: white;
+.formulario-np{
+    margin-top: 20px;
+    margin-bottom: 25px;
 }
-
-.titulo-np {
-
-    text-align: center;
-    color: #292E1E;
-    
-    font-size: 12px;
-    border-bottom: 1px solid gray;
-    width: 20%;
-    margin: auto;
-    margin-top: 2%;
-}
-.descripciones{
+.contenedor-imagen {
+    background-color: #55603d;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-border-bottom: 0px;
-}
-
-@media (max-width: 426px) {
-.cabeza-inferior{
-    display: none;
-}
-.titulo-np {
-    width: 78%;
-    font-size: 16px;
-    margin-top: 6%;
-}
-.contenedor-formulario {
-    width: 95%;
-    border-radius: 2%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-input {
-    width: 100%;
-}
-select {
-    width: 130px
-}
-form .botones {
-    width: 100%;
-}
-button {
+    flex-flow: wrap column;
     width: 40%;
-    padding: 3%;
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 400px;
 }
+.botones{ 
+    background-color: #55603d;  
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+.botones button {
+    margin: 10px;
+    border-radius: 10px;
+    border: solid 2px white;
+    background-color: #55603d;
+    color: white;
+    padding: 5px;
+
+}
+.imagen {
+    border: black solid 1px;
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 125px;
+    max-height: 125px;
+    margin: 15px
+}
+.titulo-np {
+    text-align: center;
+    margin-top: 10px;
+
+}
+.contenedor-formulario form input{
+    width: 80%;
+    padding: 5px;
+    margin: 5px;
+}
+.contenedor-formulario form label{
+    font-size: 20px;
+    margin: 10px;
+}
+.label-nombre {
+    width: 75%; 
+}
+
+.label-categoria {
+    display: flex;
+    flex-direction: column;
+}
+.label-categoria select{
+    width: 50%;
+    margin: 10px;
+}
+.label-garantia {
+    display: flex;
+    flex-direction: column;
+}
+.label-precio {
+    width: 75%;
+    margin: 10px
+}
+.label-descripcion {
+    display: flex;
+    flex-direction: column;
+}
+.label-imagenes {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    margin-top: 15px;
+}
+.label-imagenes input {
+    margin: 5px;
+}
+.label-imagenes label {
+    font-size: 25px;
+    text-decoration: underline;
+}
+.imagen-producto {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+.contenedor-image {
+    display: flex;
+    flex-direction: column;
 }

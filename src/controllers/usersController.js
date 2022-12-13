@@ -1,11 +1,12 @@
 //Requires
 const fs = require("fs");
 const path = require("path");
+const bcryptjs = require('bcryptjs');
 const userFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-const bcryptjs = require('bcryptjs');
-const db = require('../database/models')
 const { validationResult } = require("express-validator")
+const db = require('../database/models')
+
 /* const productos = JSON.parse(fs.readFileSync(userFilePath, 'utf-8')); */
 
 const multer = require('multer');
@@ -37,11 +38,19 @@ const userController = {
 
     },
 
-    logicRegister: (req, res) => {
+    logicRegister:async (req, res) => {
         const resultValidation = validationResult(req);
-        const userInDB = users.find(usuario => usuario.email == req.body.email)
-
-
+        //const userInDB = users.find(usuario => usuario.email == req.body.email)
+        const {email} =req.body
+        try {
+            const userInDB = await db.Usuario.findOne({
+                where:{email:{email}}
+            })
+            
+        } catch (error) {
+            console.log(error)
+        }
+        
         if (resultValidation.errors.length > 0) {
             return res.render("registro", {
                 errors: resultValidation.mapped(),
@@ -74,99 +83,61 @@ const userController = {
         }
 
     },
+    loginPostMysql: async (req, res) => {
 
-    // loginPost: (req, res) => {
-    //     let emailUsuario = req.body.email;
-    //     let user = users.find(usuario => usuario.email == emailUsuario);
-      
-    //     //Login compara password encriptada
-        
-    //     if (user && bcryptjs.compare(req.body.password, user.password)) {
-    //         //delete user.password;
-
-    //         req.session.user = user;
-    //         if (req.body.recordar_usuario) {
-
-    //             res.cookie("cookieEmail", user.email, { maxAge: 60000 * 5 });
-    //         }
-    //         else {
-    //             console.log("ACA LLEGO - no recuerdo cookie");
-
-    //         }
+        try {
 
 
-    //         if (user.categoria == "admin") {
-    //             res.redirect('/users/listar-usuarios');
-    //         } else {
-    //             res.redirect("/");
-    //         }
-    //     }
-    //     else {
-    //         console.log("no coinciden credenciales y llego")
-    //         let errors = "Las credenciales son invalidas, prueba nuevamente"
-    //         res.render("login", {
-    //             error: errors
-    //         })
-    //     }
-    // },
-//Login con Mysql
-//inicio
-loginPostMysql: async (req, res) => {
+            let emailUsuario = req.body.email;
+            const result = await db.Usuario.findOne({
+                where: {
+                    email: emailUsuario
+                }
+            })
 
-    try{
+            // console.log("este es el resulatdo "+result.password)
 
-    
-    let emailUsuario = req.body.email;
-     const result = await db.Usuario.findOne({
-       where:{
-        email: emailUsuario
-       } 
-     })
-   
-   // console.log("este es el resulatdo "+result.password)
-    
-       
-        if (bcryptjs.compare(req.body.password, result.password ))
-        {
-            req.session.user = result;
-            console.log("Este es el dato :  "+req.session.user.categoria)
-          
-            if (req.body.recordar_usuario) {
 
-                res.cookie("cookieEmail", result.email, { maxAge: 60000 * 5 });
+            if (bcryptjs.compare(req.body.password, result.password)) {
+                req.session.user = result;
+                //console.log("Este es el dato :  " + req.session.user.categoria)
+
+                if (req.body.recordar_usuario) {
+
+                    res.cookie("cookieEmail", result.email, { maxAge: 60000 * 5 });
+                }
+                else {
+                  //  console.log("ACA LLEGO - no recuerdo cookie");
+
+                }
+
+
+                if (result.categoria == 1) {
+                    res.redirect('/users/listar-usuarios');
+                } else {
+                    res.redirect("/");
+                }
+
             }
             else {
-                console.log("ACA LLEGO - no recuerdo cookie");
-    
-            }
-    
-    
-            if (result.categoria == 1) {
-                res.redirect('/users/listar-usuarios');
-            } else {
-                res.redirect("/");
+                //console.log("no coinciden credenciales y llego")
+                let errors = "Las credenciales son invalidas, prueba nuevamente"
+                res.render("login", {
+                    error: errors
+                })
+
             }
 
         }
-        else
-        {
-            console.log("no coinciden credenciales y llego")
-        let errors = "Las credenciales son invalidas, prueba nuevamente"
-        res.render("login", {
-            error: errors
-        })
 
+        catch (error) {
+            return res.send(error)
         }
 
-    }
-    
-     catch(error){
-        return res.send(error)
-     }
-  
 
-},
-//fin
+    },
+
+
 
 
     vistaPerfil: (req, res) => {
@@ -177,7 +148,11 @@ loginPostMysql: async (req, res) => {
 
     },
     listarUsuarios: (req, res) => {
-        db.Usuario.findAll()
+        db.Usuario.findAll({
+            where:{
+                activo:1
+            }
+        })
             .then(users => {
                 //console.log(users)
                 res.render('listadoU', { users })
@@ -187,44 +162,84 @@ loginPostMysql: async (req, res) => {
     },
     detalleUsuario: (req, res) => {
         let idUser = req.params.id;
-        
         db.Usuario.findByPk(idUser)
-        .then(verUsuario =>
-            res.render('detalleUsuario', { verUsuario }))
-       
-    },
-    editarUsuario: (req, res) => {
-        let idUser = req.params.id;
-        //let verUsuario = users.find(usuario => usuario.id == idUser);
-        db.Usuario.findByPk(idUser)
-
             .then(verUsuario =>
-                res.render('editarUsuario', { verUsuario }))
-       
-
+                res.render('detalleUsuario', { verUsuario }))
 
     },
-    actualizarUsuario: (req, res) => {
-        let id = req.params.id;
-        let usuarioActualizado = users.find(usuario => usuario.id == id)
-        let imagen
-        (req.files[0] != undefined)
-            ? imagen = req.files[0].filename
-            : imagen = usuarioActualizado.image
-        usuarioActualizado = {
-            id: usuarioActualizado.id,
-            ...req.body,
-            image: imagen,
-        }
-        let nuevoUsuario = users.map(usuario => {
-            if (usuario.id == usuarioActualizado.id) {
-                return usuario = { ...usuarioActualizado };
-            }
-            return usuario
-        })
+    editarUsuario: async (req, res) => {
+        try {
+            let idUser = req.params.id;
+            const verUsuario = await db.Usuario.findOne({
+                where: {
+                    id: idUser
+                }
+            })
 
-        fs.writeFileSync(userFilePath, JSON.stringify(nuevoUsuario, null, " "));
-        res.redirect("/users/listar-usuarios")
+            res.render('editarUsuario', { verUsuario })
+
+        }
+        catch (error) {
+            res.render(error)
+        }
+    }
+    ,
+    actualizarUsuario: async(req, res) =>  {
+       
+
+       try {
+        const {id} = req.params;
+           console.log("aca llego 1")
+            let image;
+             if(req.files[0] !=undefined)
+             {
+                 image =req.files[0].filename
+                 //console.log("imagen: "+image)
+             }
+             else
+             {
+
+                 image='generic.jpg'
+                 //console.log("generica: "+image)
+             }
+            
+            
+            //console.log("aca llego 2")
+            let usuarioToEdit = {
+                ...req.body,
+                image
+            };
+            //console.log("ESTO ES USUARIO EDIT"+req.body.nombre)
+            await db.Usuario.update(usuarioToEdit,{
+                where:{id}
+            })
+            
+            res.redirect('/users/listar-usuarios')
+
+        } catch (error) {
+            
+        }
+       
+       
+    },
+    borrar: async (req,res)=>{
+        
+        const {id} = req.params;
+        console.log("este es el id: "+id)
+        
+        
+        try {
+            
+            await db.Usuario.update(
+                {activo:0},{where:{id}}
+            )
+            console.log("deberia estar en 0")
+            res.redirect('/users/listar-usuarios')
+            
+        } catch (error) {
+            res.render(error)
+        }
+
     },
     listar: (req, res) => {
         db.Usuario.findAll()

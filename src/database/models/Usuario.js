@@ -30,6 +30,9 @@ module.exports = (sequelize, dataTypes) => {
         image: {
             type: dataTypes.STRING
         },
+        activo:{
+            type:dataTypes.INTEGER
+        },
        
     };
     let config = {

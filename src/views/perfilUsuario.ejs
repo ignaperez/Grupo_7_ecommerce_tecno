@@ -29,12 +29,12 @@
     
                     <article class="perfil-usuario">
 
-                        <div class="titulo-perfil"> <div><p>PERFIL</p> <p class="editar"><a href="***">Editar</a></p></div></div>
+                        <div class="titulo-perfil"> <div><p>PERFIL</p> <p class="editar"><a href="/users/editar-usuario/<%= user.id %> ">Editar</a></p></div></div>
 
                         <p class="rotulo">Nombres</p> 
-                        <p class="dato"><%= user.firstname %></p>
+                        <p class="dato"><%= user.nombre %></p>
                         <p class="rotulo">Apellido</p> 
-                        <p class="dato"><%= user.lastname %></p>
+                        <p class="dato"><%= user.apellido%></p>
                         <p class="rotulo">Email</p> 
                         <p class="dato"><%= user.email %></p>
                         <p class="rotulo">Teléfono</p> 
@@ -44,7 +44,7 @@
                     </article>
         
                     <article class="perfil-usuario">
-                        <div class="titulo-perfil"> <div><p>CONTRASEÑA</p> <p class="editar"><a href="***">Editar</a></p></div></div>
+                        <div class="titulo-perfil"> <div><p>CONTRASEÑA</p> <p class="editar"><a href="#">Editar</a></p></div></div>
                         <p class="rotulo">Contraseña</p> 
                         <p class="dato"><!-- <%= user.password %> -->***********</p>
         
@@ -54,14 +54,14 @@
                 <div class="caja-derecha">
                     
                     <article class="perfil-usuario">
-                        <div class="titulo-perfil"> <div><p>METODOS DE PAGO</p> <p class="editar"><a href="***">Editar</a></p></div></div>
+                        <div class="titulo-perfil"> <div><p>METODOS DE PAGO</p> <p class="editar"><a href="#">Editar</a></p></div></div>
                         <p class="rotuloCC"> <a href="">+ AÑADIR NUEVA TARJETA</a></p> 
                                 
                     </article>
 
                     <article class="perfil-usuario-2">
-                        <div class="titulo-perfil"> <div><p>FOTO DE PERFIL</p> <p class="editar"><a href="***">Editar</a></p></div></div>
-                        <div class="IMAGEN"><img class="img" src="/img/users/<%= user.image %> " alt=""> </div> 
+                        <div class="titulo-perfil"> <div><p>FOTO DE PERFIL</p> <p class="editar"><a href="#">Editar</a></p></div></div>
+                        <div class="imagen"><img class="img" src="/img/users/<%=user.image %> " alt="<%= user.image %> "> </div> 
                                 
                     </article>
 

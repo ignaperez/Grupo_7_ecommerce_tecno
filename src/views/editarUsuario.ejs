@@ -32,18 +32,18 @@
                         <div class="titulo-perfil"> <div><p>PERFIL DEL USUARIO: <%= verUsuario.username %> </p></div></div>
                        
                         <p class="rotulo">Nombres</p> 
-                        <p class="dato"><input type="text" name="firstname" value="<%= verUsuario.nombre %>">
+                        <p class="dato"><input type="text" name="nombre" value="<%= verUsuario.nombre %>">
                              </p>
                         <p class="rotulo">Apellido</p> 
-                        <p class="dato"><input type="text" name="lastname" value="<%= verUsuario.apellido %>"></p>
+                        <p class="dato"><input type="text" name="apellido" value="<%= verUsuario.apellido %>"></p>
                         <p class="rotulo">Email</p> 
                         <p class="dato"><input type="text" name="email" value="<%= verUsuario.email %>"></p>
                         <p class="rotulo">Teléfono</p> 
                         <p class="dato"><input type="text" name="telefono" value="<%= verUsuario.telefono %>"></p>
                         <p class="rotulo">Categoría</p>  
-                        <p class="dato"><select name="categoria" id="">
-                            <option selected="selected" value="User">User</option>
-                            <option value="Administrador">Administrador</option>
+                        <p class="dato"><select name="categoria">
+                            <option selected="selected" value=2>User</option>
+                            <option value=1>Administrador</option>
                         </select></p>
                             <p><button type="submit">Guardar</button></p>
                     </article>
@@ -67,7 +67,7 @@
                     <article class="perfil-usuario-2">
                         <div class="titulo-perfil"> <div><p>FOTO DE PERFIL</p> <p class="editar"><a href="***">Editar</a></p></div></div>
                         <div class="IMAGEN"><img class="img" src="/img/users/<%= verUsuario.image %> "  alt="">
-                        <p><input type="file" name="imagen" ></p> </div> 
+                        <p><input type="file" name="image" ></p> </div> 
                     </form>      
                     </article>
 

@@ -27,15 +27,8 @@
                         <button type="submit" class="boton-busqueda-caja"><i class="boton-busqueda fa-sharp fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>
-                <div class="contenedorPrincipal">
-                    <div class="menu-izquierda">
-                        <div class="tituloMenu">Menu</div>
-                        <a class="vinculosMenu" href="/users/listar-usuarios"><p>Usuarios</p></a>
-                        <a class="vinculosMenu" href="/product/dashboard"><p>Productos</p></a>
-                        <a class="vinculosMenu" href="/"><p>Inicio</p></a>
-                        <a class="vinculosMenu" href="/logout"><p>Salir</p></a>
-                    </div>
-                    <div class="seccion-productos">
+                <div>
+                    <section class="seccion-productos">
                         <% productos.forEach(producto => { %>
                             <article class="tablero-de-productos">
                                 <div class="caja-imagen">
@@ -52,7 +45,7 @@
                                 </div>
                             </article>
                         <% }) %>
-                    </div>
+                    </section>
                 </div>
             </section>
         

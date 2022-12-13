@@ -28,20 +28,20 @@
 
             <form class="formulario" action="/users/registro" method="POST" enctype="multipart/form-data">
 
-                <input class="input-registro <%= locals.errors && errors.firstname ? 'is-invalid' : null %>" 
-                type="text" name="firstname" placeholder="Nombre"
-                value="<%= locals.oldData ? oldData.firstname : null %>">
-                <% if (locals.errors && errors.firstname) { %>
+                <input class="input-registro <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" 
+                type="text" name="nombre" placeholder="Nombre"
+                value="<%= locals.oldData ? oldData.nombre : null %>">
+                <% if (locals.errors && errors.nombre) { %>
                     <div class="error-text">
-                        <%= errors.firstname.msg %> 
+                        <%= errors.nombre.msg %> 
                     </div>
                 <% } %>
-                <input class="input-registro <%= locals.errors && errors.lastname ? 'is-invalid' : null %>" 
-                type="text" name="lastname" placeholder="Apellido"
-                value="<%= locals.oldData ? oldData.lastname : null %>">
-                <% if (locals.errors && errors.lastname) { %>
+                <input class="input-registro <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" 
+                type="text" name="apellido" placeholder="Apellido"
+                value="<%= locals.oldData ? oldData.apellido : null %>">
+                <% if (locals.errors && errors.apellido) { %>
                     <div class="error-text">
-                        <%= errors.lastname.msg %> 
+                        <%= errors.apellido.msg %> 
                     </div>
                 <% } %>
                 <input class="input-registro <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
@@ -76,12 +76,12 @@
                     </div>
                 <% } %>
 
-                <div class="foto-perfil"><label for="imagenPerfil">Seleccione su foto de perfil: </label>
+                <div class="foto-perfil"><label for="image">Seleccione su foto de perfil: </label>
                     <input class="boton-imagen <%= locals.errors && errors.imagenPerfil ? 'is-invalid' : null %>" 
-                    type="file" name = "imagenPerfil"> </div>
-                <% if (locals.errors && errors.imagenPerfil) { %>
+                    type="file" name = "image"> </div>
+                <% if (locals.errors && errors.image) { %>
                     <div class="error-text">
-                        <%= errors.imagenPerfil.msg %> 
+                        <%= errors.image.msg %> 
                     </div>
                 <% } %>
                 

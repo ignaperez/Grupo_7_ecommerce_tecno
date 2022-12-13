@@ -1,79 +1,68 @@
-
-body{
-    background-color:black;
+main {
+    height: 800px;
+    
 }
 
+.titulo {
+    text-align: center;
+    color: white;
+    background-color: #55603d;
+    align-items: center;
+    position: relative;
+    font-size: 35px;
+    top: 120px;
+    border: black 2px solid;
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+}
 
-.fondo {
-     width: 100%; 
+.contenedor-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
 }
 .formulario {
-    display: flex;
-    flex-direction: column ;
-    position:  absolute ;
-    top: 40%;
-    left: 37%;
-}
-.titulo {
-    position: absolute;
-    top: 15%;
-    left: 28%;
-    color: white;
-    font-size: 15vh;
-    
-}
-.formulario .input {
-    width: 100%;
-    border-radius: 5px;
-    margin: 2vh;
-    padding: 3vh;
-    border-color: white;
-} 
-.boton {
-    width: 60%;
-    padding: 2vh;
-    background-color: #ECEBE4;
-    color: black;
-    border: black solid 1vh;
-    border-radius: 5px;
-    position: relative;
-    left: 50%;
-    margin-top: 4vh;
-}
-body {
-    background-color: black;
-}
-.error-text{
-    color: red;
+    border: 3px gray solid;
+    border-radius: 15px;
+    width: 30%;
     text-align: center;
-    margin: 1%;
+    padding: 15px;
+    padding-top: 45px;
+    margin-top: 80px;
+    align-items: center;
 }
+.input {
+    padding: 5px;
+    width: 40%;
+    border-radius: 9px;
+    font-size: 20px;
+    margin:20px auto 12px auto;
+}
+.error-text {
+    color: red;
+    padding: 10px;
+    border-radius: 9px;
+    border: 1px red solid;
+    width: 80%;
+    margin:10px auto 12px auto;
+    background-color: salmon;
+}
+.contenedor-recordar {
+    margin: 15px auto 12px auto;
+}
+.boton {
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #55603d;  
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
 
-@media (max-width: 426px) {
-    .cabeza-inferior{
-        display: none;
-    }
-    main {
-        margin-bottom: 10vh;
-    }
-    .titulo {
-        font-size: 8vh;
-        top: 15%;
-        left: 26%;
-        font-size: 30px; 
-    }
-    
-    .formulario .input {
-        padding: 0.5vh;
-    }
-    .formulario {
-        width: 60%;
-        top: 19%;
-        left: 17%;
-    }
-    .boton {
-        left: 30%;
-        border: none;
-    }
-
+}
+.checkbox {
+    margin: 5px;
 }
