@@ -13,8 +13,8 @@ const adminAccsessMiddelware = require("../middlewares/adminAccessMiddleware")
 
 
 const fs = require("fs");
-const userFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+//const userFilePath = path.join(__dirname, '../data/users.json');
+//const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 //Validaciones de Ruta para el registro
 const userValidations = require("../middlewares/userRegisterValidations")
@@ -37,8 +37,9 @@ router.get("/login", userLoggedMiddleware, userController.login);
 router.post("/login", userController.loginPostMysql);
 
 router.get("/registro", userLoggedMiddleware, userController.registro)
-router.post("/registro", upload.single("imagenPerfil"), userValidations, userController.logicRegister)
-
+router.post("/registro", upload.single("image"), userValidations, userController.logicRegister)
+// sin express validator
+//router.post("/registro", upload.single("image"), userController.logicRegister)
 router.get("/profile",userNotLoggedMiddleware, userController.vistaPerfil)
 
 router.get("/listar-usuarios",userNotLoggedMiddleware,adminAccsessMiddelware, userController.listarUsuarios);
@@ -46,6 +47,10 @@ router.get('/detalle-usuario/:id',adminAccsessMiddelware,userController.detalleU
 router.get('/editar-usuario/:id',userController.editarUsuario);
 router.put('/editar-usuario/:id',upload.any() , userController.actualizarUsuario);
 router.get('/borrar/:id',userController.borrar)
-router.get('/listar', userController.listar)
+
+router.get("/agregar-usuario", userController.agregarUsuario)
+router.post("/agregar-usuario",upload.single("image") ,userValidations ,adminAccsessMiddelware, userController.logicaAniadirUsuario)
+router.get("/listar-usuarios/search",adminAccsessMiddelware, userController.searchAdmin)
+
 module.exports = router;
 

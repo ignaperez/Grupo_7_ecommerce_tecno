@@ -12,7 +12,7 @@
                 <div class="contenedor-perfil-nav">
                    <img class="imagen-perfil-nav" src="/img/users/<%= locals.user.image %> " alt=""> 
                     <p class="nombre-usuario-nav"><%= locals.user.username %> </p>
-                </div>
+                </div><a href="/logout">Salir</a>
 
              <% } else { %>
                 <a class="vinculos" href="/users/registro">Registrate</a>
@@ -25,11 +25,10 @@
 
     <div class="cabeza-inferior">
         <h1 class="frase-inferior">Equípate para ser el mejor de tu equipo!</h1>
-        <div class="form-submit" action="/" method="GET">
-            <input class="input barra-busqueda" type="search"
-                placeholder="Eso que tanto deseas, buscalo acá"></input>
-            <i class="fa fa-search icono-search"></i>
-        </div>
+        <form class="barra-search-caja" action="/search" method="get" enctype="form">
+            <input type="text" name="keywords" class="barra-search-dashboard" placeholder="Cual es el producto que buscar?">
+            <button type="submit" class="boton-busqueda-caja"><i class="boton-busqueda fa-sharp fa-solid fa-magnifying-glass"></i></button>
+        </form>
         <div class="carrito-micuenta">
             
             <h1><a href="/users/profile">Mi cuenta</a></h1>

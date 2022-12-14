@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/registro.css">
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>PhericsOne</title>
+</head>
+
+<body>
+    <!-- partial del header-->
+    <%- include("./partials/header-superior")  %> 
+
+
+    <main>
+
+
+
+        <div class="div-formulario">
+
+            <form class="formulario" action="/users/agregar-usuario" method="POST" enctype="multipart/form-data">
+
+                <input class="input-registro <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" 
+                type="text" name="nombre" placeholder="Nombre"
+                value="<%= locals.oldData ? oldData.nombre : null %>">
+                <% if (locals.errors && errors.nombre) { %>
+                    <div class="error-text">
+                        <%= errors.nombre.msg %> 
+                    </div>
+                <% } %>
+                <input class="input-registro <%= locals.errors && errors.lastname ? 'is-invalid' : null %>" 
+                type="text" name="apellido" placeholder="Apellido"
+                value="<%= locals.oldData ? oldData.apellido : null %>">
+                <% if (locals.errors && errors.apellido) { %>
+                    <div class="error-text">
+                        <%= errors.apellido.msg %> 
+                    </div>
+                <% } %>
+                <input class="input-registro <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+                type="text" name="email" placeholder="Email@servidor.com"
+                value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="error-text">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
+                <input class="input-registro <%= locals.errors && errors.telefono ? 'is-invalid' : null %>" 
+                type="text" name="telefono" placeholder="Teléfono"
+                value="<%= locals.oldData ? oldData.telefono : null %>">
+                <% if (locals.errors && errors.telefono) { %>
+                    <div class="error-text">
+                        <%= errors.telefono.msg %> 
+                    </div>
+                <% } %>
+                <input class="input-registro <%= locals.errors && errors.username ? 'is-invalid' : null %>" 
+                type="text" name="username" placeholder="Nombre de usuario"
+                value="<%= locals.oldData ? oldData.username : null %>">
+                <% if (locals.errors && errors.username) { %>
+                    <div class="error-text">
+                        <%= errors.username.msg %> 
+                    </div>
+                <% } %>
+                <input class="input-registro <%= locals.errors && errors.password ? 'is-invalid' : null %>" 
+                type="password" name="password" placeholder="Contraseña">
+                <% if (locals.errors && errors.password) { %>
+                    <div class="error-text">
+                        <%= errors.password.msg %> 
+                    </div>
+                <% } %>
+                <div class="input-registro categoria"><label for="categoria">Categoria </label>
+                    <select class="select-categoria" name="categoria" id="categoria">
+                        <option value="1">Administrador</option>
+                        <option value="2">Usuario</option>
+                    </select>
+                </div>
+                <div class="foto-perfil"><label for="image">Seleccione su foto de perfil: </label>
+                    <input class="boton-imagen <%= locals.errors && errors.image ? 'is-invalid' : null %>" 
+                    type="file" name = "image"> </div>
+                <% if (locals.errors && errors.image) { %>
+                    <div class="error-text">
+                        <%= errors.image.msg %> 
+                    </div>
+                <% } %>
+                
+                <button class="boton" type="submit">Registrar</button>
+
+            </form>
+        </div>
+    </main>
+    <!-- partials del footer-->
+    <%- include("./partials/footer")  %> 
+</body>
+
+</html>

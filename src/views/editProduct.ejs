@@ -21,15 +21,16 @@
         <h1 class="titulo-np">Modifiquemos un Producto!</h1>
         <div class="contenedor-formulario">
             <form action="/product/editProduct/<%= producto.id %>?_method=PUT " method="post" class="formulario-np" enctype="multipart/form-data">
+                
                 <div><label for="">Nombre del Producto: </label>
                     <input type="text" name="titulo"  required value="<%= producto.titulo %>"></div>
                 <div><label for="">Que categoria le quieres asignar al producto: </label>
                     <select name="categoria" id="" required>Auriculares
-                        <option value="Auriculares">Auriculares</option>
-                        <option value="Mouse">Mouse</option>
-                        <option value="Teclados">Teclados</option>
-                        <option value="Joysticks">Joysticks</option>
-                        <option value="Mousepads">Mousepads</option>
+                        <option value=1>Auriculares</option>
+                        <option value=2>Mouse</option>
+                        <option value=3>Teclados</option>
+                        <option value=4>Joysticks</option>
+                        <option value=5>Mousepads</option>
                     </select>
                 </div>
                 <div><label for="">imagen del producto: </label>

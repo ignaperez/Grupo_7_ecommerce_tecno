@@ -3,6 +3,7 @@ const path = require('path');
 //const productsFilePath = path.join(__dirname, '../data/productData.json');
 //const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require("../database/models");
+const op = db.Sequelize.Op;
 const mainController =
 {
     index: async (req, res) => {
@@ -15,13 +16,22 @@ const mainController =
         }
 
     },
-    detalleProducto: (req, res) => {
-        let idProducto = req.params.id;
-        let producto = productos.find(producto => producto.id == idProducto);
-        if (producto.imagen2 == '')
+    detalleProducto: async (req, res) => {
+        
+        const {id} = req.params;
+        //let producto = productos.find(producto => producto.id == idProducto);
+        try {
+            const producto = await db.Producto.finByPk(id);
+            const productos =await db.Producto.findAll();
+            if (producto.imagen2 == '')
             producto.imagen2 = producto.imagen1;
-        let miniListado = productos;
+        
         res.render('detalle-producto', { productos, producto });
+            
+        } catch (error) {
+            
+        }
+        
     },
     ayuda: (req, res) => {
         res.render('ayuda');
@@ -30,7 +40,21 @@ const mainController =
         res.clearCookie("cookieEmail")
         req.session.destroy();
         res.redirect('/');
-    }
+    },
+    search: async (req, res) => {
+        try {
+            let search = req.query.keywords;
+            console.log(search)
+            //let productos = await db.Producto.findAll();
+             let productos = await db.Producto.findAll({
+                 where: {titulo: {[op.like]:"%"+ search +"%"}}
+             })
+            console.log(productos)    
+            res.render("index", {productos})    
+        } catch (error) {
+            console.log(error)
+        }
+    },
 
 
 

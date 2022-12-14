@@ -9,7 +9,7 @@ const router =express.Router();
 router.get('/',mainController.index); //ruta home
 router.get('/ayuda', mainController.ayuda);
 router.get('/logout',mainController.logout);//logout Cualquier sesion
-
+router.get('/search', mainController.search)
 
 
 

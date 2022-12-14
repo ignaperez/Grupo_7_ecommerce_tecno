@@ -2,10 +2,11 @@
 const fs = require("fs");
 const path = require("path");
 const bcryptjs = require('bcryptjs');
-const userFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+//const userFilePath = path.join(__dirname, '../data/users.json');
+//const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 const { validationResult } = require("express-validator")
 const db = require('../database/models')
+const op = db.Sequelize.Op;
 
 /* const productos = JSON.parse(fs.readFileSync(userFilePath, 'utf-8')); */
 
@@ -38,26 +39,11 @@ const userController = {
 
     },
 
-    logicRegister:async (req, res) => {
-        const resultValidation = validationResult(req);
+    logicRegister: async (req, res) => {
+        //const resultValidation = validationResult(req);
+        console.log(req.body)
         //const userInDB = users.find(usuario => usuario.email == req.body.email)
-        const {email} =req.body
         try {
-            const userInDB = await db.Usuario.findOne({
-                where:{email:{email}}
-            })
-            
-        } catch (error) {
-            console.log(error)
-        }
-        
-        if (resultValidation.errors.length > 0) {
-            return res.render("registro", {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
-        } else {
-
             let image
 
             if (req.file != undefined) {
@@ -68,19 +54,20 @@ const userController = {
             }
 
             let newUser = {
-
-                id: users[users.length - 1].id + 1,
                 ...req.body,
                 //Encripto password 
                 password: bcryptjs.hashSync(req.body.password, 10),
-                categoria: "user",
+                categoria: 2,
                 image: image
             }
-
-            users.push(newUser);
-            fs.writeFileSync(userFilePath, JSON.stringify(users, null, ' '));
+            await db.Usuario.create(newUser);
             res.redirect('/');
+
+        } catch (error) {
+            console.log(error)
         }
+
+
 
     },
     loginPostMysql: async (req, res) => {
@@ -94,47 +81,37 @@ const userController = {
                     email: emailUsuario
                 }
             })
-
-            // console.log("este es el resulatdo "+result.password)
-
-
-            if (bcryptjs.compare(req.body.password, result.password)) {
-                req.session.user = result;
-                //console.log("Este es el dato :  " + req.session.user.categoria)
-
-                if (req.body.recordar_usuario) {
-
-                    res.cookie("cookieEmail", result.email, { maxAge: 60000 * 5 });
-                }
-                else {
-                  //  console.log("ACA LLEGO - no recuerdo cookie");
-
-                }
-
-
-                if (result.categoria == 1) {
-                    res.redirect('/users/listar-usuarios');
+            if(result){
+                if (bcryptjs.compareSync(req.body.password, result.password)) {
+                    req.session.user = result;
+    
+                    if (req.body.recordar_usuario) {
+    
+                        res.cookie("cookieEmail", result.email, { maxAge: 60000 * 15 });
+                    }
+    
+                    if (result.categoria == 1) {
+                        res.redirect('/users/listar-usuarios');
+                    } else {
+                        res.redirect("/");
+                    }
                 } else {
-                    res.redirect("/");
+                    let errors = "Las credenciales son invalidas, prueba nuevamente"
+                res.render("login", {
+                    error: errors
+                })
                 }
-
-            }
-            else {
-                //console.log("no coinciden credenciales y llego")
+          }  else {
                 let errors = "Las credenciales son invalidas, prueba nuevamente"
                 res.render("login", {
                     error: errors
                 })
-
+    
             }
-
-        }
-
-        catch (error) {
+    
+        }catch (error) {
             return res.send(error)
         }
-
-
     },
 
 
@@ -149,8 +126,8 @@ const userController = {
     },
     listarUsuarios: (req, res) => {
         db.Usuario.findAll({
-            where:{
-                activo:1
+            where: {
+                activo: 1
             }
         })
             .then(users => {
@@ -184,72 +161,112 @@ const userController = {
         }
     }
     ,
-    actualizarUsuario: async(req, res) =>  {
-       
+    actualizarUsuario: async (req, res) => {
 
-       try {
-        const {id} = req.params;
-           console.log("aca llego 1")
+
+        try {
+            const { id } = req.params;
+            //console.log("aca llego 1")
             let image;
-             if(req.files[0] !=undefined)
-             {
-                 image =req.files[0].filename
-                 //console.log("imagen: "+image)
-             }
-             else
-             {
+            if (req.files[0] != undefined) {
+                image = req.files[0].filename
+                //console.log("imagen: "+image)
+            }
+            else {
 
-                 image='generic.jpg'
-                 //console.log("generica: "+image)
-             }
-            
-            
+                image = 'generic.jpg'
+                //console.log("generica: "+image)
+            }
+
+
             //console.log("aca llego 2")
             let usuarioToEdit = {
                 ...req.body,
                 image
             };
             //console.log("ESTO ES USUARIO EDIT"+req.body.nombre)
-            await db.Usuario.update(usuarioToEdit,{
-                where:{id}
+            await db.Usuario.update(usuarioToEdit, {
+                where: { id }
             })
-            
+
             res.redirect('/users/listar-usuarios')
 
         } catch (error) {
-            
+
         }
-       
-       
+
+
     },
-    borrar: async (req,res)=>{
-        
-        const {id} = req.params;
-        console.log("este es el id: "+id)
-        
-        
+    agregarUsuario: (req, res) => {
+        res.render("agregar-usuario")
+    },
+    logicaAniadirUsuario: async (req, res) => {
+        //console.log(req.body)
         try {
-            
+
+            let image
+
+            if (req.file != undefined) {
+
+                image = req.file.filename
+            } else {
+                image = 'generic.jpg'
+            }
+
+            let newUser = {
+                ...req.body,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                activo: 1,
+                image: image
+            }
+            await db.Usuario.create(newUser);
+            res.redirect('/users/listar-usuarios');
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    borrar: async (req, res) => {
+
+        const { id } = req.params;
+        console.log("este es el id: " + id)
+
+
+        try {
+
             await db.Usuario.update(
-                {activo:0},{where:{id}}
+                { activo: 0 }, { where: { id } }
             )
             console.log("deberia estar en 0")
             res.redirect('/users/listar-usuarios')
-            
+
         } catch (error) {
             res.render(error)
         }
 
     },
-    listar: (req, res) => {
-        db.Usuario.findAll()
-            .then(usuarios => {
-                res.send({ usuarios })
-            })
+    
+    searchAdmin: async (req, res) => {
+        let search = req.query.keywords;
+        try {
+      
+            let users = await db.Usuario.findAll({
+                    where: {email: {[op.like]:"%"+ search +"%"}}
+                   
 
-    }
+                })
+                console.log(users)
+            res.render("listadoU", {users})    
+        } catch (error) {
+            console.log(error)
+        }
+        
+
+    },
+
 
 
 }
+
+
 
 module.exports = userController;

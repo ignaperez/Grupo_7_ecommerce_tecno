@@ -66,3 +66,9 @@ main {
 .checkbox {
     margin: 5px;
 }
+.cabeza-inferior {
+    display: none;
+}
+.cabeza-superior {
+    margin-bottom: 25px;
+}

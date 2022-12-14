@@ -35,6 +35,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         imagen3: {
             type: dataTypes.STRING
+        },
+        activo: {
+            type: dataTypes.INTEGER
         }
        
     };

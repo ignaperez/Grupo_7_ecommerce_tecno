@@ -1,7 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 const multer = require("multer");
-const db = require('../database/models')
+const db = require('../database/models');
+const op = db.Sequelize.Op;
+const { DefaultDeserializer } = require("v8");
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -43,34 +45,52 @@ const productController = {
     newProduct: (req,res) => {
         res.render('newProduct')
     },
-    editProduct: (req, res) => {
-        let id = req.params.id;
-        let productoAEditar = productos.find(producto => producto.id == id);
-        res.render("editProduct",{producto: productoAEditar});
+    editProduct: async (req, res) => {
+        
+        ///let productoAEditar = productos.find(producto => producto.id == id);
+       try {
+            let {id} = req.params
+             const producto = await db.Producto.findByPk(id)
+             console.log(id)
+          res.render("editProduct",{producto});
+       } catch (error) {
+        
+       }
+        
     },
-    editar: (req, res) => {
-        let id = req.params.id;
-        let productoAEditar = productos.find(producto => producto.id == id)
-        let imagen 
-        (req.files[0] != undefined)
-            ? imagen = req.files[0].filename
-            : imagen = productoAEditar.imagen1
-        productoAEditar = {
-            id: productoAEditar.id,
-            ...req.body,
-            imagen1: imagen,
-        } 
-        let nuevoProducto = productos.map(producto => {
-            if(producto.id == productoAEditar.id) {
-                return producto = {...productoAEditar};
-            }
-            return producto
-        })
-        fs.writeFileSync(productsFilePath, JSON.stringify(nuevoProducto, null, " "));
-        res.redirect("/product/dashboard")
+    editar: async (req, res) => {
+        let {id} = req.params;
+        
+        try {
+            //let productoAEditar = productos.find(producto => producto.id == id)
+            let product = await db.Producto.findByPk(id)
+            let imagen 
+            (req.files[0] != undefined)
+                ? imagen = req.files[0].filename
+                : imagen = product.imagen1
+           const productoAEditar = {
+                ...req.body,
+                imagen1: imagen,
+            } 
+            // let nuevoProducto = productos.map(producto => {
+            //     if(producto.id == productoAEditar.id) {
+            //         return producto = {...productoAEditar};
+            //     }
+
+           //     return producto
+           // })
+          //  fs.writeFileSync(productsFilePath, JSON.stringify(nuevoProducto, null, " "));
+            await db.Producto.update(productoAEditar,{where:{id}})
+            res.redirect("/product/dashboard")
+        }  
+        catch (error) {
+            res.render(error)
+        }
+       
     },
-    create:(req,res)=>{
-        console.log(req.files);
+    create: async (req,res)=>{
+        try {
+            
         let image
         (req.files[0] != undefined) 
             ? image = req.files[0].filename 
@@ -85,20 +105,29 @@ const productController = {
             : image3 = "logo-img.png" 
         
         let newProduct = {
-			id: productos[productos.length - 1].id + 1,
 			...req.body,
             imagen1: image,
             imagen2: image2,
             imagen3: image3
 		};
-		productos.push(newProduct)
-		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
+		await db.Producto.create(newProduct)
+		//fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
 		//res.redirect('/');
         res.redirect('/product/dashboard');
+            
+        } catch (error) {
+            
+        }
+        
     },
     dashboard: async  (req, res) => {
         try {
-            let productos1 = await db.Producto.findAll();
+            
+            let productos1 = await db.Producto.findAll(
+                {
+                    where:{activo:1}
+                }
+            );
         res.render("admin-producto", {productos: productos1})
             
         } catch (error) {
@@ -106,26 +135,60 @@ const productController = {
         }
         
     },
-    borrar: (req, res) => {
-        let id = req.params.id;
-        let nuevosProductos = productos.filter(producto => producto.id != id);
-        let productosFinales = nuevosProductos.map(producto => {
-            if(producto.id > id){
-                producto.id = producto.id - 1;
-            }
-            return producto
-        })
+    // borrar: (req, res) => {
+    //     let id = req.params.id;
+    //     let nuevosProductos = productos.filter(producto => producto.id != id);
+    //     let productosFinales = nuevosProductos.map(producto => {
+    //         if(producto.id > id){
+    //             producto.id = producto.id - 1;
+    //         }
+    //         return producto
+    //     })
        
-        fs.writeFileSync(productsFilePath, JSON.stringify(productosFinales, null, " "))
-        res.render("/product/dashboard");
-    },
-    searchAdmin: (req, res) => {
+    //     fs.writeFileSync(productsFilePath, JSON.stringify(productosFinales, null, " "))
+    //     res.render("/product/dashboard");
+    // },
+    searchAdmin: async (req, res) => {
         let search = req.query.keywords;
-        let productoABuscar = productos.filter(producto => producto.titulo.toLowerCase().includes(search));
-        res.render("admin-producto", {
-            productos : productoABuscar
-        })
+        try {
+            //let productoABuscar = productos.filter(producto => producto.titulo.toLowerCase().includes(search));
+            let productos = await db.Producto.findAll({
+                    where: {titulo: {[op.like]:"%"+ search +"%"}}
+                })
+                console.log(productos)
+            res.render("admin-producto", {productos})    
+        } catch (error) {
+            
+        }
+        
+       /*  await MyDataSequelizeAccess.findAll({
+            where: {
+              name: {
+                $like: `%Bob%`
+              }
+            }
+          }); */
 
-    }
+
+    },
+    borrar: async (req, res) => {
+
+        const { id } = req.params;
+        // console.log("este es el id: " + id)
+
+
+        try {
+
+            await db.Producto.update(
+                { activo: 0 }, { where: { id } }
+            )
+            console.log("deberia estar en 0")
+            res.redirect('/product/dashboard')
+
+        } catch (error) {
+            res.render(error)
+        }
+
+    },
 }
 module.exports = productController;

@@ -25,9 +25,10 @@ router.get('/newProduct',adminAccessMiddleware, productController.newProduct);
 router.post('/newProduct', upload.any() ,productController.create);
 
 router.get('/editProduct/:id', adminAccessMiddleware, productController.editProduct);
-router.put("/editProduct/:id", upload.any(), productController.editar)
+router.put("/editProduct/:id", upload.any(),adminAccessMiddleware ,productController.editar)
 
 router.get("/dashboard", adminAccessMiddleware, productController.dashboard);
 router.delete("/dashboard/:id", productController.borrar)
 router.get("/dashboard/search", productController.searchAdmin)
+router.get("/eliminar-producto/:id",productController.borrar)
 module.exports = router

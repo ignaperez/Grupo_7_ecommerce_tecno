@@ -1,9 +1,13 @@
+main {
+    min-height: 750px;
+}
 .formulario {
     display: flex;
     flex-direction: column ;
     width: 45%;
     border-radius: 1vh;
     box-shadow: 1px 1px 4px rgb(218, 217, 217) ;
+    border: 1px gainsboro solid;
     margin-bottom: 10%;
     margin-top: 5%;
     justify-content: center;
@@ -13,13 +17,13 @@
 
 main h1 {
 
-    color: #ECEBE4;
+    color: black;
     width: 40%;
     font-size: 100%;
     text-align: center;
     margin: 0 auto;
     margin-top: 4%;
-    border: 1px #ECEBE4 solid;
+    border: 1px black solid;
     border-radius: 10px;
     padding: 1%;
 }
@@ -31,10 +35,10 @@ justify-content: center;
 
 .input-registro {
     width:60%;
-    border-radius: 5px;
+    border-radius: 15px;
     margin: 2vh;
-    padding: 3vh;
-    border-color: white;
+    padding: 1vh;
+    border-color: black;
     margin-left: 18%;
 }
 .boton {
@@ -42,11 +46,9 @@ justify-content: center;
     padding: 1vh;
     color: black;
     border: black solid 1%;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-top: 2vh;
-}
-body{
-    background: radial-gradient(circle closest-side, rgb(59, 59, 59) 1%, black);
+    transition: all 500ms;
 }
 .botones{
     display: flex;
@@ -54,9 +56,14 @@ body{
 }
 
 .boton:hover{
-
     background-color: #667449;
     color: #ECEBE4 ;
+}
+.cabeza-inferior {
+    display: none;
+}
+.cabeza-superior {
+    margin-bottom: 25px;
 }
 
 @media (max-width: 426px) {

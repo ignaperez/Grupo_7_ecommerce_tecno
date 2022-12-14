@@ -118,6 +118,12 @@
 .editar {
     display: none;
 }
+.cabeza-inferior {
+    display: none;
+}
+.cabeza-superior {
+    margin-bottom: 25px;
+}
 
 
 
