@@ -24,9 +24,6 @@ module.exports = (sequelize, dataTypes) => {
         password: {
             type: dataTypes.STRING
         },
-        categoria: {
-            type: dataTypes.INTEGER
-        },
         image: {
             type: dataTypes.STRING
         },
@@ -37,9 +34,17 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: 'usuarios',
-        timestamps: false
+        timestamps: false,
+        underscored: true
     };
     const Usuario = sequelize.define(alias, cols, config)
+
+     Usuario.associate = (models) => {
+         Usuario.belongsTo(models.Categoriau, {
+             as:"categoria", 
+             foreignKey: "categoria_id"
+         })
+     }
 
     return Usuario
 }

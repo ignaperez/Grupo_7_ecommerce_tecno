@@ -9,9 +9,6 @@ module.exports = (sequelize, dataTypes) => {
         titulo: {
             type: dataTypes.STRING
         },
-        categoria: {
-            type: dataTypes.INTEGER
-        },
         precio: {
             type: dataTypes.DECIMAL(8,0)
         },
@@ -43,9 +40,17 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: 'productos',
-        timestamps: false
+        timestamps: false,
+        underscored: true
     };
-    const Producto = sequelize.define(alias, cols, config)
+    const Producto = sequelize.define(alias, cols, config);
+
+    Producto.associate = (models) => {
+        Producto.belongsTo(models.Categoriap, {
+            as:"categoria", 
+            foreignKey: "categoria_id"
+        })
+    }
 
     return Producto
 }

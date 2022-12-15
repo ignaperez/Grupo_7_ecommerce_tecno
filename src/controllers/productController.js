@@ -29,16 +29,17 @@ const productController = {
     {
         try {
             let idProducto= req.params.id;
-        const producto = await db.Producto.findByPk(idProducto);
-        const productos = await db.Producto.findAll();
+        const producto = await db.Producto.findByPk(idProducto, {include: [{association:"categoria"}]}); 
+        //{include: [{association:"categoria"}]} / include para usar la asociación entre categoria y producto
+        const productos = await db.Producto.findAll();  
         //let producto = productos.find(producto => producto.id == idProducto);
         if (producto.imagen2 == '')
         producto.imagen2=producto.imagen1;
         res.render('detalle-producto',{productos, producto});
             
         } catch (error) {
-            
-        }
+            console.log(error)
+        } 
 
         
     },

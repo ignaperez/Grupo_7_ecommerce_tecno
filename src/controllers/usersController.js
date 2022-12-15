@@ -57,18 +57,15 @@ const userController = {
                 ...req.body,
                 //Encripto password 
                 password: bcryptjs.hashSync(req.body.password, 10),
-                categoria: 2,
-                image: image
+                categoria_id: 2,
+                image: image,
+                activo: 1
             }
             await db.Usuario.create(newUser);
             res.redirect('/');
 
         } catch (error) {
-            console.log(error)
-        }
-
-
-
+            console.log(error)}
     },
     loginPostMysql: async (req, res) => {
 
@@ -90,7 +87,7 @@ const userController = {
                         res.cookie("cookieEmail", result.email, { maxAge: 60000 * 15 });
                     }
     
-                    if (result.categoria == 1) {
+                    if (result.categoria_id == 1) {
                         res.redirect('/users/listar-usuarios');
                     } else {
                         res.redirect("/");
@@ -110,7 +107,7 @@ const userController = {
             }
     
         }catch (error) {
-            return res.send(error)
+            return console.log(error)
         }
     },
 
@@ -124,14 +121,13 @@ const userController = {
         })
 
     },
-    listarUsuarios: (req, res) => {
+    listarUsuarios: (req, res) => { 
         db.Usuario.findAll({
             where: {
                 activo: 1
-            }
+            }, include: [{association:"categoria"}]
         })
             .then(users => {
-                //console.log(users)
                 res.render('listadoU', { users })
             })
 
@@ -139,9 +135,10 @@ const userController = {
     },
     detalleUsuario: (req, res) => {
         let idUser = req.params.id;
-        db.Usuario.findByPk(idUser)
+        db.Usuario.findByPk(idUser, {include: [{association:"categoria"}]})
             .then(verUsuario =>
                 res.render('detalleUsuario', { verUsuario }))
+                
 
     },
     editarUsuario: async (req, res) => {

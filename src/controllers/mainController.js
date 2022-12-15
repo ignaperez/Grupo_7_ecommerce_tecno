@@ -8,11 +8,11 @@ const mainController =
 {
     index: async (req, res) => {
         try {
-            const productos =await db.Producto.findAll();
+            const productos = await db.Producto.findAll();
             res.render('index', { productos });
 
         } catch (error) {
-
+            console.log(error)
         }
 
     },

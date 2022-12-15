@@ -1,3 +1,6 @@
+main {
+    min-height: 750px;
+}
 .contenedor-agregar-search {
     display: flex;
     justify-content: space-around;
