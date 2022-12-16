@@ -17,7 +17,7 @@ const fs = require("fs");
 //const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 //Validaciones de Ruta para el registro
-const userValidations = require("../middlewares/userRegisterValidations")
+const userValidations = require("../middlewares/userRegisterValidations-1")
 //Validaciones de Ruta para el login
 const loginValidations = []
 //configuración de multer//
