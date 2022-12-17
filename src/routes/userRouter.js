@@ -12,14 +12,9 @@ const userNotLoggedMiddleware = require("../middlewares/userNotLoggedMiddleware"
 const adminAccsessMiddelware = require("../middlewares/adminAccessMiddleware")
 
 
-const fs = require("fs");
-//const userFilePath = path.join(__dirname, '../data/users.json');
-//const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-
 //Validaciones de Ruta para el registro
 const userValidations = require("../middlewares/userRegisterValidations")
-//Validaciones de Ruta para el login
-const loginValidations = []
+
 //configuración de multer//
 var storage = multer.diskStorage({
     destination:function(req,file,cb){

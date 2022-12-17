@@ -40,9 +40,13 @@ const userController = {
     },
 
     logicRegister: async (req, res) => {
-        //const resultValidation = validationResult(req);
-        console.log(req.body)
-        //const userInDB = users.find(usuario => usuario.email == req.body.email)
+        const resultValidation = validationResult(req);
+        if(resultValidation.errors.length > 0) {
+            return res.render("registro", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        } else {
         try {
             let image
 
@@ -63,9 +67,9 @@ const userController = {
             }
             await db.Usuario.create(newUser);
             res.redirect('/');
-
         } catch (error) {
             console.log(error)}
+        }
     },
     loginPostMysql: async (req, res) => {
 
@@ -248,8 +252,6 @@ const userController = {
       
             let users = await db.Usuario.findAll({
                     where: {email: {[op.like]:"%"+ search +"%"}}
-                   
-
                 })
                 console.log(users)
             res.render("listadoU", {users})    
