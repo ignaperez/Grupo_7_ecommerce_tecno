@@ -3,7 +3,6 @@ const fs = require("fs")
 //const userFilePath = path.join(__dirname, '../data/users.json');
 //const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 const {body} = require("express-validator");
-const db = require('../database/models');
 
 module.exports = [
     body("nombre").notEmpty().withMessage("Tienes que escribir un nombre"),
@@ -11,12 +10,7 @@ module.exports = [
     body("email").notEmpty().withMessage("Tienes que escribir un correo electrónico").bail()
     .isEmail().withMessage("Tienes que escribir un correo válido").bail()
     .custom((valor, {req}) => {
-        let userInDB = db.Usuario.findOne({
-            where: {
-                email: emailUsuario
-            }
-        })
-        console.log(userInDB)
+        let userInDB = users.find(usuario => usuario.email == req.body.email);
         if(userInDB){throw new Error("Este email ya esta registrado")}
         return true
     }),

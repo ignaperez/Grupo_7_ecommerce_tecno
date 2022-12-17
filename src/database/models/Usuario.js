@@ -30,6 +30,9 @@ module.exports = (sequelize, dataTypes) => {
         activo:{
             type:dataTypes.INTEGER
         },
+        categoria_id:{
+            type:dataTypes.INTEGER
+        }
        
     };
     let config = {
