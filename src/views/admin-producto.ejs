@@ -46,7 +46,10 @@
                                 </div>
                                 <div class="caja-botones">
                                     <a href="/product/editProduct/<%= producto.id %> " class="boton-editar">EDITAR</a>
-                                    <a href="/product/eliminar-producto/<%= producto.id %> " class="boton-eliminar">BORRAR</a>
+                                    <form id="borrar" action="/product/dashboard/<%= producto.id %>" method="post" enctype="multipart/form-data">
+                                        <button type="submit" class="boton-eliminar">BORRAR</button>
+                                    </form>
+                                    <!-- <a href="/product/eliminar-producto/ " class="boton-eliminar">BORRAR</a> -->
                                     </form>
                                 </div>
                             </article>
@@ -61,7 +64,9 @@
         <%- include("./partials/footer") %>
 
 
-
+        <script src="/js/dashboardProducto.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
 </body>
 
 </html>

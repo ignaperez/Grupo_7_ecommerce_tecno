@@ -30,12 +30,12 @@
                         <%= error %> 
                     </div>
                 <% } %>
-                <div class="contenedor-input"><input class="input" type="text" name="email" placeholder="Email" required></div>
-                <div class="contenedor-input"><input class="input" type="password" name="password" placeholder="Contraseña" required></div>
+                <div class="contenedor-input"><input class="input" type="text" name="email"  required>
+                <label>Email</label></div>
+                <div class="contenedor-input"><input class="input" type="password" name="password"  required>
+                <label>Contraseña</label></div>
                  <div class="contenedor-recordar">  
-                        <label>
-                            <input class="checkbox" type="checkbox" name="recordar_usuario">Recordar este usuario
-                        </label>
+                        <input class="checkbox" type="checkbox" name="recordar_usuario">Recordar este usuario
                     </div class="contenedor-boton"> 
                         <button class="boton" type="submit">Ingresar</button>
             </form>
@@ -43,6 +43,7 @@
         </main>
         <!-- partials del footer-->
         <%- include("./partials/footer") %>
+        
 </body>
 
 </html>

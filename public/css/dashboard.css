@@ -9,11 +9,19 @@ main {
     margin-bottom: 10px;
 }
 .agregar-producto {
-    color: #55603d;
+    color: black;
     font-weight: bold;
-    border: solid 2px #55603d;
+    border: solid 1px gainsboro;
     padding: 1vh;
     border-radius: 15px;
+    box-shadow:  9px 9px 18px #e6e6e6,
+             -9px -9px 18px #ffffff;
+    transition: all 500ms;
+}
+.agregar-producto:hover {
+    background-color: gainsboro;
+    color: white;
+    transform: scale(0.98);
 }
 .barra-search-dashboard {
     padding: 1vh;
@@ -133,6 +141,10 @@ main {
     background: #ffffff;
     box-shadow:  7px 7px 34px #e6e6e6,
              -7px -7px 34px #ffffff;
+    transition: all 0.5s;
+}
+.tablero-de-productos:hover {
+    transform: scale(1.1)
 }
 .caja-imagen {
     box-sizing: border-box;
@@ -189,7 +201,6 @@ main {
 .boton-editar:hover {
     background-color: #5de99c;
     transition: all .5s;
-    text-decoration: underline 2px;
     color: white;
     font-weight: bold;
 }
@@ -199,18 +210,18 @@ main {
     border: none;
     display: inline-block;
     margin: auto 15px 20px auto ;
-    padding: 5px;
+    padding: 7px;
     color: black;
     border-radius: 10px;
     background-color: white;
     background: #ffffff;
     box-shadow:  7px 7px 14px #ededed,
              -7px -7px 14px #ffffff;
+    
 }
 .boton-eliminar:hover {
     background-color: #5de99c;
     transition: all .5s;
-    text-decoration: underline 2px;
     color: white;
     font-weight: bold;
 }

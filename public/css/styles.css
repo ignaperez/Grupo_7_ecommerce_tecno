@@ -57,7 +57,9 @@ header div a {
 }
 .imagen-perfil-nav {
     width: 40%;
-    border-radius: 25%;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 10%;
     margin: 2px;
     margin-right: 15px;
 }

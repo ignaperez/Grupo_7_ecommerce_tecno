@@ -41,7 +41,7 @@ router.get("/listar-usuarios",userNotLoggedMiddleware,adminAccsessMiddelware, us
 router.get('/detalle-usuario/:id',adminAccsessMiddelware,userController.detalleUsuario);
 router.get('/editar-usuario/:id',userController.editarUsuario);
 router.put('/editar-usuario/:id',upload.any() , userController.actualizarUsuario);
-router.get('/borrar/:id',userController.borrar)
+router.post('/listar-usuarios/:id',userController.borrar)
 
 router.get("/agregar-usuario", userController.agregarUsuario)
 router.post("/agregar-usuario",upload.single("image") ,userValidations ,adminAccsessMiddelware, userController.logicaAniadirUsuario)

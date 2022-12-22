@@ -52,11 +52,13 @@
                                 <p class="parrafoInfo"><%= user.email %> </p>
                                 <p class="parrafoInfo" id="categoria"><%= user.categoria.nombre %> </p>
                             </div>
-                            <!-- user.categoria_id == 1 ? "Administrador" : "Usuario" -->
                             <div class="divBotones">
                                 <a class="botonCRUD first" href="/users/detalle-usuario/<%= user.id %> ">Perfil</a>
                                 <a class="botonCRUD second" href="/users/editar-usuario/<%= user.id %>">Editar</a>
-                                <a class="botonCRUD third" href="/users/borrar/<%= user.id %> ">Borrar</a>
+                                <form id="borrar" action="/users/listar-usuarios/<%= user.id %>" method="post" enctype="multipart/form-data">
+                                    <button class="botonCRUD third" type="submit">Borrar</button>
+                                </form>
+                                <!-- <a class="botonCRUD third" id="borrar" href="/users/borrar/">Borrar</a> -->
                             </div>
                         </div>
                         <% }) %>
@@ -72,6 +74,7 @@
 
         <script src="/js/listadoUsuario.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
 </body>
 
 </html>

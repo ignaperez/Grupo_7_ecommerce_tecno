@@ -34,13 +34,38 @@ main {
     margin-top: 80px;
     align-items: center;
 }
-.input {
-    padding: 5px;
-    width: 40%;
-    border-radius: 9px;
-    font-size: 20px;
-    margin:20px auto 12px auto;
+.contenedor-input{
+    position: relative;
 }
+.input {
+    border: solid 1.5px gray;
+    padding: 7px;
+    width: 40%;
+    background: none;
+    border-radius: 9px;
+    font-size: 15px;
+    margin:20px auto 12px auto;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+label {
+    position: absolute;
+    left: 170px;
+    top:12px;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input:focus {
+    outline: none;
+    border: 1.5px solid #55603d;
+}
+.input:focus ~ label {
+    transform: translateY(-10%) scale(0.8);
+    background-color: white;
+    padding: 0 0.2em;
+    color: #55603d;
+}
+
 .error-text {
     color: red;
     padding: 10px;
@@ -54,14 +79,23 @@ main {
     margin: 15px auto 12px auto;
 }
 .boton {
-    color: white;
-    padding: 5px;
-    font-size: 20px;
-    background-color: #55603d;  
+    padding: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: white;  
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
-
+    box-shadow:  5px 5px 13px #b3b3b3,
+    -5px -5px 13px #ffffff;
+    transition: all 500ms;
+}
+.boton:hover {
+    box-shadow:  9px 9px 18px #f0f0f0,
+             -9px -9px 18px #ffffff;
+    background-color: #55603d;
+    color: white;
+    font-weight: bold;
 }
 .checkbox {
     margin: 5px;

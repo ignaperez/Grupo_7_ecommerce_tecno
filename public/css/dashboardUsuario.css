@@ -4,16 +4,24 @@ main {
 .contenedor-agregar-search {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 .agregar-producto {
-    color: #55603d;
+    color: black;
     font-weight: bold;
-    border: solid 2px #55603d;
-    padding: 0.5vh;
+    border: solid 1px gainsboro;
+    padding: 1vh;
     border-radius: 15px;
-    align-items: center ;
+    box-shadow:  9px 9px 18px #e6e6e6,
+             -9px -9px 18px #ffffff;
+    transition: all 500ms;
+}
+.agregar-producto:hover {
+    background-color: gainsboro;
+    color: white;
+    transform: scale(0.98);
 }
 .barra-search-dashboard {
     padding: 1vh;
@@ -131,6 +139,10 @@ main {
     background: #ffffff;
     box-shadow:  6px -6px 25px #dedede,
              -6px 6px 25px #ffffff;
+    transition: all .4s;
+}
+.contenedorUsuario:hover{
+    transform: scale(1.02);
 }
 .contenedorIMG {
     max-width: 20%;
@@ -171,6 +183,7 @@ main {
     box-shadow:  6px 6px 12px #f0f0f0,
              -6px -6px 12px #ffffff;  
     transition: all 0.5s;  
+    border: none;
 }
 .first:hover{
     background: linear-gradient(315deg, #e6e6e6, #ffffff);
@@ -181,6 +194,9 @@ box-shadow:  -8px -8px 16px #f0f0f0,
 .second:hover{
     background-color: #5de99c;
     color: white;
+}
+.third {
+    padding: 2px;
 }
 .third:hover{
     background-color: tomato;

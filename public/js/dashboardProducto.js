@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
             console.log(boton);
              Swal.fire({
                  icon: "warning",
-                 title:"¿Quieres eliminar este usuario?",
+                 title:"¿Quieres eliminar este producto?",
                  showConfirmButton: true,
                  confirmButtonText:"Si",
                  showCancelButton: true,
@@ -15,6 +15,7 @@ window.addEventListener("load", function () {
                  allowEscapeKey: false,
                  allowEnterKey: false
              }).then(result => {
+                 console.log(result);
                  if(result.value == true) { 
                     boton.submit()
                  } else {

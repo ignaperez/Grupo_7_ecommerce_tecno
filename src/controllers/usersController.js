@@ -229,21 +229,17 @@ const userController = {
     borrar: async (req, res) => {
 
         const { id } = req.params;
-        console.log("este es el id: " + id)
+        
+         try {
 
-
-        try {
-
-            await db.Usuario.update(
-                { activo: 0 }, { where: { id } }
-            )
-            console.log("deberia estar en 0")
-            res.redirect('/users/listar-usuarios')
-
-        } catch (error) {
-            res.render(error)
-        }
-
+             await db.Usuario.update(
+                 { activo: 0 }, { where: { id } }
+             )
+             
+             res.redirect('/users/listar-usuarios')
+         } catch (error) {
+             res.render(error)
+         } 
     },
     
     searchAdmin: async (req, res) => {
@@ -252,7 +248,7 @@ const userController = {
       
             let users = await db.Usuario.findAll({
                     where: {email: {[op.like]:"%"+ search +"%"}}
-                })
+                , include: [{association:"categoria"}]})
                 console.log(users)
             res.render("listadoU", {users})    
         } catch (error) {
