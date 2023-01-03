@@ -9,6 +9,9 @@ const {body} = require("express-validator");
 const userNotLoggedMiddleware = require("../middlewares/userNotLoggedMiddleware");
 const adminAccessMiddleware = require("../middlewares/adminAccessMiddleware");
 
+//Validaciones de Ruta para la creación de un nuevo producto.
+const productValidations = require("../middlewares/newProductValidation")
+
 var storage = multer.diskStorage({
     destination:function(req,file,cb){
         cb(null, 'public/img/productos')
@@ -22,7 +25,7 @@ var upload = multer({storage: storage})
 router.get('/carrito', userNotLoggedMiddleware , productController.carrito);
 router.get('/detalle-producto/:id',productController.detalleProducto);
 router.get('/newProduct',adminAccessMiddleware, productController.newProduct);
-router.post('/newProduct', upload.any() ,productController.create);
+router.post('/newProduct', upload.any() ,productValidations,productController.create);
 
 router.get('/editProduct/:id', adminAccessMiddleware, productController.editProduct);
 router.put("/editProduct/:id", upload.any(),adminAccessMiddleware ,productController.editar)
