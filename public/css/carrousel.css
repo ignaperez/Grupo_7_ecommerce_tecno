@@ -1,0 +1,23 @@
+.carrusel-list{
+    position: relative;
+    display: flex;
+    width: 90%;
+    margin: 10px auto 25px;
+}
+.carrusel-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.carrusel-prev {
+    
+    position: absolute;
+    left: 0px;
+}
+.carrusel-next {
+    position: absolute;
+    right: 550px;
+}

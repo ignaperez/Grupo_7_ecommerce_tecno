@@ -1,34 +1,8 @@
 const path = require("path");
 const fs = require("fs")
-//const userFilePath = path.join(__dirname, '../data/users.json');
-//const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 const {body} = require("express-validator");
 const db = require('../database/models')
-//const op = db.Sequelize.Op;
-// const emailsInDB = () => {
-//     try {
-//         const emailUser = req.body.email
-//             db.Usuario.findAll({
-//              where: {
-//                  email: emailUser
-//              }})} catch (error) {
-//                 console.log(error);
-//              }
-// }
-// console.log(emailsInDB);
-// const emailExiste = async (email)=>{
 
-//     try {
-//         const emailBuscado = await db.Usuario.findAll(
-//             {
-//                 where:{ email: email}
-//             }
-//         )
-//         console.log(emailBuscado)
-//     } catch (error) {
-        
-//     }
-// }
 module.exports = [
     body("nombre").notEmpty().withMessage("Tienes que escribir un nombre"),
     body("apellido").notEmpty().withMessage("Tienes que escribir un apellido"),
@@ -36,7 +10,7 @@ module.exports = [
     .isEmail().withMessage("Tienes que escribir un correo válido").bail()
     .custom(async (valor,{req}) => { 
     let emailNuevo = req.body.email;
-    // console.log("email por body: " + emailNuevo)           
+         
     const {count, row} = await  db.Usuario.findAndCountAll({
         where:{
             email:emailNuevo
@@ -45,7 +19,6 @@ module.exports = [
    
     if(count>0)
     {
-        // console.log(count)
         throw new Error('El email ya esta registrado')
     }
     return true    

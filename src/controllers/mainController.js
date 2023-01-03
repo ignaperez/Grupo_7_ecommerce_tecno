@@ -55,8 +55,9 @@ const mainController =
         }
     },
     mandaEmail: (req,res)=>{
-        console.log(req.body)
+        
         res.send('email enviado')
+    
     }
 
 
