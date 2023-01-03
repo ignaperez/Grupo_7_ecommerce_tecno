@@ -44,13 +44,11 @@ const mainController =
     search: async (req, res) => {
         try {
             let search = req.query.keywords;
-            console.log(search)
-            //let productos = await db.Producto.findAll();
              let productos = await db.Producto.findAll({
                  where: {titulo: {[op.like]:"%"+ search +"%"}}
              })
             console.log(productos)    
-            res.render("index", {productos})    
+            res.render("resultados", {productos})    
         } catch (error) {
             console.log(error)
         }

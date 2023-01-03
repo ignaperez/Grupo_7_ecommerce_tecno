@@ -13,7 +13,9 @@ window.addEventListener("load", function () {
                  cancelButtonText: "No",
                  allowOutsideClick: false,
                  allowEscapeKey: false,
-                 allowEnterKey: false
+                 allowEnterKey: false,
+                 iconColor: "tomato",
+                 confirmButtonColor:"#55603d"
              }).then(result => {
                  if(result.value == true) { 
                     boton.submit()

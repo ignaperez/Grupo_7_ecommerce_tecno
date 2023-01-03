@@ -13,11 +13,13 @@ window.addEventListener("load", function () {
                  cancelButtonText: "No",
                  allowOutsideClick: false,
                  allowEscapeKey: false,
-                 allowEnterKey: false
+                 allowEnterKey: false,
+                 iconColor: "tomato",
+                 confirmButtonColor:"#55603d"
              }).then(result => {
                  console.log(result);
                  if(result.value == true) { 
-                    boton.submit()
+                     boton.submit()
                  } else {
                      e.preventDefault()
                  }

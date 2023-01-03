@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/resultados.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>PerichsOne</title>
+  </head>
+  <body>
+    <!-- En el header van las dos primeras barras : La que dice equipate para ser el mejor y la otra es donde va el nombre y la barra de busqueda! NADA MAS -->
+    <!-- partial del header-->
+    <%- include("./partials/header-total") %>
+
+    <main>
+      <section>
+        <div class="contenedor-categorias">
+          <p class="n-filtros">Filtros</p>
+          <div class="contenedor-checkbox">
+            <p class="n-categorias">Categorias</p>
+            <ul class="lista-categorias">
+              <li class="checkbox-categoria">Auriculares</li>
+              <li class="checkbox-categoria">Teclados</li>
+              <li class="checkbox-categoria">Mouse</li>
+              <li class="checkbox-categoria">Joisticks</li>
+              <li class="checkbox-categoria">Monitores</li>
+              <li class="checkbox-categoria">Mousepads</li>
+            </ul>
+          </div>
+        </div>
+        <div class="caja-productos">
+          <% if (productos.length > 0) { %> <% productos.forEach(producto => {
+          %>
+          
+            <article class="tablero-de-productos">
+          <div class="caja-imagen">
+            <a href="/product/detalle-producto/<%= producto.id %>"><img
+                class="imagen-dashboard"
+                src="/img/productos/<%= producto.imagen1 %> "
+                alt=""/></a>
+            </div>
+            <div class="caja-titulo">
+              <p class="titulo-producto"><%= producto.titulo %></p>
+            </div>
+            <div class="boton-carrito">
+              <button class="añadir-carrito">Agregar al carrito</button>
+            </div>
+          </article>
+          <% }) %>
+        </div>
+        <% } else { %>
+        <div class="sin-resultado-caja">
+          <p>No se encontraron productos...</p>
+        </div>
+        <% } %>
+      </section>
+    </main>
+
+    <!-- partials del footer-->
+    <%- include("./partials/footer") %>
+  </body>
+</html>

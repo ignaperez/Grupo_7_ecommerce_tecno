@@ -85,7 +85,7 @@ const userController = {
             if(result){
                 if (bcryptjs.compareSync(req.body.password, result.password)) {
                     req.session.user = result;
-    
+                    console.log(result);
                     if (req.body.recordar_usuario) {
     
                         res.cookie("cookieEmail", result.email, { maxAge: 60000 * 15 });

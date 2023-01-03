@@ -6,9 +6,9 @@ const db = require('../database/models/')
  loggedMiddleware = (req, res, next) => {
     res.locals.isLogged = false;
     
-    
     let userInCookie = req.cookies.cookieEmail;
     if(userInCookie){
+        
         //console.log(userInCookie)
    // var userFromCookie = users.find(user => user.email == userInCookie)
     async()=>{
@@ -22,7 +22,6 @@ const db = require('../database/models/')
                 
             if(userFromCookie) {
                     req.session.user = userFromCookie
-                    
                 }
         } catch (error) {
             console.log(error)
