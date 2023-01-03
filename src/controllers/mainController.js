@@ -4,6 +4,7 @@ const path = require('path');
 //const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require("../database/models");
 const op = db.Sequelize.Op;
+
 const mainController =
 {
     index: async (req, res) => {
@@ -53,6 +54,10 @@ const mainController =
             console.log(error)
         }
     },
+    mandaEmail: (req,res)=>{
+        console.log(req.body)
+        res.send('email enviado')
+    }
 
 
 
