@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/registro.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/new-editProduct.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -21,10 +23,20 @@
         <h1 class="titulo-np">Agreguemos nuevos productos!</h1>
         <div class="contenedor-formulario">
             <form action="/product/newProduct" method="POST" class="formulario-np" enctype="multipart/form-data">
+                
+                
+                
                 <div><label for="">Ingrese el nombre del nuevo producto: </label>
-                    <input type="text" name="titulo" placeholder="Por ejemplo, auriculares Logitech" ></div>
+                    <% if (locals.errors && errors.titulo) { %>
+                        <p class="error-text">
+                            <%= errors.titulo.msg %>
+                        </p>
+                        <% } %>
+                    <input type="text" name="titulo" placeholder="Por ejemplo, auriculares Logitech" value="<%= locals.oldData ? oldData.titulo : null %>"></div>
+                    
+
                 <div><label for="categoria">Ingrese la categoría del nuevo producto: </label>
-                    <select name="categoria_id" id="categoria" >Auriculares
+                    <select name="categoria_id" id="categoria">Auriculares
                         <option value=1>Auriculares</option>
                         <option value=2>Teclados</option>
                         <option value=3>Mouse</option>
@@ -36,11 +48,21 @@
                 <div>
                     <label for="">Ingrese imágenes del nuevo producto: </label>
                         <input type="file" name="imagen1">
+                        <% if (locals.errors && errors.imagen1) { %>
+                            <p class="error-text">
+                                <%= errors.imagen1.msg %>
+                            </p>
+                            <% } %>
                         <input type="file" name="imagen2">
                         <input type="file" name="imagen3">
                 </div>
         <div><label for="precio">Ingrese el precio del nuevo producto: </label>
-            <input type="text" id="precio"name="precio"></div>
+            <% if (locals.errors && errors.precio) { %>
+                <p class="error-text">
+                    <%= errors.precio.msg %>
+                </p>
+                <% } %>
+            <input type="text" id="precio"name="precio" value="<%= locals.oldData ? oldData.precio : null %>"></div>
         <div><label for="garantia">Garantía: </label>
             <select name="garantia" id="garantia">
                 <option value="6">6 meses</option>
@@ -49,7 +71,13 @@
             </select>
         </div>
         <div>
-            <div><label for="">Descripción 1: </label><textarea name="descripcion1" cols="30" rows="5"></textarea></div>
+            <div><label for="">Descripción 1: </label><textarea name="descripcion1" cols="30" rows="5" ></textarea>
+                <% if (locals.errors && errors.nombre) { %>
+                    <p class="error-text">
+                        <%= errors.nombre.msg %>
+                    </p>
+                    <% } %></div>
+            
             <div><label for="">Descripción 2: </label><textarea name="descripcion2" cols="30" rows="5"></textarea></div>
             <div><label for="">Descripción 3: </label><textarea name="descripcion3" cols="30" rows="5"></textarea></div>
         </div>

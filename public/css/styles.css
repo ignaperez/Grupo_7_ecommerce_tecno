@@ -6,13 +6,18 @@
 /* cabeza superior */
 
 .cabeza-superior {
-  display: flex;
-  background-color: #292e1e;
-  height: 75px;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+    display: flex;
+    background-color:#292E1E;
+    height: 75px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    align-items: center;
+}
+
+.error-text {
+    font-size: 14px;
+    padding: 10px;
 }
 .frase-top {
   padding-left: 4vh;

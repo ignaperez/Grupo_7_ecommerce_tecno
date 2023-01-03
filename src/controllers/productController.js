@@ -4,6 +4,8 @@ const multer = require("multer");
 const db = require('../database/models');
 const op = db.Sequelize.Op;
 const { DefaultDeserializer } = require("v8");
+const { validationResult } = require("express-validator")
+
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -74,7 +76,14 @@ const productController = {
         }
 
     },
-    create: async (req, res) => {
+    create: async (req,res)=>{
+        const resultValidation = validationResult(req);
+        if(resultValidation.errors.length > 0) {
+            return res.render("newProduct", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        } else {
         try {
 
             let image
@@ -102,7 +111,7 @@ const productController = {
         } catch (error) {
 
         }
-
+        }
     },
     dashboard: async (req, res) => {
         try {
