@@ -335,6 +335,28 @@ footer {
   color: white;
 }
 
+@media (max-width: 1025px){
+  
+  .frase-top {
+    padding: 0;
+    flex: 3;
+    margin-left: 7% ;
+  }
+  .contenedor-nav-superior {
+    flex: 3;
+  }
+  .vinculos {
+    font-size: 1em;
+  }
+  .carrito-micuenta {
+    margin-right: 1.5rem;
+  }
+  .carrito-micuenta i{
+    font-size: 1.3em;
+
+  }
+}
+
 @media (max-width: 426px) {
   .cabeza-superior {
     height: auto;
@@ -345,11 +367,30 @@ footer {
     text-align: center;
     padding-left: 0;
     margin-bottom: 10px;
+    flex: 5;
+  }
+  .contenedor-nav-superior{
+    width: 95%;
   }
   .hipervinculos-header {
     background-color: #292e1e;
     margin-bottom: 5%;
-    display: inline;
+    display:flex;
+    flex-direction:column ;
+    align-items: center;
+    flex: 5;
+  }
+  .vinculos {
+    width: 5rem;
+    font-size: 1em;
+    margin: 0 0.3rem;
+  }
+  .boton-dropdown{
+    font-size: 1em;
+  }
+  .contenedor-dropdown {
+    right: 50px;
+    top: 5rem;
   }
   .cabeza-inferior {
     display: flex;
@@ -359,7 +400,7 @@ footer {
   }
   .carrito {
     padding: 0;
-    font-size: 4vh;
+    font-size: 1.2em;
   }
   .frase-inferior {
     display: none;
@@ -370,7 +411,7 @@ footer {
     background-color: none;
   }
   .barra-navegacion {
-    padding: 0;
+    padding: 0.2rem;
   }
   .articulo {
     width: 35%;

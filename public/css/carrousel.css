@@ -68,3 +68,24 @@
 .contenedor-principal .flecha-derecha {
 	right: 0;
 }
+
+@media (max-width: 1025px) {
+    .contenedor-principal{
+        width: 90%;
+    }
+    .articulo {
+        width: 310px;
+    }
+}
+@media (max-width: 426px) {
+    .contenedor-principal {
+        height: auto;
+    }
+    .articulo {
+        width: 350px;
+        height: 300px;
+    }
+    .producto-imagen {
+        max-height: 250px;
+    }
+}

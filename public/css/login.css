@@ -106,3 +106,36 @@ label {
 .cabeza-superior {
     margin-bottom: 25px;
 }
+@media (max-width: 1025px) {
+    main {
+        height: auto;
+        height: 500px;
+    }
+    .formulario {
+        width: 45%;
+        margin: 0;
+    }
+    label{
+        left: 140px;
+    }
+    .titulo {
+        top: 30px;
+    }
+}
+
+@media (max-width: 426px) {
+    .titulo{
+        width: 80%;
+        height: 2rem;
+        font-size: 1.6em;
+    }
+    .formulario{
+        width: 85%;
+    }
+    .input{
+        width: 70%;
+    }
+    label {
+        left: 40px;
+    }
+}
