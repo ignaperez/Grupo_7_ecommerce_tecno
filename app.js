@@ -11,6 +11,7 @@ const apiProductRouter = require('./src/routes/apiProductRouter');
 const session = require('express-session');
 const loggedMiddleware = require("./src/middlewares/loggedMiddleware");
 const cookies = require("cookie-parser");
+const cors = require("cors")
 
 //Configuración
 app.use(express.static(path.resolve(__dirname,'public')));
@@ -23,7 +24,9 @@ app.use(session ( {
     resave: false,
     saveUninitialized: true}));
 app.use(cookies())
-
+ app.use(cors({
+     origin:"*"
+ }))
 
 app.use(loggedMiddleware)
 
@@ -33,13 +36,11 @@ app.use("/users", usersRouter)
 app.use('/apiUser', apiUserRouter)
 app.use('/apiProduct', apiProductRouter)
 app.use("/product", productRouter )
-app.get('/', (req, res) => {
-    res.send('Servidor funcionando')
-});
+
 
 //SERVIDOR
 /* app.listen(2000, () => {console.log('Servidor corriendo en el puerto 2000');})  */
-app.listen(process.env.PORT || 3000
+app.listen(process.env.PORT || 3001
     , ()=>{
-    console.log('Servidor funcionando en puerto 3000');
+    console.log('Servidor funcionando en puerto 3001');
 }); 

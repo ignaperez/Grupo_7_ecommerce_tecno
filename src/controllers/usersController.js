@@ -41,34 +41,35 @@ const userController = {
 
     logicRegister: async (req, res) => {
         const resultValidation = validationResult(req);
-        if(resultValidation.errors.length > 0) {
+        if (resultValidation.errors.length > 0) {
             return res.render("registro", {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             })
         } else {
-        try {
-            let image
+            try {
+                let image
 
-            if (req.file != undefined) {
+                if (req.file != undefined) {
 
-                image = req.file.filename
-            } else {
-                image = 'generic.jpg'
+                    image = req.file.filename
+                } else {
+                    image = 'generic.jpg'
+                }
+
+                let newUser = {
+                    ...req.body,
+                    //Encripto password 
+                    password: bcryptjs.hashSync(req.body.password, 10),
+                    categoria_id: 2,
+                    image: image,
+                    activo: 1
+                }
+                await db.Usuario.create(newUser);
+                res.redirect('/');
+            } catch (error) {
+                console.log(error)
             }
-
-            let newUser = {
-                ...req.body,
-                //Encripto password 
-                password: bcryptjs.hashSync(req.body.password, 10),
-                categoria_id: 2,
-                image: image,
-                activo: 1
-            }
-            await db.Usuario.create(newUser);
-            res.redirect('/');
-        } catch (error) {
-            console.log(error)}
         }
     },
     loginPostMysql: async (req, res) => {
@@ -82,15 +83,15 @@ const userController = {
                     email: emailUsuario
                 }
             })
-            if(result){
+            if (result) {
                 if (bcryptjs.compareSync(req.body.password, result.password)) {
                     req.session.user = result;
                     console.log(result);
                     if (req.body.recordar_usuario) {
-    
+
                         res.cookie("cookieEmail", result.email, { maxAge: 60000 * 15 });
                     }
-    
+
                     if (result.categoria_id == 1) {
                         res.redirect('/users/listar-usuarios');
                     } else {
@@ -98,19 +99,19 @@ const userController = {
                     }
                 } else {
                     let errors = "Las credenciales son invalidas, prueba nuevamente"
-                res.render("login", {
-                    error: errors
-                })
+                    res.render("login", {
+                        error: errors
+                    })
                 }
-          }  else {
+            } else {
                 let errors = "Las credenciales son invalidas, prueba nuevamente"
                 res.render("login", {
                     error: errors
                 })
-    
+
             }
-    
-        }catch (error) {
+
+        } catch (error) {
             return console.log(error)
         }
     },
@@ -125,11 +126,11 @@ const userController = {
         })
 
     },
-    listarUsuarios: (req, res) => { 
+    listarUsuarios: (req, res) => {
         db.Usuario.findAll({
             where: {
                 activo: 1
-            }, include: [{association:"categoria"}]
+            }, include: [{ association: "categoria" }]
         })
             .then(users => {
                 res.render('listadoU', { users })
@@ -139,10 +140,10 @@ const userController = {
     },
     detalleUsuario: (req, res) => {
         let idUser = req.params.id;
-        db.Usuario.findByPk(idUser, {include: [{association:"categoria"}]})
+        db.Usuario.findByPk(idUser, { include: [{ association: "categoria" }] })
             .then(verUsuario =>
                 res.render('detalleUsuario', { verUsuario }))
-                
+
 
     },
     editarUsuario: async (req, res) => {
@@ -202,61 +203,68 @@ const userController = {
         res.render("agregar-usuario")
     },
     logicaAniadirUsuario: async (req, res) => {
-        //console.log(req.body)
-        try {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render("registro", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        } else {
+            try {
 
-            let image
+                let image
 
-            if (req.file != undefined) {
+                if (req.file != undefined) {
 
-                image = req.file.filename
-            } else {
-                image = 'generic.jpg'
+                    image = req.file.filename
+                } else {
+                    image = 'generic.jpg'
+                }
+
+                let newUser = {
+                    ...req.body,
+                    password: bcryptjs.hashSync(req.body.password, 10),
+                    activo: 1,
+                    image: image
+                }
+                await db.Usuario.create(newUser);
+                res.redirect('/users/listar-usuarios');
+            } catch (error) {
+                console.log(error)
+            }}
+        },
+        borrar: async (req, res) => {
+
+            const { id } = req.params;
+
+            try {
+
+                await db.Usuario.update(
+                    { activo: 0 }, { where: { id } }
+                )
+
+                res.redirect('/users/listar-usuarios')
+            } catch (error) {
+                res.render(error)
             }
+        },
 
-            let newUser = {
-                ...req.body,
-                password: bcryptjs.hashSync(req.body.password, 10),
-                activo: 1,
-                image: image
-            }
-            await db.Usuario.create(newUser);
-            res.redirect('/users/listar-usuarios');
-        } catch (error) {
-            console.log(error)
-        }
-    },
-    borrar: async (req, res) => {
+            searchAdmin: async (req, res) => {
+                let search = req.query.keywords;
+                try {
 
-        const { id } = req.params;
-        
-         try {
+                    let users = await db.Usuario.findAll({
+                        where: { email: { [op.like]: "%" + search + "%" } }
+                        , include: [{ association: "categoria" }]
+                    })
+                    console.log(users)
+                    res.render("listadoU", { users })
+                } catch (error) {
+                    console.log(error)
+                }
 
-             await db.Usuario.update(
-                 { activo: 0 }, { where: { id } }
-             )
-             
-             res.redirect('/users/listar-usuarios')
-         } catch (error) {
-             res.render(error)
-         } 
-    },
-    
-    searchAdmin: async (req, res) => {
-        let search = req.query.keywords;
-        try {
-      
-            let users = await db.Usuario.findAll({
-                    where: {email: {[op.like]:"%"+ search +"%"}}
-                , include: [{association:"categoria"}]})
-                console.log(users)
-            res.render("listadoU", {users})    
-        } catch (error) {
-            console.log(error)
-        }
-        
 
-    },
+            },
 
 
 

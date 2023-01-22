@@ -12,8 +12,13 @@ module.exports = {
     list: (req, res) => {
 
         DB.Usuario
-            .findAll()
+            .findAll({ include: [{ association: "categoria" }], where: {activo: 1} }
+            )
             .then(usuarios => {
+                for (let i = 0; i < usuarios.length; i++) {
+                    usuarios[i].setDataValue("detail", `http://localhost:3001/apiUser/${usuarios[i].id}`)
+                    usuarios[i].setDataValue("pathImage", `http://localhost:3001/img/users/${usuarios[i].image}`)
+                }
                 return res.json({
                     total: usuarios.length,
                     data: usuarios,
@@ -26,6 +31,7 @@ module.exports = {
         DB.Usuario
             .findByPk(req.params.id)
             .then(usuario => {
+            usuario.setDataValue("pathImage", `http://localhost:3001/img/users/${usuario.image}`)  
                 return res.json({
                     data: usuario,
                     status: 200

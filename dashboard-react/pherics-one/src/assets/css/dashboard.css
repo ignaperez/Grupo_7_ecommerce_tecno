@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.contenedor-principal-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+    border-bottom: .1px solid #474a4d;
+    
+}
+
+.frase-top {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #292E1E;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+/* Nav Bar estático */
+
+
