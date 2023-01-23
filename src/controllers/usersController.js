@@ -154,7 +154,7 @@ const userController = {
                     id: idUser
                 }
             })
-
+            
             res.render('editarUsuario', { verUsuario })
 
         }

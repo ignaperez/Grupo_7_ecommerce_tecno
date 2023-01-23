@@ -50,7 +50,7 @@
 
                     <div class="datos-compra">
                         <input class="cantidad" type="number" value="1" name="cantidad-producto" maxlength="1">
-                        <button class="boton-comprar" type="submit">Comprar</button>
+                        <button class="boton-comprar" type="submit" data-id="<%= producto.id %> ">Comprar</button>
                     </div>
                 </section>
             </section>
@@ -112,6 +112,8 @@
         <%- include("./partials/footer") %>
         
 <script src="/js/detalleProducto.js"></script>
+<script src="/js/agregarCarrito.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

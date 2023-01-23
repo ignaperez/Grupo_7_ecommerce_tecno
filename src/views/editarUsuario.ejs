@@ -26,11 +26,12 @@
 
 
                 <div class="caja-izquierda">
-    
+                    
                     <article class="perfil-usuario">
-                        <form action="/users/editar-usuario/<%= verUsuario.id %>?_method=PUT " method="post" class="formulario-np" enctype="multipart/form-data">
                         <div class="titulo-perfil"> <div><p>PERFIL DEL USUARIO: <%= verUsuario.username %> </p></div></div>
-                       
+                        
+                        <form action="/users/editar-usuario/<%= verUsuario.id %>?_method=PUT " method="post" class="formulario-np" enctype="multipart/form-data">
+                        
                         <p class="rotulo">Nombres</p> 
                         <p class="dato"><input type="text" name="nombre" value="<%= verUsuario.nombre %>">
                              </p>

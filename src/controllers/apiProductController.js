@@ -35,10 +35,10 @@ module.exports = {
                  `http://localhost:3001/apiProduct/${productos[i].id}`);
                 productos[i].setDataValue(
                     "pathImage_1",
-                 `http://localhost:3001/img/users/${productos[i].imagen1}`);
+                 `http://localhost:3001/img/productos/${productos[i].imagen1}`);
                 productos[i].setDataValue(
                     "pathImage_2",
-                 `http://localhost:3001/img/users/${productos[i].imagen2}`);
+                 `http://localhost:3001/img/productos/${productos[i].imagen2}`);
             }  
                 let respuesta = {
                      status: 200,

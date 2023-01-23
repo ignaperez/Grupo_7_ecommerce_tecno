@@ -5,12 +5,12 @@
     font-size: 25px;
     text-transform: uppercase;
     font-style: oblique;
-    background-color: rgb(180, 180, 180);
+    background-color: black;
     display: inline-block;
     padding: 10px;
     border: solid black 2px;
     margin: 15px auto 0 15%;
-    border-radius: 20px;
+    border-radius: 10px;
     
 }
 
@@ -34,8 +34,8 @@
     margin: 0px auto 20px;
     overflow: hidden;
     scroll-behavior: smooth;
-    border: 3px solid #292E1E;
-    background-color: #292E1E;
+    border: 5px solid #292E1E;
+    background-color: white;
     border-radius: 15px;
 }
 .articulo:hover {

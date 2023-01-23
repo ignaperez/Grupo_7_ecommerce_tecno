@@ -58,13 +58,13 @@ ion-icon {
 }
 
 .icon-button:hover {
-    filter: brightness(1.2);
+    filter: brightness(0.7);
 }
 
 
 .dropdown {
     position: absolute;
-    top: 4.625rem;
+    top: 3.525rem;
     width: 18.75rem;
     transform: translateX(-45%);
     background-color: var(--bg);
@@ -72,6 +72,7 @@ ion-icon {
     border-radius: var(--border-radius);
     padding: 1rem;
     overflow: hidden;
+    z-index: 50;
 }
 
 .menu-item {

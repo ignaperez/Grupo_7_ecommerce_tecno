@@ -1,190 +1,89 @@
 * {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
-img {
-    width: 50%;
+main {
+  min-height: 50rem;
 }
 
-.productos-carro {
-    display: flex;
-    flex-direction: column ;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    align-items: center;
-    text-align: center;
+.descripcion-carro p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.contenedor-tabla-productos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.contenedor-tabla {
     width: 70%;
-    margin: 0 auto;
-    border: 2px solid #292E1E;
-    border-radius: 5%;
-    margin-top: 25px ;
-    margin-bottom: 50px ;
-}
-
-
-.descripcion-carro p{
-    display: flex;
-    flex-wrap: wrap;
-   align-items: flex-start;
-}
-
-
-
-.articulo-carro {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 90%;
-    box-sizing: border-box;
-    border-radius: 3vh;
-    margin-bottom: 4%;
-    margin-top: 4%;
-
-}
-
-.articulo-carro div {
-
-    display: flex;
-    font-display: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.img-carro{
-    width: 10%;
-    border: 1px rgb(230, 224, 224) solid;
-    padding: 5px;
-}
-
-
-
-.producto-imagen {
-    
-    text-align: center;
-    width: 60%;
-}
-
-.nombre-producto-c{
-    width: 18%;
-    text-align: left;
-}
-
-.contenedor-c{
-
-    width: 100%;
-    border-bottom: 1px rgb(168, 162, 162) solid;
-    padding-bottom: 10px;
-}
-
-.titulo-carro {
-    font-size: 20px;
-    padding: 10px;
-    margin: 0 auto;
-    width: 70%;
-    margin-top: 20px    ;
-    
-}
-
-.BOTONES{
-    display: flex;
-    justify-content: space-around;
-    margin: 30px;
-    height: 40px;
-    width: 70%;
-
-}
-
-button{
-    background-color: #292E1E;
-    color: #ECEBE4;
-    border-radius: 10%;
-    font-weight: bold;
-}
-
-.precio-tit{
-    width: 0;
-
-}
-
-.detalle-envio {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    padding: 4vh;
-    margin: 4vh;
-    width: 30%;
-    border: rgb(103, 103, 103) solid 1px;
-    border-radius: 20px;
-    text-align: center;
-    position: relative;
-    left: 30%;
-}
-
-.contenedor-input {
-    padding: 1vh;
-    margin: 1vh;
-    display: flex; 
-    justify-content: space-between; 
-    flex-wrap: wrap;
-}
-.label {
-    font-size: 2vh;
-}
-.input {
-    align-items: center;
-    position: relative;
-    right: 8vh;
-    border: black 1px solid;
-}
-.titulo-envio {
-    text-align: center;
-    font-size: 2vh;
-    font-weight: bold;
-    padding-bottom: 2vh;
-    border-bottom: solid 1px rgb(103, 103, 103);
-}
-
-@media (max-width: 426px){
-.cabeza-inferior{
-    display: none;
-}  
-.productos-carro {
-        width: 95%;
-    }
-.precio-c {
-    display: none;
-}
-.precio-tit{
-    display: none;
-}
-
-.img-carro {
-    width: 20%;
-}
-.titulo-carro {
-    width: initial;
-    text-align: center;
-}
-.nombre-producto-c {
-    font-size: 13px;
-    width: 40%;
-}
-.detalle-envio {
-    margin: 0;
-    width: 79%;
-    left: 2%;
-    margin-bottom: 10px;
     
+    justify-content: center;
 }
-.input{
-    position: initial;
-    width: 95%;
+.tabla-productos {
+  width: 100%;
+  text-align: center;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  border: solid 1px gainsboro;
+  margin: 1rem;
+  padding: 1rem;
 }
-.BOTONES {
-    width: 100%;
-    justify-content: space-evenly;
-    margin: 20px;
+.tHead {
+  font-size: 1.5rem;
+  background-color: white;
+  border-bottom: 1px solid gray;
+}
+.tBody {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.valor-total {
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    margin: .5rem;
+}
+.boton-eliminar {
+    font-size: 1.5rem;
+    width: 3rem;
+    background-color: tomato;
+    border: none;
+    color:white;
+    padding: .5rem;
+    transition: all .5s;
+}
+.boton-eliminar:hover {
+    transform: scale(0.90);
+}
+.alert-warning {
+    font-size: 2rem;
+    margin: 2rem;
+}
+.botones {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.boton {
+    width: 11rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color: #292E1E;
+    color: white; 
+    transition: all .5s; 
 }
 
+.boton:hover {
+    transform: scale(1.05);
 }

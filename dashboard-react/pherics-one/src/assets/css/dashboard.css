@@ -1,3 +1,4 @@
+/* Nav Bar */
 * {
     margin: 0;
     padding: 0; 
@@ -11,7 +12,7 @@
     align-items: center;
     background-color: white;
     border-bottom: .1px solid #474a4d;
-    
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .frase-top {
@@ -20,9 +21,18 @@
     color: #292E1E;
     position: absolute;
     left: 1rem;
-    top: 1rem;
+    top: 0.5rem;
+    text-decoration: underline;
+}
+.frase-top-baja {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    left: 2.3rem;
+    top: 2.2rem;
+
 }
 
-/* Nav Bar estático */
 
 

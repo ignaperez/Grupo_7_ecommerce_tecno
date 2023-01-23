@@ -1,0 +1,170 @@
+/* estilos principal */
+.contenedor-principal-user {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    min-height: 50rem;
+    margin-top: 2rem;
+}
+.seccion-detalle-usuario {
+    width: 30%;
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.seccion-lista-usuarios {
+    width: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+/* Estilos para UserDetail*/
+.titulo-ultimo-usuario {
+    font-size: 2em;
+    display: block;
+    border-bottom: gainsboro 1px solid;
+    text-align: center;
+    width: 85%;
+    margin: 1rem 0 0 ;
+}
+.contenedor-detalles {
+    width: 25rem;
+    height: 30rem;
+    background-color: white;
+    
+    border-radius: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.contenedor-imagen {
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+    top: 4rem;
+    z-index: 1;
+}
+.imagen-usuario {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid gainsboro;
+}
+.contenedor-info {
+    width: 90%;
+    border: 1px solid gainsboro;
+    background-color: #fcfcfc;
+    border-radius: 1rem;
+    height: 20rem;
+    margin: 1rem 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}   
+.contenedor-info-hijo {
+    display: flex; 
+    width: 90%;
+    margin: .825rem;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.parrafo-detalle {
+    font-size: 1em;
+    font-weight: bold;
+}
+.parrafo-detalle-titulo {
+    text-transform: uppercase;
+}
+/* Estilos para UserCard */
+.contenedor-detalle-titulo {
+    font-size: 2em;
+    display: block;
+    border-bottom: gainsboro 1px solid;
+    text-align: center;
+    width: 85%;
+    margin: 1rem 0 2rem ;
+}
+.contenedor-usuario {
+    margin: 5px 0 5px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60rem;
+    padding: 5px;
+    box-sizing: content-box;
+    border-radius: 25px;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    transition: all .4s;
+}
+.contenedor-usuario:hover{
+    transform: scale(1.02);
+}
+.contenedorIMG {
+    max-width: 20%;
+}
+.user-image {
+    width: 35px;
+    height: 35px;
+    border-radius: 1.5625rem;
+}
+.contenedor-datos {
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+}
+.parrafo-info {
+    box-sizing: content-box;
+}
+.boton-detalle {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    font-size: 0.8rem;
+    transition: all .5s;
+}
+.boton-detalle:hover {
+    background-color: gainsboro;
+    transform: scale(0.95);
+}
+/* Estilos para usuarios totales */
+
+.contenedor-total-usuarios {
+    width: 30%;
+    margin-left: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.contenedor-total-user {
+    width: 80%;
+    margin-top: 2rem;
+    height: 10rem;
+    border-radius: 1rem;
+    box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+}
+.contenedor-titulo-user {
+    width: 100%;
+    border-bottom: 2px gainsboro solid;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+.titulo-total-usuario {
+    padding: 1rem;
+    font-size: 2rem;
+    color: gray;
+}
+.contenedor-texto-totales {
+    display: flex;
+    flex: row  nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}

@@ -1,0 +1,78 @@
+.ultimo-producto {
+    margin-top: 2rem;
+    display: block;
+    width: 80%;
+    text-align: center;
+    font-size: 2em;
+    border-bottom: gainsboro 1px solid;
+}
+.carrousel{
+    margin-top: 1rem;
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2rem;
+    overflow-x: hidden;
+    border-radius: 2rem;
+}
+.contenedor-grande{
+    width: 200%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    transition: all .5s ease; 
+    border-radius: 2rem; 
+}
+.carrousel .imagen-carrusel {
+    width: calc(100% / 2);
+    object-fit: scale-down;
+    min-height: 10vh;
+    height: 20rem;
+     
+}
+.carrousel .puntos {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: .4rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 0;
+    border-radius: 2rem;
+}
+.carrousel .punto{
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;    margin: .2rem;
+    border-radius: 50%;
+}
+.carrousel .punto.activo {
+    background-color: gray;
+}
+.contenedor-datos-producto{
+    width: 95%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;    margin: .2rem;
+    margin: 1rem auto.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.nombre-producto {
+    font-size: 1.5em;
+    margin: 2rem;
+    width: 100%;
+}
+.precio-producto {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-around;
+    font-size: 1.5em;
+}

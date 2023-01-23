@@ -25,20 +25,7 @@
 
     <main>
       <section>
-        <div class="contenedor-categorias">
-          <p class="n-filtros">Filtros</p>
-          <div class="contenedor-checkbox">
-            <p class="n-categorias">Categorias</p>
-            <ul class="lista-categorias">
-              <li class="checkbox-categoria">Auriculares</li>
-              <li class="checkbox-categoria">Teclados</li>
-              <li class="checkbox-categoria">Mouse</li>
-              <li class="checkbox-categoria">Joisticks</li>
-              <li class="checkbox-categoria">Monitores</li>
-              <li class="checkbox-categoria">Mousepads</li>
-            </ul>
-          </div>
-        </div>
+        
         <div class="caja-productos">
           <% if (productos.length > 0) { %> 
             <% productos.forEach(producto => { %>
@@ -54,7 +41,7 @@
               <p class="titulo-producto"><%= producto.titulo %></p>
             </div>
             <div class="boton-carrito">
-              <button class="añadir-carrito">Agregar al carrito</button>
+              <button class="añadir-carrito" data-id="<%= producto.id %>">Agregar al carrito</button>
             </div>
           </article>
           <% }) %>
@@ -66,8 +53,10 @@
         <% } %>
       </section>
     </main>
-
+    
     <!-- partials del footer-->
     <%- include("./partials/footer") %>
+    <script src="/js/agregarCarrito.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
