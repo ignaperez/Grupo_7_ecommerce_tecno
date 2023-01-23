@@ -164,7 +164,15 @@ const userController = {
     }
     ,
     actualizarUsuario: async (req, res) => {
-
+        const resultValidation = validationResult(req);
+        userId = req.params.id;
+        if (resultValidation.errors.length > 0) {
+            return res.render("editarUsuarioValidaciones",{
+                userId,
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        } else {
 
         try {
             const { id } = req.params;
@@ -198,7 +206,8 @@ const userController = {
         }
 
 
-    },
+    }
+},
     agregarUsuario: (req, res) => {
         res.render("agregar-usuario")
     },

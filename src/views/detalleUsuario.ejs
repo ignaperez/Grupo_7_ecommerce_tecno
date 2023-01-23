@@ -28,9 +28,7 @@
                 <div class="caja-izquierda">
     
                     <article class="perfil-usuario">
-
                         <div class="titulo-perfil"> <div><p>PERFIL DEL USUARIO: <%= verUsuario.username %> </p> <p class="editar"><a href="/users/editar-usuario/<%= verUsuario.id %> ">Editar</a></p></div></div>
-
                         <p class="rotulo">Nombres</p> 
                         <p class="dato"><%= verUsuario.nombre %> </p>
                         <p class="rotulo">Apellido</p> 
@@ -44,7 +42,7 @@
                     </article>
         
                     <article class="perfil-usuario">
-                        <div class="titulo-perfil"> <div><p>CONTRASEÑA</p> <p class="editar"><a href="/users/editar-usuario/<%= verUsuario.id %> ">Editar</a></p></div></div>
+                        <div class="titulo-perfil"> <div><p>CONTRASEÑA</p> </div></div>
                         <p class="rotulo">Contraseña</p> 
                         <p class="dato"> -->***********</p>
         
@@ -54,13 +52,13 @@
                 <div class="caja-derecha">
                     
                     <article class="perfil-usuario">
-                        <div class="titulo-perfil"> <div><p>METODOS DE PAGO</p> <p class="editar"><a href="#">Editar</a></p></div></div>
+                        <div class="titulo-perfil"> <div><p>METODOS DE PAGO</p> </div></div>
                         <p class="rotuloCC"> <a href="">+ AÑADIR NUEVA TARJETA</a></p> 
                                 
                     </article>
 
                     <article class="perfil-usuario-2">
-                        <div class="titulo-perfil"> <div><p>FOTO DE PERFIL</p> <p class="editar"><a href="/users/editar-usuario/<%= verUsuario.id %> ">Editar</a></p></div></div>
+                        <div class="titulo-perfil"> <div><p>FOTO DE PERFIL</p></div></div>
                         <div class="IMAGEN"><img class="img" src="/img/users/<%= verUsuario.image %> "  alt=""> </div> 
                                 
                     </article>
