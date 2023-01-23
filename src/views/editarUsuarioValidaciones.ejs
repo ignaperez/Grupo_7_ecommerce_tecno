@@ -26,28 +26,48 @@
 
 
                 <div class="caja-izquierda">
-
+    
                     <article class="perfil-usuario">
-                    <form action="/users/editar-usuario/<%= verUsuario.id %>?_method=PUT " method="post" class="formulario-np" enctype="multipart/form-data">
-
-                     <div class="titulo-perfil"><div><p>PERFIL DEL USUARIO: <%= verUsuario.username %> </p> <p class="editar"><a href="/users/editar-usuario/<%= verUsuario.id %> ">Editar</a></p></div></div>
+                        <form action="/users/editar-usuario/3?_method=PUT" method="post" class="formulario-np" enctype="multipart/form-data">
+                         <div class="titulo-perfil"> <div><p>PERFIL DEL USUARIO: <%= oldData.nombre %> </p></div></div> 
                         <p class="rotulo">Nombres</p> 
-                        <p class="dato"><input type="text" name="nombre" value="<%= verUsuario.nombre %>"></p>
+                        <% if (locals.errors && errors.nombre) { %>
+                            <div class="error-text">
+                                <%= errors.nombre.msg %>
+                            </div>
+                        <% } %>
+                        <p class="dato"><input type="text" name="nombre" value="<%= oldData.nombre %>"></p>
                         <p class="rotulo">Apellido</p> 
-                        <p class="dato"><input type="text" name="apellido" value="<%= verUsuario.apellido %>"></p>
+                        <% if (locals.errors && errors.apellido) { %>
+                            <div class="error-text">
+                                <%= errors.apellido.msg %>
+                            </div>
+                        <% } %>
+                        <p class="dato"><input type="text" name="apellido" value="<%= oldData.apellido %>"></p>
                         <p class="rotulo">Email</p> 
-                        <p class="dato"><input type="text" name="email" value="<%= verUsuario.email %>"></p>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="error-text">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                        <p class="dato"><input type="text" name="email" value="<%= oldData.email %>"></p>
                         <p class="rotulo">Teléfono</p> 
-                        <p class="dato"><input type="text" name="telefono" value="<%= verUsuario.telefono %>"></p>
+                        <% if (locals.errors && errors.telefono) { %>
+                            <div class="error-text">
+                                <%= errors.telefono.msg %>
+                            </div>
+                        <% } %>
+                        <p class="dato"><input type="text" name="telefono" value="<%= oldData.telefono %>"></p>
                         <p class="rotulo">Categoría</p>  
                         <p class="dato"><select name="categoria_id">
                             <option selected="selected" value=2>Usuario</option>
                             <option value=1>Administrador</option>
                         </select></p>
+                            <p><button type="submit" class="boton-form-edit">GUARDAR CAMBIOS</button></p>
                     </article>
                    
                     <article class="perfil-usuario">
-                        <div class="titulo-perfil"> <div><p>CONTRASEÑA</p> <p class="editar"></p></div></div>
+                        <div class="titulo-perfil"> <div><p>CONTRASEÑA</p> <p class="editar"><a href="***">Editar</a></p></div></div>
                         <p class="rotulo">Contraseña</p> 
                         <p class="dato"> -->***********</p>
         
@@ -57,20 +77,16 @@
                 <div class="caja-derecha">
                     
                     <article class="perfil-usuario">
-                        <div class="titulo-perfil"> <div><p>METODOS DE PAGO</p> </div></div>
+                        <div class="titulo-perfil"> <div><p>METODOS DE PAGO</p> <p class="editar"><a href="***">Editar</a></p></div></div>
                         <p class="rotuloCC"> <a href="">+ AÑADIR NUEVA TARJETA</a></p> 
                                 
                     </article>
 
                     <article class="perfil-usuario-2">
-                        <div class="titulo-perfil"> <div><p>FOTO DE PERFIL</p></div></div>
-                        <div class="IMAGEN"><img class="img" src="/img/users/<%= verUsuario.image %> "  alt="">
+                        <div class="titulo-perfil"> <div><p>FOTO DE PERFIL</p> <p class="editar"><a href="***">Editar</a></p></div></div>
+                        <div class="IMAGEN"><img class="img" src="/img/users/<%= oldData.image %> "  alt="">
                         <p><input type="file" name="image" ></p> </div> 
-                        <p><button type="submit" class="boton-form-edit">GUARDAR CAMBIOS</button></p>
-
-                    </form>    
-                    
-                    
+                    </form>      
                     </article>
 
     
@@ -97,4 +113,4 @@
 
 </body>
 
-</html>
+</html>                     
