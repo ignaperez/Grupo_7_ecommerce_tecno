@@ -133,24 +133,35 @@ main {
     margin-bottom: 25px;
 }
 
-.boton-form-edit{
-    position: absolute;
-    background-color: #292E1E;
-    color: white;
-    left: 62%;
-    top: 130%;
-    height: 40px;
-}
+
 
 .boton-form-edit:hover{
     background-color: black;
 }
-
+.boton-form-edit{
+    /* position: absolute; */
+    background-color: #292E1E;
+    color: white;
+/*     left: 62%;
+    top: 120%; */
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
 
 
 
 
 @media (min-width: 769px) {
+
+    .boton-form-edit{
+        position: absolute;
+        background-color: #292E1E;
+        color: white;
+        left: 62%;
+        top: 120%;
+        height: 40px;
+    }
 
     .editar {
         display: block;

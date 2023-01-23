@@ -28,10 +28,9 @@
                 <div class="caja-izquierda">
                     
                     <article class="perfil-usuario">
-                        <div class="titulo-perfil"> <div><p>PERFIL DEL USUARIO: <%= verUsuario.username %> </p></div></div>
-                        
-                        <form action="/users/editar-usuario/<%= verUsuario.id %>?_method=PUT " method="post" class="formulario-np" enctype="multipart/form-data">
-                        
+
+                     <div class="titulo-perfil"><div><p>PERFIL DEL USUARIO: <%= verUsuario.username %> </p></p></div></div>
+                    <form action="/users/editar-usuario/<%= verUsuario.id %>?_method=PUT " method="post" class="formulario-np" enctype="multipart/form-data">
                         <p class="rotulo">Nombres</p> 
                         <p class="dato"><input type="text" name="nombre" value="<%= verUsuario.nombre %>"></p>
                         <p class="rotulo">Apellido</p> 
@@ -65,14 +64,15 @@
 
                     <article class="perfil-usuario-2">
                         <div class="titulo-perfil"> <div><p>FOTO DE PERFIL</p></div></div>
-                        <div class="IMAGEN"><img class="img" src="/img/users/<%= verUsuario.image %> "  alt="">
+                        <div class="IMAGEN"><img class="img" src="/img/users/<%=verUsuario.image%> "  alt="">
                         <p><input type="file" name="image" ></p> </div> 
-                        <p><button type="submit" class="boton-form-edit">GUARDAR CAMBIOS</button></p>
+                    </article>
+
+                    <p><button type="submit" class="boton-form-edit">GUARDAR CAMBIOS</button></p>
 
                     </form>    
                     
                     
-                    </article>
 
     
 
