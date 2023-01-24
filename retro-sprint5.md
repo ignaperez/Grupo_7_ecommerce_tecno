@@ -1,9 +1,8 @@
 Comenzar a Hacer:
 ordenar bien las tarjetas en trello para evitar confusiones.
-realizar la weekly
+
 
 Hacer mas:
-Comentar lo que vamos haciendo en el codigo, así todos saben bien que es lo que cambiamos y/o hacemos.
 Definir las tareas concretas para terminar el front-end, y agregar las animaciones
 
 Continuar haciendo:
